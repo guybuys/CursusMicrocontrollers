@@ -1,0 +1,31 @@
+site_name: Cursus Microcontrollers
+site_description: Leer microcontrollers programmeren met Arduino (C++) en MicroPython
+site_author: Guy Buys
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: pink
+    - scheme: slate
+      primary: teal
+      accent: orange
+nav:
+  - Home: index.md
+  - Inhoud: inhoud.md
+  - Introductie: introductie.md
+  - GPIO Output: gpio_output.md
+  - GPIO Input: gpio_input.md
+  - Datatypes: datatypes.md
+  - Analoge signalen en PWM: analoog_pwm.md
+  - Samenspel en toepassingen: toepassingen.md
+  - Vooruitblik: vooruitblik.md
+markdown_extensions:
+  - codehilite
+  - admonition
+  - toc
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.details
