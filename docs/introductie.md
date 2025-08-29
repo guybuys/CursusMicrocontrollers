@@ -4,13 +4,15 @@
 
 ### 1.1 Wat is een microcontroller?
 Een microcontroller is een kleine computer op een chip. Hij kan drie dingen:
+
 - **Meten** (via ingangen of sensoren)
 - **Denken** (programma uitvoeren)
 - **Sturen** (via uitgangen, bijvoorbeeld een LED of motor aanzetten)
 
-👉 **Voorbeelden:**
-- Arduino Uno, Arduino Nano
+ **Voorbeelden:**
+
 - Raspberry Pi Pico
+- Arduino Uno
 
 ![Foto van Raspberry Pi Pico en Arduino UNO naast elkaar](img/pico_arduino.jpg)
 
