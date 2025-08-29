@@ -1,21 +1,32 @@
 # Introductie
 
-Wat is een microcontroller?
+## Hoofdstuk 1 – Wat is een microcontroller?
 
-Een microcontroller is een klein computertje dat je zelf kunt programmeren om dingen te meten en te sturen.
+### 1.1 Wat is een microcontroller?
+Een microcontroller is een kleine computer op een chip. Hij kan drie dingen:
+- **Meten** (via ingangen of sensoren)
+- **Denken** (programma uitvoeren)
+- **Sturen** (via uitgangen, bijvoorbeeld een LED of motor aanzetten)
 
-## Voorbeelden
-- Arduino
+👉 **Voorbeelden:**
+- Arduino Uno, Arduino Nano
 - Raspberry Pi Pico
-- Andere boards
 
-## Mini-computer
-Een microcontroller is eigenlijk een mini-computer die je zelf opdrachten geeft.
+![Foto van Raspberry Pi Pico en Arduino UNO naast elkaar](img/pico_arduino.jpg)
 
-## Elektronica basis
-- **Spanning (V):** Hoeveel "druk" er op de stroom staat
-- **Stroom (I):** Hoeveel elektronen er bewegen
+### 1.2 Verschil met een computer
+Een laptop kan veel dingen tegelijk doen (internet, filmpjes, spelletjes).
+Een microcontroller doet meestal één taak, maar kan dat heel betrouwbaar en snel.
+Bijvoorbeeld: een wasmachine besturen, lampen automatisch schakelen of een robot laten bewegen.
 
-> **Let op:** Veilig werken is belangrijk! Vraag altijd hulp als je twijfelt.
+### 1.3 Veilig werken met elektronica
+Microcontrollers werken meestal op 3.3V of 5V → veilig voor mensen.
 
-![Plaats voor schema of foto](PLACEHOLDER_SCHEMA)
+Maar: sluit nooit rechtstreeks een grote motor of lamp aan.
+
+Altijd eerst een weerstand gebruiken bij een LED, anders gaat hij kapot.
+
+![Schema van LED met serieweerstand](img/led-series-diagram.png)
+
+---
+
