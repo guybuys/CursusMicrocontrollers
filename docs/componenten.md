@@ -4,52 +4,45 @@ Hier vind je uitleg over de belangrijkste basiscomponenten die je tegenkomt bij 
 
 ## DC Spanningsbron
 
-- **Foto:** ![DC spanningsbron](img/dc_spanning.jpg)
-- **Symbool:** ![Symbool DC bron](img/symbool_dc.png)
+**Symbool:** ![Symbool DC bron](img/ac_dc_bron.png)
 
 De spanningsbron is de voeding voor je microcontroller. Dit kan een batterij zijn, een adapter of de USB-poort van je computer.
 
 ## Weerstand
 
-- **Foto:** ![Weerstand](img/weerstand.jpg)
-- **Symbool:** ![Symbool weerstand](img/symbool_weerstand.png)
+**Symbool:** ![Symbool weerstand](img/ac_weerstand.png)
 
-Een weerstand beperkt de stroom in een circuit. Onmisbaar bij het aansluiten van een LED!
+Een weerstand beperkt de stroom in een circuit. Dit hebben we bijvoorbeeld nodig bij het aansluiten van een LED!
 
 ## Zekering (Fuse)
 
-- **Foto:** ![Zekering](img/zekering.jpg)
-- **Symbool:** ![Symbool zekering](img/symbool_zekering.png)
+ **Symbool:** ![Symbool zekering](img/ac_fuse.png)
 
-Een zekering beschermt tegen te hoge stroom. Let op: een zekering is geen weerstand!
+Een zekering beschermt tegen te hoge stroom. Wanneer de stroom te groot wordt, zal de zekering gecontrolleerd doorbranden. Let op: een zekering is geen weerstand, vele leerlingen teken een weerstand met het symbool van een zekering maar dat is helemaal verkeerd!
 
 ## Diode
 
-- **Foto:** ![Diode](img/diode.jpg)
-- **Symbool:** ![Symbool diode](img/symbool_diode.png)
+**Symbool:** ![Symbool diode](img/ac_diode.png)
 
-Een diode laat stroom maar in één richting door.
+Een diode laat stroom maar in één richting door. Zoals het in dit symbool staat, kan de stroom van boven naar onder stromen maar niet omgekeerd.
 
 ## LED (Light Emitting Diode)
 
-- **Foto:** ![LED](img/led.jpg)
-- **Symbool:** ![Symbool LED](img/symbool_led.png)
+**Symbool:** ![Symbool LED](img/ac_led.png)
 
-Een LED geeft licht als er stroom doorheen gaat. Gebruik altijd een serieweerstand!
+Een LED is een speciale diode, ze geeft licht als er voldoende stroom doorheen gaat. Gebruik altijd een serieweerstand om ervoor te zorgen dat er niet te veel stroom doorheen vloeit! Dan kan de LED of de uitgang van de microcontroller immers kapot gaan.
 
+<!--
 ## Serieweerstand bij LED
 
 - **Schema:** ![Schema LED met weerstand](img/schema_led_weerstand.png)
 
 De serieweerstand voorkomt dat de LED kapot gaat door te veel stroom.
+-->
+## Schakelaar (SPDT))
 
-## SPDT Switch (Schakelaar)
+- **Foto:** ![SPDT switch](img/SPDT.jpg)
+- **Symbool:** ![Symbool SPDT switch](img/ac_spdt.png)
 
-- **Foto:** ![SPDT switch](img/spdt.jpg)
-- **Symbool:** ![Symbool SPDT switch](img/symbool_spdt.png)
+Met een SPDT (Single Pole Dual Throw) schakelaar of tuimelschakelaar, kun je kiezen of hoe "middelste" contact verbonden wordt. In het model op de foto, kan je zorgen dat het met geen van beiden contact maakt maar dit kan meestal niet. Het is ofwel het ene, ofwel het andere en daar zit slechts een zeer korte "dode tijd" tussen. Dit komt later terug bij GPIO output.
 
-Met een SPDT schakelaar kun je kiezen of een uitgang met GND of VCC verbonden wordt. Dit komt later terug bij GPIO output.
-
----
-
-> Vervang de voorbeeldbestanden door je eigen foto's en symbolen in de map `docs/img/`.
