@@ -42,7 +42,7 @@ Een zekering beschermt tegen te hoge stroom. Wanneer de stroom te groot wordt, z
 
 ## Schakelaar (SPDT)
 
-- **Foto:** ![SPDT switch](img/SPDT_drawing.png)
+- **Afbeelding:** ![SPDT switch](img/SPDT_drawing.png)
 - **Symbool:** ![Symbool SPDT switch](img/ac_spdt.png)
 
 Met een SPDT (Single Pole Dual Throw) schakelaar of tuimelschakelaar, kan je kiezen of hoe "middelste" contact verbonden wordt. In het model op de foto, kan je zorgen dat het met geen van beiden contact maakt maar dit kan meestal niet. Het is ofwel verbonden met het ene, ofwel met het andere en daar zit slechts een zeer korte "dode tijd" tussen. Deze schakelaar komt later terug bij GPIO output.
