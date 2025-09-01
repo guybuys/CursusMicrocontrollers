@@ -13,6 +13,7 @@ theme:
 nav:
   - Home: index.md
   - Inhoud: inhoud.md
+  - Componenten: componenten.md
   - Introductie: introductie.md
   - GPIO Output: gpio_output.md
   - GPIO Input: gpio_input.md
