@@ -22,13 +22,14 @@ Een microcontroller doet meestal één taak, maar kan dat heel betrouwbaar en sn
 Bijvoorbeeld: een wasmachine besturen, lampen automatisch schakelen of een robot laten bewegen.
 
 ### 1.3 Veilig werken met elektronica
-Microcontrollers werken meestal op 3.3V of 5V → veilig voor mensen.
+Microcontrollers werken meestal op 3.3V of 5V. Spanningen tot en met 24V zijn veilig voor mensen.
 
-Maar: sluit nooit rechtstreeks een grote motor of lamp aan.
+Dit wil niet zeggen dat mensen veilig zijn voor microcontrollers.
+Het vermogen dat een microcontroller bord kan leveren is beperkt. Sluit nooit rechtstreeks een grote motor of lamp aan. Dit kan leiden tot te hoge stromen waardoor de microcontroller of het bord kapot kan gaan.
 
-Altijd eerst een weerstand gebruiken bij een LED, anders gaat hij kapot.
+Zoals in het hoofdstuk over componenten al vermeld werd: altijd een weerstand in serie zetten met een LED, anders kan er iets kapot gaan.
 
-![Schema van LED met serieweerstand](img/led-series-diagram.png)
+![Schema van LED met serieweerstand](img/ac_source_led_res.png)
 
 ---
 
