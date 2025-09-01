@@ -40,9 +40,9 @@ De serieweerstand voorkomt dat de LED kapot gaat door te veel stroom.
 
 Een zekering beschermt tegen te hoge stroom. Wanneer de stroom te groot wordt, zal de zekering gecontrolleerd doorbranden. Let op: een zekering is geen weerstand, vele leerlingen tekenen een weerstand met het symbool van een zekering maar dat is helemaal verkeerd!
 
-## Schakelaar (SPDT))
+## Schakelaar (SPDT)
 
-- **Foto:** ![SPDT switch](img/SPDT_drawing.jpg)
+- **Foto:** ![SPDT switch](img/SPDT_drawing.png)
 - **Symbool:** ![Symbool SPDT switch](img/ac_spdt.png)
 
 Met een SPDT (Single Pole Dual Throw) schakelaar of tuimelschakelaar, kan je kiezen of hoe "middelste" contact verbonden wordt. In het model op de foto, kan je zorgen dat het met geen van beiden contact maakt maar dit kan meestal niet. Het is ofwel verbonden met het ene, ofwel met het andere en daar zit slechts een zeer korte "dode tijd" tussen. Deze schakelaar komt later terug bij GPIO output.
