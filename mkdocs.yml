@@ -30,6 +30,5 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.details
-  - pymdownx.copybutton
 extra_css:
   - overrides.css
