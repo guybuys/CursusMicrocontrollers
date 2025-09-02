@@ -1,0 +1,7 @@
+/* Verschillende achtergrondkleuren voor codeblokken per taal */
+.code-cpp pre {
+  background: #e3f2fd !important;
+}
+.code-python pre {
+  background: #f3e5f5 !important;
+}
