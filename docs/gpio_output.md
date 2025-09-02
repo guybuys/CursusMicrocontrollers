@@ -3,7 +3,7 @@
 GPIO als uitgang: hiermee kun je bijvoorbeeld een LED aan of uit zetten.
 
 ## LED schakelen
-
+<div class="code-cpp">
 ```cpp
 // Arduino (C++) voorbeeld
 int ledPin = 13;
@@ -17,7 +17,9 @@ void loop() {
   delay(1000);
 }
 ```
+</div>
 
+<div class="code-python">
 ```python
 # MicroPython voorbeeld
 from machine import Pin
@@ -29,6 +31,7 @@ while True:
     led.value(0)  # LED uit
     time.sleep(1)
 ```
+</div>
 
 > **Let op:** HIGH (1) / LOW (0) betekent aan/uit (Boolean).
 

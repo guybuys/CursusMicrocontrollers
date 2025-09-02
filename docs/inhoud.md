@@ -1,6 +1,7 @@
 # Inhoudstabel
 
 1. [Introductie](introductie.md)
+2. [Componenten](componenten.md)
 2. [GPIO Output – dingen besturen](gpio_output.md)
 3. [GPIO Input – dingen meten](gpio_input.md)
 4. [Meer datatypes](datatypes.md)

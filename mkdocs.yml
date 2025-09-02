@@ -13,8 +13,8 @@ theme:
 nav:
   - Home: index.md
   - Inhoud: inhoud.md
-  - Componenten: componenten.md
   - Introductie: introductie.md
+  - Componenten: componenten.md
   - GPIO Output: gpio_output.md
   - GPIO Input: gpio_input.md
   - Datatypes: datatypes.md
@@ -30,3 +30,6 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.details
+  - pymdownx.copybutton
+extra_css:
+  - overrides.css
