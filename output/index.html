@@ -509,15 +509,30 @@
 
 <h1 id="output-dingen-aansturen">Output – Dingen aansturen</h1>
 <p>Output betekent dat de microcontroller iets aanstuurt of laat gebeuren. Dit kan bijvoorbeeld een LED, een motor, een buzzer of een display zijn.</p>
-<ul>
-<li>Je stuurt een signaal naar buiten.</li>
-<li>Voorbeelden: lamp aan/uit, geluid maken, tekst tonen.</li>
-</ul>
-<blockquote>
-<p>In de praktijk gebeurt output vaak via een GPIO-pin, maar het concept output is breder dan alleen GPIO.</p>
-</blockquote>
-<hr />
-<p>Lees verder op de pagina 'GPIO' hoe je dit met een microcontroller doet.</p>
+<p>We kunnen dit begrijpen door in te beelden dat er een SPDT schakelaar in de microcontroller zou zitten die het signaal verbind met de <strong>VCC</strong> (dit is de voedingsspanning, meestal 5V of 3,3V) ofwel met de <strong>GND</strong> (grond, ground of 0V).</p>
+<p><strong>Schema:</strong> 
+ <img alt="Schema Actief Hoog" src="../img/ac_output_ah.png" /></p>
+<p>In het bovenstaande voorbeeld zien we dat pin 3 aangesloten is aan een <strong>LED</strong> met een <strong>serie weerstand</strong>. De microcontroller (of het microcontroller bord) is ook aan gesloten aan een spanningsbron of voeding. De uitgang op pin 3 kan verbonden worden met ofwel <strong>VCC</strong> ofwel <strong>GND</strong>. Zoals het in het schema staat, is de uitgang op dit moment verbonden met <strong>VCC</strong> waardoor er stroom door de LED en serieweerstand loopt en de LED licht geeft. Het is mogelijk in het programma van de microcontroller om de output te verbinden met <strong>GND</strong>. Wanneer dat gebeurd, zal er geen stroom vloeien en gaat de LED uit.</p>
+<p>Om een uitgang, aangesloten op <em>ledPin</em> (in ons voorbeeld is <em>ledPin</em> gelijk aan 3), aan te zetten (of <em>"hoog"</em> te zetten), gebruiken we deze instructie in <strong>C++</strong>, de taal die <strong>Arduino</strong> gebruikt.</p>
+<p><div class="highlight"><pre><span></span><code><span class="c1">// cpp</span>
+<span class="n">digitalWrite</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w"> </span><span class="c1">// LED aan</span>
+</code></pre></div>
+We kunnen de uitgang ook uit zetten, dit doen we dan zo:</p>
+<p><div class="highlight"><pre><span></span><code><span class="c1">// cpp</span>
+<span class="n">digitalWrite</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span><span class="w"> </span><span class="c1">// LED uit</span>
+</code></pre></div>
+In <strong>MicroPython</strong> zou het er zo uit zien:
+<div class="highlight"><pre><span></span><code><span class="c1"># MicroPython</span>
+<span class="n">led</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="kc">True</span><span class="p">);</span> <span class="c1"># LED aan</span>
+</code></pre></div>
+En voor uit te schakelen:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># MicroPython</span>
+<span class="n">led</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="kc">False</span><span class="p">);</span> <span class="c1"># LED uit</span>
+</code></pre></div>
+<p>Het is ook mogelijk om de LED op een andere manier aan te sluiten:</p>
+<p><strong>Schema:</strong> 
+ <img alt="Schema Actief Laag" src="../img/ac_output_al.png" /></p>
+<p>Dit schema en de werking zijn nagenoeg hetzelfde maar de LED en de serieweerstand zijn aan <strong>VCC</strong> aangesloten in plaats van aan <strong>GND</strong>. Dit wil zeggen dat de LED nu zal licht geven wanneer de uitgang van de microcontroller met <strong>GND</strong> verbonden is en zal uit zijn wanneer hij met <strong>VCC</strong> verbonden is. Dit noemen we <strong>actief laag</strong> terwijl het eerste schema <strong>actief hoog</strong> genoemd wordt. Een 1 of een 0, HIGH of LOW, True of False hebben in beide schema's dus een andere uitwerking. Het is belangrijk om hiermee rekening te houden.</p>
 
 
 
