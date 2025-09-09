@@ -68,6 +68,12 @@ We gebruiken deze symbolen om schema's te tekenen, zodat we duidelijk kunnen mak
    **Tekening:** 
    ![fritzing tekening Arduino UNO R3 en BMP280](img\ac_no_schematic_instructables.png)
 
-Deze tekening komt van de instructables.com website [Bron: instructables.com](https://www.instructables.com/How-to-Use-the-Adafruit-BMP280-Sensor-Arduino-Tuto/) en toont hoe een BMP280 module die temperatuur en luchtdruk kan meten, via een breadbord aangesloten wordt aan een Arduino R3. Deze tekening geeft een beschrijving van de aansluitingen maar het is **geen schema**. De verschillende onderdelen worden grafisch voorgesteld en **niet** in een **symbool**. Dit werkt voor kleine, gemakkelijke schakelingen maar het werkt niet zo goed voor grotere of complexere circuits. Als we hetzelfde circuit schematisch willen voorstellen, kan het er bijvoord zo uit zien:
+Deze tekening komt van een website.
+ [Bron: instructables.com](https://www.instructables.com/How-to-Use-the-Adafruit-BMP280-Sensor-Arduino-Tuto/) 
+ Er wordt getoond hoe een BMP280 module, die temperatuur en luchtdruk kan meten, via een breadbord aangesloten wordt aan een Arduino R3. Deze tekening geeft een beschrijving van de aansluitingen maar het is **geen schema**. De verschillende onderdelen worden grafisch voorgesteld en **niet** met **symbolen**. Dit werkt meestal goed voor kleine, gemakkelijke schakelingen na te bouwen maar het werkt niet zo goed voor grotere of complexere circuits of om te begrijpen hoe de schakeling werkt. Als we hetzelfde circuit **schematisch** willen voorstellen, kan het er bijvoorbeeld zo uit zien:
+
  **Schema:** 
  ![Schema Arduino UNO R3 en BMP280](img\ac_schematic_like_instructables.png)
+
+ In tegenstelling met de tekening, zien we hier duidelijk dat SDA signaal van de microcontroller met SDI van de sensor verbonden wordt en het SCL signaal van de microcontroller met SCK van de sensor. Op dit moment weet je waarschijnlijk nog niet wat dat wil zeggen of waarom dat nuttig is maar wanneer je binnenkort meer weet over *seriële communicatie*, zal je het circuit veel beter begrijpen. Voorlopig moet je weten dat een tekening vooral bedoeld is om een circuit te kunnen nabouwen en een schema om het circuit te kunnen begrijpen **en** nabouwen.
+  
