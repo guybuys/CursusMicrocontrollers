@@ -34,4 +34,4 @@ Negatieve getallen zijn handig, bijvoorbeeld bij temperatuurmetingen.
 
 > Bijvoorbeeld: temperatuur = -5 °C
 
-![Plaats voor teller-schema](PLACEHOLDER_TELLER_SCHEMA)
+<!--![Plaats voor teller-schema](PLACEHOLDER_TELLER_SCHEMA)-->

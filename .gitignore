@@ -1,0 +1,14 @@
+# MkDocs build output
+site/
+
+# Python virtual environment
+.venv/
+
+# VS Code settings
+.vscode/
+
+# MacOS
+.DS_Store
+
+# Windows
+Thumbs.db

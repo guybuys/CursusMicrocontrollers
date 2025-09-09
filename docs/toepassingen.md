@@ -54,4 +54,4 @@ while True:
 - Reaction game met knop en LED
 - Toonhoogte veranderen met knop en buzzer
 
-![Plaats voor verkeerslicht-schema](PLACEHOLDER_VERKEERSLICHT_SCHEMA)
+<!--![Plaats voor verkeerslicht-schema](PLACEHOLDER_VERKEERSLICHT_SCHEMA)-->

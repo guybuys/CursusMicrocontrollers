@@ -17,6 +17,4 @@ Serial.println("Hallo!");
 print("Hallo!")
 ```
 
-> Later kun je uitbreiden met sensoren, displays en motoren!
-
-![Plaats voor uitbreidings-schema](PLACEHOLDER_UITBREIDING_SCHEMA)
+> Later kun je uitbreiden met vb sensoren, displays en motoren!
