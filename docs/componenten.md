@@ -65,7 +65,9 @@ Dit is het symbool van het microcontroller bord **Arduino UNO R3**. Zoals je kan
 
 We gebruiken deze symbolen om schema's te tekenen, zodat we duidelijk kunnen maken hoe de componenten aangesloten worden. Je vind heel veel informatie over microcontroller borden zoals de Arduino. Soms vind je een tekening zoals hieronder die duidelijk maken hoe een Arduino aan een ander bord of component aangesloten moet worden.
 
-   **Tekening:** ![fritzing tekening Arduino UNO R3 en BMP280](img\ac_no_schematic_instructables.png)
+   **Tekening:** 
+   ![fritzing tekening Arduino UNO R3 en BMP280](img\ac_no_schematic_instructables.png)
 
 Deze tekening komt van de instructables.com website [Bron: instructables.com](https://www.instructables.com/How-to-Use-the-Adafruit-BMP280-Sensor-Arduino-Tuto/) en toont hoe een BMP280 module die temperatuur en luchtdruk kan meten, via een breadbord aangesloten wordt aan een Arduino R3. Deze tekening geeft een beschrijving van de aansluitingen maar het is **geen schema**. De verschillende onderdelen worden grafisch voorgesteld en **niet** in een **symbool**. Dit werkt voor kleine, gemakkelijke schakelingen maar het werkt niet zo goed voor grotere of complexere circuits. Als we hetzelfde circuit schematisch willen voorstellen, kan het er bijvoord zo uit zien:
- **Schema:** ![Schema Arduino UNO R3 en BMP280](img\ac_schematic_like_instructables.png)
+ **Schema:** 
+ ![Schema Arduino UNO R3 en BMP280](img\ac_schematic_like_instructables.png)
