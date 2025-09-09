@@ -16,7 +16,7 @@
         <link rel="prev" href="../introductie/">
       
       
-        <link rel="next" href="../gpio_output/">
+        <link rel="next" href="../output/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -397,6 +397,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#microcontroller" class="md-nav__link">
+    <span class="md-ellipsis">
+      Microcontroller
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -412,12 +421,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../gpio_output/" class="md-nav__link">
+      <a href="../output/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    GPIO Output
+    Output
     
   </span>
   
@@ -434,12 +443,34 @@
   
   
     <li class="md-nav__item">
-      <a href="../gpio_input/" class="md-nav__link">
+      <a href="../input/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    GPIO Input
+    Input
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gpio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    GPIO
     
   </span>
   
@@ -617,6 +648,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#microcontroller" class="md-nav__link">
+    <span class="md-ellipsis">
+      Microcontroller
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -663,7 +703,19 @@ De serieweerstand voorkomt dat de LED kapot gaat door te veel stroom.
 <li><strong>Afbeelding:</strong> <img alt="SPDT switch" src="../img/SPDT_drawing.png" /></li>
 <li><strong>Symbool:</strong> <img alt="Symbool SPDT switch" src="../img/ac_spdt.png" /></li>
 </ul>
-<p>Met een SPDT (Single Pole Dual Throw) schakelaar of tuimelschakelaar, kan je kiezen of hoe "middelste" contact verbonden wordt. In het model op de foto, kan je zorgen dat het met geen van beiden contact maakt maar dit kan meestal niet. Het is ofwel verbonden met het ene, ofwel met het andere en daar zit slechts een zeer korte "dode tijd" tussen. Deze schakelaar komt later terug bij GPIO output.</p>
+<p>Met een SPDT (Single Pole Dual Throw) schakelaar of tuimelschakelaar, kan je kiezen of hoe "middelste" contact verbonden wordt. In het model op de foto, kan je zorgen dat het met geen van beiden contact maakt maar dit kan meestal niet. Het is ofwel verbonden met het ene, ofwel met het andere en daar zit slechts een zeer korte <em>"dode tijd"</em> tussen. Deze schakelaar komt later terug bij <strong>output</strong>.</p>
+<h2 id="microcontroller">Microcontroller</h2>
+<p><strong>Symbool:</strong> <img alt="Symbool ATmega328-p" src="../img/ac_ATmega328-p.png" /></p>
+<p>Dit is het symbool van de ATmega328-p. Deze microcontroller wordt ondermeer gebruikt op de <strong>Arduino UNO R3</strong>.</p>
+<p>Zoals je ziet, is het symbool eerder simpel, een rechthoek met veel aansluitingen. Dit is vaak het geval bij complexere componenten. Je zal merken dat <em>de grond</em> (GND of 0V) vaak onderaan staat en de <em>voedingsspanning</em> (VCC) in de regel bovenaan. Ook zullen <em>inputs</em> vaak links staan en <em>outputs</em> rechts. Hier komen we later nog terug, wanneer we beter weten wat <em>in- en outputs</em> zijn. De signaal namen staan in de rechthoek terwijl de pin nummers buiten de rechthoek, naast de pinnen genoteerd staan.</p>
+<p>## Microcontroller bord</p>
+<p><strong>Symbool:</strong> <img alt="Symbool Arduino UNO R3" src="../img/ac_arduino_uno_r3.png" /></p>
+<p>Dit is het symbool van het microcontroller bord <strong>Arduino UNO R3</strong>. Zoals je kan zien, lijkt het heel erg op een symbool van de microcontroller maar het is niet helemaal hetzelfde. Een <strong>microcontroller</strong> is een component terwijl er op een <strong>microcontroller bord</strong> meerdere componenten staan, waaronder de microcontroller zelf. Van deze extra componenten maken we abstractie (we tekenen ze niet). Enkel de pinnen waarmee we het bord verbinden, worden in het symbool getekend.</p>
+<p>## Schema's</p>
+<p>We gebruiken deze symbolen om schema's te tekenen, zodat we duidelijk kunnen maken hoe de componenten aangesloten worden. Je vind heel veel informatie over microcontroller borden zoals de Arduino. Soms vind je een tekening zoals hieronder die duidelijk maken hoe een Arduino aan een ander bord of component aangesloten moet worden.</p>
+<p><strong>Tekening:</strong> <img alt="fritzing tekening Arduino UNO R3 en BMP280" src="../img/ac_no_schematic_instructables.png" />
+Deze tekening komt van de instructables.com website (https://www.instructables.com/How-to-Use-the-Adafruit-BMP280-Sensor-Arduino-Tuto/) en toont hoe een BMP280 module die temperatuur en luchtdruk kan meten, via een breadbord aangesloten wordt aan een Arduino R3. Deze tekening geeft ook een beschrijving van de aansluitingen maar het is <strong>geen schema</strong>. De verschillende onderdelen worden grafisch voorgesteld en niet in een symbool. Dit werkt voor kleine, gemakkelijke schakelingen maar het werkt niet zo goed voor grotere of complexere circuits. Als we hetzelfde circuit schematisch willen voorstellen, kan het er bijvoord zo uit zien:
+ <strong>Schema:</strong> <img alt="Schema Arduino UNO R3 en BMP280" src="../img/ac_schematic_like_instructables.png" /></p>
 
 
 

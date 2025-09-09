@@ -13,7 +13,7 @@
       
       
       
-        <link rel="prev" href="../gpio_output/">
+        <link rel="prev" href="../input/">
       
       
         <link rel="next" href="../datatypes/">
@@ -24,7 +24,7 @@
     
     
       
-        <title>GPIO Input - Cursus Microcontrollers</title>
+        <title>GPIO - Cursus Microcontrollers</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#gpio-input-dingen-meten" class="md-skip">
+        <a href="#gpio-general-purpose-inputoutput" class="md-skip">
           Skip to content
         </a>
       
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              GPIO Input
+              GPIO
             
           </span>
         </div>
@@ -316,12 +316,34 @@
   
   
     <li class="md-nav__item">
-      <a href="../gpio_output/" class="md-nav__link">
+      <a href="../output/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    GPIO Output
+    Output
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../input/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Input
     
   </span>
   
@@ -352,7 +374,7 @@
   
   
   <span class="md-ellipsis">
-    GPIO Input
+    GPIO
     
   </span>
   
@@ -365,7 +387,7 @@
   
   
   <span class="md-ellipsis">
-    GPIO Input
+    GPIO
     
   </span>
   
@@ -388,9 +410,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#knop-indrukken" class="md-nav__link">
+  <a href="#voorbeeld-led-aansturen-output" class="md-nav__link">
     <span class="md-ellipsis">
-      Knop indrukken
+      Voorbeeld: LED aansturen (output)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#voorbeeld-knop-uitlezen-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      Voorbeeld: Knop uitlezen (input)
     </span>
   </a>
   
@@ -519,9 +550,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#knop-indrukken" class="md-nav__link">
+  <a href="#voorbeeld-led-aansturen-output" class="md-nav__link">
     <span class="md-ellipsis">
-      Knop indrukken
+      Voorbeeld: LED aansturen (output)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#voorbeeld-knop-uitlezen-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      Voorbeeld: Knop uitlezen (input)
     </span>
   </a>
   
@@ -543,9 +583,37 @@
 
 
 
-<h1 id="gpio-input-dingen-meten">GPIO Input – dingen meten</h1>
-<p>GPIO als ingang: hiermee kun je bijvoorbeeld een knop uitlezen.</p>
-<h2 id="knop-indrukken">Knop indrukken</h2>
+<h1 id="gpio-general-purpose-inputoutput">GPIO – General Purpose Input/Output</h1>
+<p>GPIO staat voor General Purpose Input/Output. Dit zijn de pinnen op een microcontroller die je kunt gebruiken als input (iets meten) of output (iets aansturen).</p>
+<ul>
+<li>GPIO als output: bijvoorbeeld een LED aan/uit zetten.</li>
+<li>GPIO als input: bijvoorbeeld een knop uitlezen.</li>
+</ul>
+<p>GPIO is de brug tussen de concepten input/output en de echte hardware.</p>
+<h2 id="voorbeeld-led-aansturen-output">Voorbeeld: LED aansturen (output)</h2>
+<div class="highlight"><pre><span></span><code><span class="c1">// Arduino (C++) voorbeeld</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">ledPin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">13</span><span class="p">;</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w"> </span><span class="c1">// LED aan</span>
+<span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+<span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span><span class="w">  </span><span class="c1">// LED uit</span>
+<span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># MicroPython voorbeeld</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">machine</span><span class="w"> </span><span class="kn">import</span> <span class="n">Pin</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+<span class="n">led</span> <span class="o">=</span> <span class="n">Pin</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">OUT</span><span class="p">)</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">led</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># LED aan</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">led</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>  <span class="c1"># LED uit</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="voorbeeld-knop-uitlezen-input">Voorbeeld: Knop uitlezen (input)</h2>
 <div class="highlight"><pre><span></span><code><span class="c1">// Arduino (C++) voorbeeld</span>
 <span class="kt">int</span><span class="w"> </span><span class="n">buttonPin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
 <span class="kt">int</span><span class="w"> </span><span class="n">ledPin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">13</span><span class="p">;</span>
@@ -572,9 +640,8 @@
         <span class="n">led</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 </code></pre></div>
 <blockquote>
-<p><strong>Debouncing:</strong> Soms "stuitert" een knop, daar kun je later meer over leren.</p>
+<p>Meer weten? Bekijk de pagina's over input en output voor de concepten achter deze voorbeelden.</p>
 </blockquote>
-<p><img alt="Plaats voor schema knop" src="PLACEHOLDER_KNOP_SCHEMA" /></p>
 
 
 

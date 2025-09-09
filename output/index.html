@@ -13,8 +13,10 @@
       
       
       
-        <link rel="prev" href="../toepassingen/">
+        <link rel="prev" href="../componenten/">
       
+      
+        <link rel="next" href="../input/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -22,7 +24,7 @@
     
     
       
-        <title>Vooruitblik - Cursus Microcontrollers</title>
+        <title>Output - Cursus Microcontrollers</title>
       
     
     
@@ -76,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#vooruitblik" class="md-skip">
+        <a href="#output-dingen-aansturen" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Vooruitblik
+              Output
             
           </span>
         </div>
@@ -311,10 +313,19 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../output/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -325,6 +336,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -443,32 +455,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Vooruitblik
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../vooruitblik/" class="md-nav__link">
         
   
   
@@ -479,44 +469,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#andere-datatypes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Andere datatypes
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#serial-communicatie" class="md-nav__link">
-    <span class="md-ellipsis">
-      Serial communicatie
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -541,32 +493,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#andere-datatypes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Andere datatypes
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#serial-communicatie" class="md-nav__link">
-    <span class="md-ellipsis">
-      Serial communicatie
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -581,24 +507,17 @@
 
 
 
-<h1 id="vooruitblik">Vooruitblik</h1>
-<h2 id="andere-datatypes">Andere datatypes</h2>
+<h1 id="output-dingen-aansturen">Output – Dingen aansturen</h1>
+<p>Output betekent dat de microcontroller iets aanstuurt of laat gebeuren. Dit kan bijvoorbeeld een LED, een motor, een buzzer of een display zijn.</p>
 <ul>
-<li>float (kommagetallen)</li>
-<li>string (tekst)</li>
+<li>Je stuurt een signaal naar buiten.</li>
+<li>Voorbeelden: lamp aan/uit, geluid maken, tekst tonen.</li>
 </ul>
-<h2 id="serial-communicatie">Serial communicatie</h2>
-<p>Met de computer praten via de seriële poort.</p>
-<div class="highlight"><pre><span></span><code><span class="c1">// Arduino (C++) voorbeeld</span>
-<span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Hallo!&quot;</span><span class="p">);</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="c1"># MicroPython voorbeeld</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hallo!&quot;</span><span class="p">)</span>
-</code></pre></div>
 <blockquote>
-<p>Later kun je uitbreiden met sensoren, displays en motoren!</p>
+<p>In de praktijk gebeurt output vaak via een GPIO-pin, maar het concept output is breder dan alleen GPIO.</p>
 </blockquote>
-<p><img alt="Plaats voor uitbreidings-schema" src="PLACEHOLDER_UITBREIDING_SCHEMA" /></p>
+<hr />
+<p>Lees verder op de pagina 'GPIO' hoe je dit met een microcontroller doet.</p>
 
 
 
