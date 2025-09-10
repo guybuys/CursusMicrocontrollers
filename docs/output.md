@@ -60,6 +60,7 @@ Het is ook mogelijk om de LED (of iets anders) op een andere manier aan te sluit
  Dit schema en de werking zijn nagenoeg hetzelfde maar de LED en de serieweerstand zijn aan **VCC** aangesloten in plaats van aan **GND**. Dit wil zeggen dat de LED nu zal licht geven wanneer de uitgang van de microcontroller met **GND** verbonden is en zal uit zijn wanneer hij met **VCC** verbonden is.
 
  Nu moeten we in de code (**C++** of **MicroPython**) de uitgang dus ***laag*** zetten om actief te zijn. Dit gebeurd met dezelfde code als hierboven om de uitgang *laag* te zetten:
+ 
 
  ```cpp
 // cpp
