@@ -28,6 +28,7 @@ led.value(1); # Uitgang hoog of LED aan
 
 We kunnen ook de LED uit zetten, zoals aangegeven in dit **schema:**
 ![Schema Actief Hoog Uit](img/ac_output_ah_off.png)
+
 Er kan nu geen stroom van **+** naar **-** lopen. In de *code* doen we dit zo:
 ```cpp
 // cpp
