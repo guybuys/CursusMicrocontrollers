@@ -25,7 +25,7 @@ Bijvoorbeeld: een wasmachine besturen, lampen automatisch schakelen of een robot
 
 Er zijn vele verschillende mogelijkheden om microtrollers te programmeren. Wij gaan ons beperken tot **C++** en **python**.
 
-Alle **Arduino** borden zijn te programmeren in **C++**. Sommige (de meer krachtige) kunnen ook in **MicroPython** geprogrammeerd worden. Dit is eigenlijk een *light* versie van **python** met enkele bibliotheken die speciaal bedoeld zijn voor microcontrollers. Doorheen de verdere cursus gaan we steeds zowel de code in **C++** als **MicroPython** bespreken. Dit gebeurd in *"code blokken"* zoals hier:
+Alle **Arduino** borden zijn te programmeren in **C++**. Sommige (de meer krachtige) kunnen ook in **MicroPython** geprogrammeerd worden. Dit is eigenlijk een *light* versie van **python** met enkele bibliotheken die speciaal bedoeld zijn voor microcontrollers. Doorheen de verdere cursus gaan we steeds zowel de code in **C++** als **MicroPython** bespreken. Dit gebeurt in *"code blokken"* zoals hier:
 
 ```cpp
 // cpp

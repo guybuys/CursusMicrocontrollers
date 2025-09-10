@@ -2,7 +2,7 @@
 
 Output betekent dat de microcontroller iets aanstuurt of laat gebeuren. Dit kan bijvoorbeeld een LED, een motor, een buzzer of een display zijn.
 
-We kunnen dit *voorstellen* door te veronderstellen dat er een SPDT schakelaar in de microcontroller zou zitten die het signaal verbind met de **VCC** (dit is de voedingsspanning, meestal 5V of 3,3V) of met de **GND** (grond, ground of 0V).
+We kunnen dit *voorstellen* door te veronderstellen dat er een SPDT schakelaar in de microcontroller zou zitten die het signaal verbindt met de **VCC** (dit is de voedingsspanning, meestal 5V of 3,3V) of met de **GND** (grond, ground of 0V).
 
 **Schema:**
 ![Schema Actief Hoog Aan](img/ac_output_ah_on.png)
@@ -15,7 +15,7 @@ We bekijken nu hoe we, in **C++**, de taal die **Arduino** gebruikt, de uitgang 
 // cpp
 digitalWrite(3, HIGH); // Pin 3 hoog, LED aan
 ```
-In **MicroPython** ziet het er net iets anders uit. Daar moeten we eerst laten weten dat *led* aan pin 3 aangesloten is. Hoe dat moet, volgt later nog.
+In **MicroPython** ziet het er net iets anders uit. Daar moeten we eerst laten weten dat *led* aan pin 3 aangesloten is. *Hoe* dat moet, volgt later nog.
 ```python
 # MicroPython
 led.value(True); # Uitgang hoog of LED aan
