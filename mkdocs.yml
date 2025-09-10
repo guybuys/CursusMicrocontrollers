@@ -12,7 +12,7 @@ theme:
       accent: orange
 nav:
   - Home: index.md
-  - Inhoud: inhoud.md
+  - Inhoudstabel: inhoud.md
   - Introductie: introductie.md
   - Componenten: componenten.md
   - Output: output.md
