@@ -509,7 +509,7 @@
 
 <h1 id="output-dingen-aansturen">Output – Dingen aansturen</h1>
 <p>Output betekent dat de microcontroller iets aanstuurt of laat gebeuren. Dit kan bijvoorbeeld een LED, een motor, een buzzer of een display zijn.</p>
-<p>We kunnen dit <em>voorstellen</em> door te veronderstellen dat er een SPDT schakelaar in de microcontroller zou zitten die het signaal verbind met de <strong>VCC</strong> (dit is de voedingsspanning, meestal 5V of 3,3V) of met de <strong>GND</strong> (grond, ground of 0V).</p>
+<p>We kunnen dit <em>voorstellen</em> door te veronderstellen dat er een SPDT schakelaar in de microcontroller zou zitten die het signaal verbindt met de <strong>VCC</strong> (dit is de voedingsspanning, meestal 5V of 3,3V) of met de <strong>GND</strong> (grond, ground of 0V).</p>
 <p><strong>Schema:</strong>
 <img alt="Schema Actief Hoog Aan" src="../img/ac_output_ah_on.png" /></p>
 <p>In het bovenstaande voorbeeld zien we dat pin 3 aangesloten is aan een <strong>LED</strong> met een <strong>serie weerstand</strong>. De microcontroller (of het microcontroller bord) is ook aangesloten aan een spanningsbron of voeding. De uitgang op <em>pin 3</em> kan verbonden worden met ofwel <strong>VCC</strong> ofwel <strong>GND</strong>. Zoals het in het schema staat, is de uitgang op dit moment verbonden met <strong>VCC</strong> waardoor er stroom door de LED en serieweerstand loopt en de LED licht geeft.</p>
@@ -517,7 +517,7 @@
 <p><div class="highlight"><pre><span></span><code><span class="c1">// cpp</span>
 <span class="n">digitalWrite</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w"> </span><span class="c1">// Pin 3 hoog, LED aan</span>
 </code></pre></div>
-In <strong>MicroPython</strong> ziet het er net iets anders uit. Daar moeten we eerst laten weten dat <em>led</em> aan pin 3 aangesloten is. Hoe dat moet, volgt later nog.
+In <strong>MicroPython</strong> ziet het er net iets anders uit. Daar moeten we eerst laten weten dat <em>led</em> aan pin 3 aangesloten is. <em>Hoe</em> dat moet, volgt later nog.
 <div class="highlight"><pre><span></span><code><span class="c1"># MicroPython</span>
 <span class="n">led</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="kc">True</span><span class="p">);</span> <span class="c1"># Uitgang hoog of LED aan</span>
 </code></pre></div>
