@@ -531,50 +531,28 @@ Er kan nu geen stroom van <strong>+</strong> naar <strong>-</strong> lopen. In d
 <div class="highlight"><pre><span></span><code><span class="c1">// cpp</span>
 <span class="n">digitalWrite</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span><span class="w"> </span><span class="c1">// Pin 3 laag, LED uit</span>
 </code></pre></div>
-<p>In <strong>MicroPython</strong> gaat het zo:</p>
-<p><div class="highlight"><pre><span></span><code><span class="c1"># MicroPython</span>
+<p>In <strong>MicroPython</strong> gaat het zo:
+<div class="highlight"><pre><span></span><code><span class="c1"># MicroPython</span>
 <span class="n">led</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="kc">False</span><span class="p">);</span> <span class="c1"># Uitgang laag of LED uit</span>
 </code></pre></div>
-of</p>
-<p><div class="highlight"><pre><span></span><code><span class="c1"># MicroPython</span>
+of
+<div class="highlight"><pre><span></span><code><span class="c1"># MicroPython</span>
 <span class="n">led</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span> <span class="c1"># Uitgang laag of LED uit</span>
-</code></pre></div>
-In bovenstaande voorbeeld gaat de LED aan als de uitgang <strong><em>hoog</em></strong> staat en uit als de uitgang <strong><em>laag</em></strong> staat. Dit noemen we een <strong>actief hoog</strong> signaal.</p>
-<hr />
-<p>Het is ook mogelijk om de LED (of iets anders) op een andere manier aan te sluiten zodat deze licht geeft (of actief is) wanneer de uitgang <strong><em>laag</em></strong> staat. Dit noemen we een <strong>actief laag</strong> signaal.</p>
-<p><strong>Schema:</strong> 
- <img alt="Schema Actief Laag Aan" src="../img/ac_output_al_on.png" /></p>
-<p>Dit schema en de werking zijn nagenoeg hetzelfde maar de LED en de serieweerstand zijn aan <strong>VCC</strong> aangesloten in plaats van aan <strong>GND</strong>. Dit wil zeggen dat de LED nu zal licht geven wanneer de uitgang van de microcontroller met <strong>GND</strong> verbonden is en zal uit zijn wanneer hij met <strong>VCC</strong> verbonden is.</p>
-<p>Nu moeten we in de code (<strong>C++</strong> of <strong>MicroPython</strong>) de uitgang dus <strong><em>laag</em></strong> zetten om actief te zijn. Dit gebeurd met dezelfde code als hierboven om de uitgang <em>laag</em> te zetten:</p>
-<p>```cpp
-// cpp
-digitalWrite(3, LOW); // Pin 3 laag, LED aan
-<div class="highlight"><pre><span></span><code>In **MicroPython** gaat het zo:
-
-```python
-# MicroPython
-led.value(False); # Uitgang laag of LED aan
-</code></pre></div>
-of</p>
-<p><div class="highlight"><pre><span></span><code><span class="c1"># MicroPython</span>
-<span class="n">led</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span> <span class="c1"># Uitgang laag of LED aan</span>
 </code></pre></div>
 Om de LED uit te zetten, moeten we in dit geval de uitgang <strong><em>hoog</em></strong> zetten:</p>
 <p><strong>Schema:</strong>
-<img alt="Schema Actief Laag Uit" src="../img/ac_output_al_off.png" /></p>
-<p>```cpp
-// cpp
-digitalWrite(3, HIGH); // Pin 3 hoog, LED uit
-<div class="highlight"><pre><span></span><code>In **MicroPython** gaat het zo:
-
-```python
-# MicroPython
-led.value(True); # Uitgang hoog of LED uit
-</code></pre></div>
-of</p>
+<img alt="Schema Actief Laag Uit" src="../img/ac_output_al_off.png" />
+<div class="highlight"><pre><span></span><code><span class="c1">// cpp</span>
+<span class="n">digitalWrite</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w"> </span><span class="c1">// Pin 3 hoog, LED uit</span>
+</code></pre></div></p>
+<p>In <strong>MicroPython</strong> gaat het zo:
 <div class="highlight"><pre><span></span><code><span class="c1"># MicroPython</span>
-<span class="n">led</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span> <span class="c1"># Uitgang hoog of LED uit</span>
+<span class="n">led</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="kc">True</span><span class="p">);</span> <span class="c1"># Uitgang hoog of LED uit</span>
 </code></pre></div>
+of
+<div class="highlight"><pre><span></span><code><span class="c1"># MicroPython</span>
+<span class="n">led</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span> <span class="c1"># Uitgang hoog of LED uit</span>
+</code></pre></div></p>
 <p>Een <strong>1</strong> of een <strong>0</strong>, <strong>HIGH</strong> of <strong>LOW</strong>, <strong>True</strong> of <strong>False</strong> hebben in beide schema's dus een andere uitwerking. Het is belangrijk om hiermee rekening te houden!</p>
 
 
