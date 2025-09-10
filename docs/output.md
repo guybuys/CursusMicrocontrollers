@@ -37,69 +37,33 @@ digitalWrite(3, LOW); // Pin 3 laag, LED uit
 ```
 
 In **MicroPython** gaat het zo:
-
 ```python
 # MicroPython
 led.value(False); # Uitgang laag of LED uit
 ```
 of
-
 ```python
 # MicroPython
 led.value(0); # Uitgang laag of LED uit
 ```
-In bovenstaande voorbeeld gaat de LED aan als de uitgang ***hoog*** staat en uit als de uitgang ***laag*** staat. Dit noemen we een **actief hoog** signaal.
-
----
-
-Het is ook mogelijk om de LED (of iets anders) op een andere manier aan te sluiten zodat deze licht geeft (of actief is) wanneer de uitgang ***laag*** staat. Dit noemen we een **actief laag** signaal.
-
- **Schema:** 
- ![Schema Actief Laag Aan](img\ac_output_al_on.png)
-
- Dit schema en de werking zijn nagenoeg hetzelfde maar de LED en de serieweerstand zijn aan **VCC** aangesloten in plaats van aan **GND**. Dit wil zeggen dat de LED nu zal licht geven wanneer de uitgang van de microcontroller met **GND** verbonden is en zal uit zijn wanneer hij met **VCC** verbonden is.
-
- Nu moeten we in de code (**C++** of **MicroPython**) de uitgang dus ***laag*** zetten om actief te zijn. Dit gebeurd met dezelfde code als hierboven om de uitgang *laag* te zetten:
- 
-
- ```cpp
-// cpp
-digitalWrite(3, LOW); // Pin 3 laag, LED aan
-```
-
-In **MicroPython** gaat het zo:
-
-```python
-# MicroPython
-led.value(False); # Uitgang laag of LED aan
-```
-of
-
-```python
-# MicroPython
-led.value(0); # Uitgang laag of LED aan
-``` 
 Om de LED uit te zetten, moeten we in dit geval de uitgang ***hoog*** zetten:
 
- **Schema:**
+**Schema:**
 ![Schema Actief Laag Uit](img\ac_output_al_off.png)
-
- ```cpp
+```cpp
 // cpp
 digitalWrite(3, HIGH); // Pin 3 hoog, LED uit
 ```
 
 In **MicroPython** gaat het zo:
-
 ```python
 # MicroPython
 led.value(True); # Uitgang hoog of LED uit
 ```
 of
-
 ```python
 # MicroPython
-led.value(0); # Uitgang hoog of LED uit
+led.value(1); # Uitgang hoog of LED uit
 ``` 
 
 
