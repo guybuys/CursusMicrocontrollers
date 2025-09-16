@@ -41,6 +41,7 @@ In C++ moet je het datatype van een variabele altijd **expliciet** vermelden.
 Bij een boolean betekent **0** hetzelfde als `false` en **1** hetzelfde als `true`.
 
 ```cpp
+// cpp
 bool ledAan = true;   // LED aan
 bool knopIngedrukt = false; // Knop niet ingedrukt
 ```
@@ -49,10 +50,11 @@ bool knopIngedrukt = false; // Knop niet ingedrukt
 ### In MicroPython
 In MicroPython hoef je het datatype van een variabele **niet expliciet** te vermelden. Python kiest zelf het type op basis van de waarde.
 
-Toch is het belangrijk om zelf goed te weten welk type je gebruikt.  
+Toch is het **heel belangrijk** om zelf goed te weten welk type je gebruikt.  
 Ook hier geldt: **0** is `False` en **1** is `True`. Let op: in Python schrijf je *True* en *False* altijd met een **hoofdletter**!
 
 ```python
+# MicroPython
 led_aan = True      # LED aan
 knop_ingedrukt = False  # Knop niet ingedrukt
 ```
