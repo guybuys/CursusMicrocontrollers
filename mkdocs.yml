@@ -12,13 +12,14 @@ theme:
       accent: orange
 nav:
   - Home: index.md
-  - Inhoudstabel: inhoud.md
+  - Inhoud: inhoud.md
   - Introductie: introductie.md
   - Componenten: componenten.md
-  - Output: output.md
-  - Input: input.md
-  - GPIO: gpio.md
-  - Datatypes: datatypes.md
+  - Bit en Boolean – de kleinste eenheid: bit_boolean.md
+  - Output – dingen aansturen: output.md
+  - Input – dingen meten: input.md
+  - GPIO – Input/Output in de praktijk: gpio.md
+  - Meer datatypes: datatypes.md
   - Analoge signalen en PWM: analoog_pwm.md
   - Samenspel en toepassingen: toepassingen.md
   - Vooruitblik: vooruitblik.md
