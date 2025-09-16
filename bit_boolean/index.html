@@ -13,8 +13,10 @@
       
       
       
-        <link rel="prev" href="../toepassingen/">
+        <link rel="prev" href="../componenten/">
       
+      
+        <link rel="next" href="../output/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -22,7 +24,7 @@
     
     
       
-        <title>Vooruitblik - Cursus Microcontrollers</title>
+        <title>Bit en Boolean – de kleinste eenheid - Cursus Microcontrollers</title>
       
     
     
@@ -76,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#vooruitblik" class="md-skip">
+        <a href="#bit-en-boolean-de-kleinste-eenheid" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Vooruitblik
+              Bit en Boolean – de kleinste eenheid
             
           </span>
         </div>
@@ -311,10 +313,32 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../bit_boolean/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Bit en Boolean – de kleinste eenheid
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -325,6 +349,104 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#wat-is-een-bit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wat is een bit?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wat-is-een-variabele" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wat is een variabele?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wat-zijn-datatypes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wat zijn datatypes?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#boolean-in-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Boolean in code
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Boolean in code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#in-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      In C++
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#in-micropython" class="md-nav__link">
+    <span class="md-ellipsis">
+      In MicroPython
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#waar-kom-je-bits-en-booleans-tegen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Waar kom je bits en booleans tegen?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extra-naamgeving-van-variabelen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extra: Naamgeving van variabelen
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -465,32 +587,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Vooruitblik
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../vooruitblik/" class="md-nav__link">
         
   
   
@@ -501,44 +601,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#andere-datatypes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Andere datatypes
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#serial-communicatie" class="md-nav__link">
-    <span class="md-ellipsis">
-      Serial communicatie
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -570,18 +632,78 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#andere-datatypes" class="md-nav__link">
+  <a href="#wat-is-een-bit" class="md-nav__link">
     <span class="md-ellipsis">
-      Andere datatypes
+      Wat is een bit?
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#serial-communicatie" class="md-nav__link">
+  <a href="#wat-is-een-variabele" class="md-nav__link">
     <span class="md-ellipsis">
-      Serial communicatie
+      Wat is een variabele?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wat-zijn-datatypes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wat zijn datatypes?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#boolean-in-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Boolean in code
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Boolean in code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#in-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      In C++
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#in-micropython" class="md-nav__link">
+    <span class="md-ellipsis">
+      In MicroPython
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#waar-kom-je-bits-en-booleans-tegen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Waar kom je bits en booleans tegen?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extra-naamgeving-van-variabelen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extra: Naamgeving van variabelen
     </span>
   </a>
   
@@ -603,22 +725,82 @@
 
 
 
-<h1 id="vooruitblik">Vooruitblik</h1>
-<h2 id="andere-datatypes">Andere datatypes</h2>
+<h1 id="bit-en-boolean-de-kleinste-eenheid">Bit en Boolean – de kleinste eenheid</h1>
+<h2 id="wat-is-een-bit">Wat is een bit?</h2>
+<p>Een <strong>bit</strong> is de kleinste eenheid van informatie in een computer.<br />
+Een bit kan maar 2 waarden hebben: alleen de waarde <strong>0</strong> of <strong>1</strong>. </p>
+<p>Deze 2 waarden kunnen, afhankelijk van de context, anders genoemd worden, zo kan een <strong>0</strong> ook <em>uit, laag</em> of <em>onwaar</em> genoemd worden en een <strong>1</strong> op zijn beurt <em>aan, hoog</em> of <em>waar</em>.</p>
+<h2 id="wat-is-een-variabele">Wat is een variabele?</h2>
+<p>Een <strong>variabele</strong> is een naam voor een stukje geheugen in de computer waar je informatie in kunt opslaan.  </p>
+<p>Je kunt een variabele zien als een doosje met een label erop: je stopt er een waarde in, en je kunt die waarde later weer gebruiken of veranderen. Door het gebruik van variabelen, kunnen we krachtige en leesbare programma's maken.</p>
+<p>Een variabele heeft altijd een <strong>naam</strong> en een <strong>datatype</strong>.</p>
+<blockquote>
+<p>Met variabelen kun je informatie onthouden met de naam van de <em>variabele</em> als <code>label</code>. Bijvoorbeeld: <code>spanning = 230</code> waarbij we naar de waarde <em>230</em> kunnen refereren als <em>spanning</em>.</p>
+</blockquote>
+<h2 id="wat-zijn-datatypes">Wat zijn datatypes?</h2>
+<p>Een <strong>datatype</strong> bepaalt welk soort informatie een <em>variabele</em> kan opslaan in een programma.</p>
 <ul>
-<li>float (kommagetallen)</li>
-<li>string (tekst)</li>
+<li>Voor een bit (waar/onwaar) gebruik je het datatype <strong>boolean</strong>.</li>
+<li>Andere datatypes, die we later nog uitgebreid gaan bespreken, bestaan uit meerdere bits. Bijvoorbeeld:</li>
+<li><strong>integer</strong>: een <strong><em>geheel getal</em></strong> of een getal zonder decimalen (meestal 8, 16 of 32 bits)</li>
+<li><strong>float</strong>: een  <strong><em>kommagetal</em></strong> of getal met decimalen</li>
+<li><strong>string</strong>: een stukje tekst</li>
 </ul>
-<h2 id="serial-communicatie">Serial communicatie</h2>
-<p>Met de computer praten via de seriële poort.</p>
-<div class="highlight"><pre><span></span><code><span class="c1">// Arduino (C++) voorbeeld</span>
-<span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Hallo!&quot;</span><span class="p">);</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="c1"># MicroPython voorbeeld</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hallo!&quot;</span><span class="p">)</span>
+<p>Hoe meer bits een datatype heeft, hoe meer verschillende waarden je ermee kunt opslaan.  </p>
+<p>Een boolean kan maar twee waarden hebben (<strong>0</strong> of <strong>1</strong>), maar een <em>unsigned integer</em> (geheel getal zonder teken) van <strong>8 bits</strong> kan bijvoorbeeld waarden van <strong>0</strong> tot <strong>255</strong> bevatten.</p>
+<blockquote>
+<p>Het juiste <strong><em>datatype</em></strong> kiezen is belangrijk om je programma goed te laten werken!</p>
+</blockquote>
+<h2 id="boolean-in-code">Boolean in code</h2>
+<p>In programmeertalen gebruik je het datatype <strong>boolean</strong> om met waar/onwaar te werken.</p>
+<h3 id="in-c">In C++</h3>
+<p>In C++ moet je het datatype van een variabele altijd <strong>expliciet</strong> vermelden. </p>
+<p>Bij een boolean betekent <strong>0</strong> hetzelfde als <code>false</code> en <strong>1</strong> hetzelfde als <code>true</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="kt">bool</span><span class="w"> </span><span class="n">ledAan</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w">   </span><span class="c1">// LED aan</span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">knopIngedrukt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"> </span><span class="c1">// Knop niet ingedrukt</span>
 </code></pre></div>
 <blockquote>
-<p>Later kun je uitbreiden met vb sensoren, displays en motoren!</p>
+<p>In het bovenstaande voorbeeld, hebben we 2 variabelen gemaakt: <code>ledAan</code> en <code>knopIngedrukt</code>. Ze zijn van het <em>type</em> <strong>bool</strong> (boolean) en hebben de respectievelijke <em>waarde</em> <code>true</code> en <code>false</code>.</p>
+</blockquote>
+<h3 id="in-micropython">In MicroPython</h3>
+<p>In MicroPython hoef je het datatype van een variabele <strong>niet expliciet</strong> te vermelden. Python kiest zelf het type op basis van de waarde.</p>
+<p>Toch is het belangrijk om zelf goed te weten welk type je gebruikt.<br />
+Ook hier geldt: <strong>0</strong> is <code>False</code> en <strong>1</strong> is <code>True</code>. Let op: in Python schrijf je <em>True</em> en <em>False</em> altijd met een <strong>hoofdletter</strong>!</p>
+<div class="highlight"><pre><span></span><code><span class="n">led_aan</span> <span class="o">=</span> <span class="kc">True</span>      <span class="c1"># LED aan</span>
+<span class="n">knop_ingedrukt</span> <span class="o">=</span> <span class="kc">False</span>  <span class="c1"># Knop niet ingedrukt</span>
+</code></pre></div>
+<blockquote>
+<p>In het bovenstaande voorbeeld, hebben we 2 variabelen gemaakt: <code>led_aan</code> en <code>knop_ingedrukt</code>. We kunnen enkel aan de waarde zien dat ze van het <em>type</em> <strong>boolean</strong>  zijn: ze hebben namelijk de respectievelijke <em>waarde</em> <code>True</code> en <code>False</code>.</p>
+</blockquote>
+<h2 id="waar-kom-je-bits-en-booleans-tegen">Waar kom je bits en booleans tegen?</h2>
+<ul>
+<li>Bij het aansturen van uitgangen (LED aan/uit)</li>
+<li>Bij het uitlezen van ingangen (knop ingedrukt of niet)</li>
+<li>In logische beslissingen (if-statements)</li>
+</ul>
+<blockquote>
+<p>Een boolean is dus een handige manier om met <em>ja/nee</em>-vragen in je programma te werken!</p>
+</blockquote>
+<hr />
+<h2 id="extra-naamgeving-van-variabelen">Extra: Naamgeving van variabelen</h2>
+<p>Probeer altijd een naam te kiezen die <strong>duidelijk</strong> maakt wat de variabele voorstelt.</p>
+<p>Bij het kiezen van een <em>variabelenaam</em> is het handig om een duidelijke <em>conventie</em> te volgen.<br />
+Dit maakt je code beter leesbaar en begrijpelijk voor anderen (en jezelf!).</p>
+<ul>
+<li>
+<p><strong>In C++</strong> gebruiken programmeurs vaak de <strong>camelCase</strong>-notatie.<br />
+  Hierbij begint de naam met een kleine letter en elk nieuw woord krijgt een hoofdletter.
+  Bijvoorbeeld: <code>ledAan</code>, <code>knopIngedrukt</code></p>
+</li>
+<li>
+<p><strong>In MicroPython</strong> (en Python in het algemeen) wordt meestal de <strong>snake_case</strong>-notatie gebruikt.<br />
+  Hierbij worden woorden gescheiden door een <em>underscore</em> (_), alles in kleine letters.
+  Bijvoorbeeld: <code>led_aan</code>, <code>knop_ingedrukt</code></p>
+</li>
+</ul>
+<blockquote>
+<p>Het is <strong>niet verplicht</strong>, maar het volgen van deze <em>conventies</em> maakt je code <strong>overzichtelijker</strong>! 
+Het volgen van conventies maakt je code overzichtelijker en wordt vaak gewaardeerd door docenten en programmeurs.</p>
 </blockquote>
 
 
