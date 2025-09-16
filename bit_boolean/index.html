@@ -756,7 +756,8 @@ Een bit kan maar 2 waarden hebben: alleen de waarde <strong>0</strong> of <stron
 <h3 id="in-c">In C++</h3>
 <p>In C++ moet je het datatype van een variabele altijd <strong>expliciet</strong> vermelden. </p>
 <p>Bij een boolean betekent <strong>0</strong> hetzelfde als <code>false</code> en <strong>1</strong> hetzelfde als <code>true</code>.</p>
-<div class="highlight"><pre><span></span><code><span class="kt">bool</span><span class="w"> </span><span class="n">ledAan</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w">   </span><span class="c1">// LED aan</span>
+<div class="highlight"><pre><span></span><code><span class="c1">// cpp</span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">ledAan</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w">   </span><span class="c1">// LED aan</span>
 <span class="kt">bool</span><span class="w"> </span><span class="n">knopIngedrukt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"> </span><span class="c1">// Knop niet ingedrukt</span>
 </code></pre></div>
 <blockquote>
@@ -764,9 +765,10 @@ Een bit kan maar 2 waarden hebben: alleen de waarde <strong>0</strong> of <stron
 </blockquote>
 <h3 id="in-micropython">In MicroPython</h3>
 <p>In MicroPython hoef je het datatype van een variabele <strong>niet expliciet</strong> te vermelden. Python kiest zelf het type op basis van de waarde.</p>
-<p>Toch is het belangrijk om zelf goed te weten welk type je gebruikt.<br />
+<p>Toch is het <strong>heel belangrijk</strong> om zelf goed te weten welk type je gebruikt.<br />
 Ook hier geldt: <strong>0</strong> is <code>False</code> en <strong>1</strong> is <code>True</code>. Let op: in Python schrijf je <em>True</em> en <em>False</em> altijd met een <strong>hoofdletter</strong>!</p>
-<div class="highlight"><pre><span></span><code><span class="n">led_aan</span> <span class="o">=</span> <span class="kc">True</span>      <span class="c1"># LED aan</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># MicroPython</span>
+<span class="n">led_aan</span> <span class="o">=</span> <span class="kc">True</span>      <span class="c1"># LED aan</span>
 <span class="n">knop_ingedrukt</span> <span class="o">=</span> <span class="kc">False</span>  <span class="c1"># Knop niet ingedrukt</span>
 </code></pre></div>
 <blockquote>

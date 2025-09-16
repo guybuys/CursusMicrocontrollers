@@ -531,69 +531,65 @@
 
 <h1 id="output-dingen-aansturen">Output – Dingen aansturen</h1>
 <p>Output betekent dat de microcontroller iets aanstuurt of laat gebeuren. Dit kan bijvoorbeeld een LED, een motor, een buzzer of een display zijn.</p>
-<p>We kunnen dit <em>voorstellen</em> door te veronderstellen dat er een SPDT schakelaar in de microcontroller zou zitten die het signaal verbindt met de <strong>VCC</strong> (dit is de voedingsspanning, meestal 5V of 3,3V) of met de <strong>GND</strong> (grond, ground of 0V).</p>
+<p>We kunnen dit <em>voorstellen</em> door te denken aan een SPDT-schakelaar in de microcontroller die het signaal verbindt met <strong>VCC</strong> (de voedingsspanning, meestal 5V of 3,3V) of met <strong>GND</strong> (grond, ‘ground’ of 0V).</p>
 <p><strong>Schema:</strong>
 <img alt="Schema Actief Hoog Aan" src="../img/ac_output_ah_on.png" /></p>
-<p>In het bovenstaande voorbeeld zien we dat pin 3 aangesloten is aan een <strong>LED</strong> met een <strong>serie weerstand</strong>. De microcontroller (of het microcontroller bord) is ook aangesloten aan een spanningsbron of voeding. De uitgang op <em>pin 3</em> kan verbonden worden met ofwel <strong>VCC</strong> ofwel <strong>GND</strong>. Zoals het in het schema staat, is de uitgang op dit moment verbonden met <strong>VCC</strong> waardoor er stroom door de LED en serieweerstand loopt en de LED licht geeft.</p>
-<p>We bekijken nu hoe we, in <strong>C++</strong>, de taal die <strong>Arduino</strong> gebruikt, de uitgang met <strong>VCC</strong> moeten verbinden om de LED te laten branden:</p>
+<p>In het bovenstaande voorbeeld zien we dat pin 3 aangesloten is aan een <strong>LED</strong> met een <strong>serie weerstand</strong>. De microcontroller (of het microcontroller bord) is ook aangesloten aan een spanningsbron of voeding. De uitgang op <em>pin 3</em> kan verbonden worden met ofwel <strong>VCC</strong> ofwel <strong>GND</strong>. Zoals in het schema te zien is, is de uitgang op dit moment verbonden met <strong>VCC</strong>, waardoor er stroom door de LED en serieweerstand loopt en de LED licht geeft.</p>
+<p>We bekijken nu hoe we in <strong>C++</strong>, de taal die <strong>Arduino</strong> gebruikt, de uitgang met <strong>VCC</strong> verbinden om de LED te laten branden:</p>
 <p><div class="highlight"><pre><span></span><code><span class="c1">// cpp</span>
-<span class="n">digitalWrite</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w"> </span><span class="c1">// Pin 3 hoog, LED aan</span>
+<span class="n">digitalWrite</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="p">);</span><span class="w"> </span><span class="c1">// Pin 3 hoog, LED aan</span>
 </code></pre></div>
-In <strong>MicroPython</strong> ziet het er net iets anders uit. Daar moeten we eerst laten weten dat <em>led</em> aan pin 3 aangesloten is. <em>Hoe</em> dat moet, volgt later nog.
+In <strong>MicroPython</strong> ziet het er net iets anders uit. Daar moeten we eerst aangeven dat <em>led</em> aan pin 3 is aangesloten. <em>Hoe</em> dat moet, volgt later.</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># MicroPython</span>
 <span class="n">led</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="kc">True</span><span class="p">);</span> <span class="c1"># Uitgang hoog of LED aan</span>
 </code></pre></div>
-of
-<div class="highlight"><pre><span></span><code><span class="c1"># MicroPython</span>
-<span class="n">led</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span> <span class="c1"># Uitgang hoog of LED aan</span>
-</code></pre></div></p>
 <p>We kunnen ook de LED uit zetten, zoals aangegeven in dit <strong>schema:</strong>
 <img alt="Schema Actief Hoog Uit" src="../img/ac_output_ah_off.png" /></p>
-<p>Er kan nu geen stroom van <strong>+</strong> naar <strong>-</strong> lopen. In de <em>code</em> doen we dit zo:
-<div class="highlight"><pre><span></span><code><span class="c1">// cpp</span>
-<span class="n">digitalWrite</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span><span class="w"> </span><span class="c1">// Pin 3 laag, LED uit</span>
+<p>Er kan nu geen stroom van <strong>+</strong> naar <strong>-</strong> lopen. In de <em>code</em> doen we dit zo:</p>
+<p><div class="highlight"><pre><span></span><code><span class="c1">// cpp</span>
+<span class="n">digitalWrite</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="nb">false</span><span class="p">);</span><span class="w"> </span><span class="c1">// Pin 3 laag, LED uit</span>
 </code></pre></div>
 In <strong>MicroPython</strong> gaat het zo:
 <div class="highlight"><pre><span></span><code><span class="c1"># MicroPython</span>
 <span class="n">led</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="kc">False</span><span class="p">);</span> <span class="c1"># Uitgang laag of LED uit</span>
-</code></pre></div>
-of
-<div class="highlight"><pre><span></span><code><span class="c1"># MicroPython</span>
-<span class="n">led</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span> <span class="c1"># Uitgang laag of LED uit</span>
 </code></pre></div></p>
-<p>In bovenstaande voorbeeld gaat de LED aan als de uitgang <strong><em>hoog</em></strong> staat en uit als de uitgang <strong><em>laag</em></strong> staat. Dit noemen we een <strong>actief hoog</strong> signaal.</p>
+<p>In het bovenstaande voorbeeld gaat de LED aan als de uitgang <strong><em>hoog</em></strong> staat en uit als de uitgang <strong><em>laag</em></strong> staat. Dit noemen we een <strong>actief hoog</strong> signaal.</p>
 <hr />
-<p>Het is ook mogelijk om de LED (of iets anders) op een andere manier aan te sluiten zodat deze licht geeft (of actief is) wanneer de uitgang <strong><em>laag</em></strong> staat. Dit noemen we een <strong>actief laag</strong> signaal.</p>
+<p>Het is ook mogelijk om de LED (of iets anders zoals een motor, ... ) op een andere manier aan te sluiten zodat deze licht geeft (of actief is) wanneer de uitgang <strong><em>laag</em></strong> staat. Dit noemen we een <strong>actief laag</strong> signaal.</p>
 <p><strong>Schema:</strong>
 <img alt="Schema Actief Laag Aan" src="../img/ac_output_al_on.png" /></p>
-<p>Dit schema en de werking zijn nagenoeg hetzelfde maar de LED en de serieweerstand zijn aan <strong>VCC</strong> aangesloten in plaats van aan <strong>GND</strong>. Dit wil zeggen dat de LED nu zal licht geven wanneer de uitgang van de microcontroller met <strong>GND</strong> verbonden is en zal uit zijn wanneer hij met <strong>VCC</strong> verbonden is.</p>
-<p>Nu moeten we in de code (<strong>C++</strong> of <strong>MicroPython</strong>) de uitgang dus <strong><em>laag</em></strong> zetten om actief te zijn. Dit gebeurt met dezelfde code als hierboven om de uitgang <em>laag</em> te zetten:
+<p>Dit schema en de werking zijn nagenoeg hetzelfde, maar de LED en de serieweerstand zijn aan <strong>VCC</strong> aangesloten in plaats van aan <strong>GND</strong>. Dit wil zeggen dat de LED nu zal licht geven wanneer de uitgang van de microcontroller met <strong>GND</strong> verbonden is en zal uit zijn wanneer hij met <strong>VCC</strong> verbonden is.</p>
+<p>Nu moeten we in de code (<strong>C++</strong> of <strong>MicroPython</strong>) de uitgang <strong><em>laag</em></strong> zetten om de LED te laten branden. Dit gebeurt met dezelfde code als hierboven om de uitgang <em>laag</em> te zetten:
 <div class="highlight"><pre><span></span><code><span class="c1">// cpp</span>
-<span class="n">digitalWrite</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span><span class="w"> </span><span class="c1">// Pin 3 laag, LED aan</span>
+<span class="n">digitalWrite</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="nb">false</span><span class="p">);</span><span class="w"> </span><span class="c1">// Pin 3 laag, LED aan</span>
 </code></pre></div>
 In <strong>MicroPython</strong> gaat het zo:
 <div class="highlight"><pre><span></span><code><span class="c1"># MicroPython</span>
 <span class="n">led</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="kc">False</span><span class="p">);</span> <span class="c1"># Uitgang laag of LED aan</span>
-</code></pre></div>
-of
-<div class="highlight"><pre><span></span><code><span class="c1"># MicroPython</span>
-<span class="n">led</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span> <span class="c1"># Uitgang laag of LED aan</span>
 </code></pre></div></p>
-<p>Om de LED uit te zetten, moeten we in dit geval de uitgang <strong><em>hoog</em></strong> zetten:</p>
+<p>Om de LED uit te zetten, moeten we in dit geval de uitgang <strong><em>hoog</em></strong> (<code>true</code>) zetten:</p>
 <p><strong>Schema:</strong>
 <img alt="Schema Actief Laag Uit" src="../img/ac_output_al_off.png" />
 <div class="highlight"><pre><span></span><code><span class="c1">// cpp</span>
-<span class="n">digitalWrite</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w"> </span><span class="c1">// Pin 3 hoog, LED uit</span>
+<span class="n">digitalWrite</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="p">);</span><span class="w"> </span><span class="c1">// Pin 3 hoog, LED uit</span>
 </code></pre></div>
 In <strong>MicroPython</strong> gaat het zo:
 <div class="highlight"><pre><span></span><code><span class="c1"># MicroPython</span>
 <span class="n">led</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="kc">True</span><span class="p">);</span> <span class="c1"># Uitgang hoog of LED uit</span>
+</code></pre></div></p>
+<p>Een <code>1</code> of een <code>0</code>, <code>true</code> of <code>false</code>, <code>True</code> of <code>False</code> hebben in beide schema's dus een andere uitwerking. Het is belangrijk om hiermee rekening te houden!</p>
+<hr />
+<blockquote>
+<p>Let op!</p>
+</blockquote>
+<p>Bij Arduino kun je <code>HIGH</code> en <code>LOW</code> gebruiken als waarde voor digitale pinnen, bijvoorbeeld bij <strong>digitalWrite</strong>. Let op: dit zijn allemaal hoofdletters en werken alleen in de Arduino-omgeving. Voor <em>gewone</em> booleans in C++ gebruik je <code>true</code> en <code>false</code>. In andere C++-<em>omgevingen</em> werken <code>HIGH</code> en <code>LOW</code> meestal niet. In code ziet het er dan zo uit: </p>
+<p><div class="highlight"><pre><span></span><code><span class="c1">// cpp</span>
+<span class="n">digitalWrite</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w"> </span><span class="c1">// Pin 3 hoog, LED uit</span>
 </code></pre></div>
-of
+In <strong>MicroPython</strong> bestaan <strong>HIGH</strong> en <strong>LOW</strong> niet maar je kan in plaats van <code>False</code> of <code>True</code> ook <code>0</code> of <code>1</code> gebruiken:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># MicroPython</span>
 <span class="n">led</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span> <span class="c1"># Uitgang hoog of LED uit</span>
-</code></pre></div></p>
-<p>Een <strong>1</strong> of een <strong>0</strong>, <strong>HIGH</strong> of <strong>LOW</strong>, <strong>True</strong> of <strong>False</strong> hebben in beide schema's dus een andere uitwerking. Het is belangrijk om hiermee rekening te houden!</p>
+</code></pre></div>
 
 
 
