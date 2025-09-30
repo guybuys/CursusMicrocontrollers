@@ -5,6 +5,7 @@ Input betekent dat de microcontroller informatie ontvangt uit *de buitenwereld*.
 ## Het concept van digitale input
 
 Stel je voor dat je een heel **eenvoudige voltmeter** hebt die maar twee waarden kan weergeven:
+
 - **True** (waar) = er staat spanning op de ingang
 - **False** (onwaar) = er staat geen spanning op de ingang
 
