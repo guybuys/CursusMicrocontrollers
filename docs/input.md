@@ -15,20 +15,20 @@ Zo werkt digitale input ook: de microcontroller meet of er spanning staat op een
 
 ## Voorbeelden van digitale input
 
-- **Knop indrukken**: 
+1. **Drukknop indrukken**: 
 
-  - Knop ingedrukt = True (spanning aanwezig)
-  - Knop niet ingedrukt = False (geen spanning)
+    - Knop ingedrukt = True (spanning aanwezig)
+    - Knop niet ingedrukt = False (geen spanning)
 
-- **Schakelaar**:
+2. **Schakelaar**:
 
-  - Schakelaar aan = True 
-  - Schakelaar uit = False
+    - Schakelaar aan = True 
+    - Schakelaar uit = False
 
-- **Eenvoudige sensor**:
+3. **Eenvoudige sensor**:
 
-  - Object gedetecteerd = True
-  - Geen object = False
+    - Object gedetecteerd = True
+    - Geen object = False
 
 ## Schema-voorstelling
 
