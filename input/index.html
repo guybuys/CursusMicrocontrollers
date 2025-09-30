@@ -437,9 +437,42 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#extra-schmitt-trigger-waarom-niet-gewoon-bij-25v-omschakelen" class="md-nav__link">
+  <a href="#input-lezen-in-code" class="md-nav__link">
     <span class="md-ellipsis">
-      Extra: Schmitt Trigger - waarom niet gewoon bij 2,5V omschakelen?
+      Input lezen in code
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Input lezen in code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#in-c-arduino" class="md-nav__link">
+    <span class="md-ellipsis">
+      In C++ (Arduino)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#in-micropython" class="md-nav__link">
+    <span class="md-ellipsis">
+      In MicroPython
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schmitt-trigger-waarom-niet-gewoon-bij-25v-omschakelen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Schmitt Trigger - waarom niet gewoon bij 2,5V omschakelen?
     </span>
   </a>
   
@@ -626,9 +659,42 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#extra-schmitt-trigger-waarom-niet-gewoon-bij-25v-omschakelen" class="md-nav__link">
+  <a href="#input-lezen-in-code" class="md-nav__link">
     <span class="md-ellipsis">
-      Extra: Schmitt Trigger - waarom niet gewoon bij 2,5V omschakelen?
+      Input lezen in code
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Input lezen in code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#in-c-arduino" class="md-nav__link">
+    <span class="md-ellipsis">
+      In C++ (Arduino)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#in-micropython" class="md-nav__link">
+    <span class="md-ellipsis">
+      In MicroPython
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schmitt-trigger-waarom-niet-gewoon-bij-25v-omschakelen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Schmitt Trigger - waarom niet gewoon bij 2,5V omschakelen?
     </span>
   </a>
   
@@ -660,7 +726,7 @@
 
 
 <h1 id="input-dingen-meten">Input – Dingen meten</h1>
-<p>Input betekent dat de microcontroller informatie ontvangt uit de buitenwereld. Dit kan bijvoorbeeld een knop, een sensor of een schakelaar zijn.</p>
+<p>Input betekent dat de microcontroller informatie ontvangt uit <em>de buitenwereld</em>. Dit kan bijvoorbeeld een knop, een sensor of een schakelaar zijn.</p>
 <h2 id="het-concept-van-digitale-input">Het concept van digitale input</h2>
 <p>Stel je voor dat je een heel <strong>eenvoudige voltmeter</strong> hebt die maar twee waarden kan weergeven:
 - <strong>True</strong> (waar) = er staat spanning op de ingang
@@ -688,12 +754,28 @@
 <li>Geen object = False</li>
 </ul>
 <h2 id="schema-voorstelling">Schema-voorstelling</h2>
-<p>Net zoals bij output kunnen we dit voorstellen in een schema:</p>
+<p>Net zoals bij <strong>output</strong> kunnen we dit voorstellen in een <strong>schema</strong>:</p>
 <p><img alt="Input schema" src="../img/ac_input_dt.png" /></p>
 <blockquote>
-<p>De microcontroller werkt als een digitale voltmeter: hij meet alleen of er wel of geen spanning staat, niet hoeveel spanning er precies is.</p>
+<p>De microcontroller werkt als een <strong><em>digitale</em> voltmeter</strong>: hij meet alleen of er <strong>wel</strong> of <strong>geen</strong> spanning staat, niet <em>hoeveel</em> spanning er precies is.</p>
 </blockquote>
-<h2 id="extra-schmitt-trigger-waarom-niet-gewoon-bij-25v-omschakelen">Extra: Schmitt Trigger - waarom niet gewoon bij 2,5V omschakelen?</h2>
+<h2 id="input-lezen-in-code">Input lezen in code</h2>
+<h3 id="in-c-arduino">In C++ (Arduino)</h3>
+<p>In <strong>C++</strong> lees je een digitale ingang uit met de functie <code>digitalRead()</code>:</p>
+<p><div class="highlight"><pre><span></span><code><span class="c1">// cpp</span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">knopStatus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">digitalRead</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span><span class="w">  </span><span class="c1">// Lees pin 4 uit</span>
+</code></pre></div>
+Je krijgt dan <code>HIGH</code> (of <code>true</code>) terug als er spanning op de pin staat, of <code>LOW</code> (of <code>false</code>) als er geen spanning staat.</p>
+<blockquote>
+<p>Opmerking, in het bovenstaande voorbeeld wordt er een variabele <strong>knopStatus</strong> aangemaakt om de waarde van <em>digitalRead</em> in op te vangen. Wanneer die variabele reeds bestaat in het programma, is het datatype <code>bool</code> in het begin van de lijn niet meer nodig.</p>
+</blockquote>
+<h3 id="in-micropython">In MicroPython</h3>
+<p>In <strong>MicroPython</strong> ziet het er opnieuw net iets anders uit. Daar moeten we eerst aangeven dat <em>knop</em> aan pin 4 is aangesloten. <em>Hoe</em> dat moet, volgt later. Je leest een digitale ingang uit met de <em>methode</em> <code>.value()</code>:</p>
+<p><div class="highlight"><pre><span></span><code><span class="c1"># MicroPython</span>
+<span class="n">knop_status</span> <span class="o">=</span> <span class="n">knop</span><span class="o">.</span><span class="n">value</span><span class="p">()</span>  <span class="c1"># Lees de knop uit</span>
+</code></pre></div>
+Je krijgt dan <code>1</code> (of <code>True</code>) terug als er spanning op de pin staat, of <code>0</code> (of <code>False</code>) als er geen spanning staat.</p>
+<h2 id="schmitt-trigger-waarom-niet-gewoon-bij-25v-omschakelen">Schmitt Trigger - waarom niet gewoon bij 2,5V omschakelen?</h2>
 <p>Je zou denken: "Waarom schakelt de microcontroller niet gewoon om bij 2,5V (de helft van 5V)?"<br />
 Het probleem is dat spanningen kunnen <strong>trillen</strong> of <strong>ruis</strong> kunnen hebben. Als de spanning heel langzaam stijgt of daalt rond 2,5V, zou de uitgang heel vaak kunnen omschakelen tussen 0 en 1.</p>
 <p><strong>Oplossing: De Schmitt Trigger</strong><br />
