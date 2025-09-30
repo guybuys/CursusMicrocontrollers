@@ -369,6 +369,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Input – dingen meten
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -380,6 +393,70 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#het-concept-van-digitale-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      Het concept van digitale input
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#voorbeelden-van-digitale-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      Voorbeelden van digitale input
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schema-voorstelling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Schema-voorstelling
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extra-schmitt-trigger-waarom-niet-gewoon-bij-25v-omschakelen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extra: Schmitt Trigger - waarom niet gewoon bij 2,5V omschakelen?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#van-concept-naar-praktijk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Van concept naar praktijk
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -515,6 +592,59 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#het-concept-van-digitale-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      Het concept van digitale input
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#voorbeelden-van-digitale-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      Voorbeelden van digitale input
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schema-voorstelling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Schema-voorstelling
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extra-schmitt-trigger-waarom-niet-gewoon-bij-25v-omschakelen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extra: Schmitt Trigger - waarom niet gewoon bij 2,5V omschakelen?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#van-concept-naar-praktijk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Van concept naar praktijk
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -531,15 +661,54 @@
 
 <h1 id="input-dingen-meten">Input – Dingen meten</h1>
 <p>Input betekent dat de microcontroller informatie ontvangt uit de buitenwereld. Dit kan bijvoorbeeld een knop, een sensor of een schakelaar zijn.</p>
+<h2 id="het-concept-van-digitale-input">Het concept van digitale input</h2>
+<p>Stel je voor dat je een heel <strong>eenvoudige voltmeter</strong> hebt die maar twee waarden kan weergeven:
+- <strong>True</strong> (waar) = er staat spanning op de ingang
+- <strong>False</strong> (onwaar) = er staat geen spanning op de ingang</p>
+<p>Deze voltmeter kan dus alleen maar <strong>ja</strong> of <strong>nee</strong> antwoorden op de vraag: "Is er spanning?"</p>
+<p>Zo werkt digitale input ook: de microcontroller meet of er spanning staat op een pin en geeft als antwoord een <strong>boolean</strong> terug.</p>
+<h2 id="voorbeelden-van-digitale-input">Voorbeelden van digitale input</h2>
 <ul>
-<li>Je meet of leest een waarde van buitenaf.</li>
-<li>Voorbeelden: knop indrukken, temperatuur meten, lichtsterkte meten.</li>
+<li><strong>Knop indrukken</strong>: </li>
+<li>Knop ingedrukt = True (spanning aanwezig)</li>
+<li>
+<p>Knop niet ingedrukt = False (geen spanning)</p>
+</li>
+<li>
+<p><strong>Schakelaar</strong>:</p>
+</li>
+<li>Schakelaar aan = True </li>
+<li>
+<p>Schakelaar uit = False</p>
+</li>
+<li>
+<p><strong>Eenvoudige sensor</strong>:</p>
+</li>
+<li>Object gedetecteerd = True</li>
+<li>Geen object = False</li>
 </ul>
+<h2 id="schema-voorstelling">Schema-voorstelling</h2>
+<p>Net zoals bij output kunnen we dit voorstellen in een schema:</p>
+<p><img alt="Input schema" src="../img/ac_input_dt.png" /></p>
 <blockquote>
-<p>In de praktijk gebeurt input vaak via een GPIO-pin, maar het concept input is breder dan alleen GPIO.</p>
+<p>De microcontroller werkt als een digitale voltmeter: hij meet alleen of er wel of geen spanning staat, niet hoeveel spanning er precies is.</p>
 </blockquote>
+<h2 id="extra-schmitt-trigger-waarom-niet-gewoon-bij-25v-omschakelen">Extra: Schmitt Trigger - waarom niet gewoon bij 2,5V omschakelen?</h2>
+<p>Je zou denken: "Waarom schakelt de microcontroller niet gewoon om bij 2,5V (de helft van 5V)?"<br />
+Het probleem is dat spanningen kunnen <strong>trillen</strong> of <strong>ruis</strong> kunnen hebben. Als de spanning heel langzaam stijgt of daalt rond 2,5V, zou de uitgang heel vaak kunnen omschakelen tussen 0 en 1.</p>
+<p><strong>Oplossing: De Schmitt Trigger</strong><br />
+Een microcontroller gebruikt daarom een <strong>Schmitt Trigger</strong>. Dit betekent:
+- Bij <strong>stijgende</strong> spanning schakelt hij om van 0 naar 1 bij bijvoorbeeld <strong>3,0V</strong>
+- Bij <strong>dalende</strong> spanning schakelt hij om van 1 naar 0 bij bijvoorbeeld <strong>2,0V</strong></p>
+<p><img alt="Schmitt Trigger diagram" src="../img/ac_schmitt_trigger_input.png" /></p>
+<p>Deze <strong>verschillende</strong> drempelwaardes maken het systeem <strong>stabieler</strong> en voorkomen ongewenste schakelingen door ruis.</p>
+<blockquote>
+<p>Dit heet <strong>hysterese</strong> (of <em>hysteresis</em> in het Engels) - een slim trucje om storing te voorkomen!</p>
+</blockquote>
+<h2 id="van-concept-naar-praktijk">Van concept naar praktijk</h2>
+<p>In de praktijk gebeurt digitale input vaak via een <strong>GPIO-pin</strong> van de microcontroller. Hoe je dit precies programmeert in <strong>C++</strong> en <strong>MicroPython</strong>, leer je in het hoofdstuk over GPIO.</p>
 <hr />
-<p>Lees verder op de pagina 'GPIO' hoe je dit met een microcontroller doet.</p>
+<p><em>Lees verder op de pagina <a href="../gpio/">'GPIO'</a> hoe je dit met een microcontroller doet.</em></p>
 
 
 
