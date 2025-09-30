@@ -1,6 +1,7 @@
 # Cursus Microcontrollers
 
-Deze website is een interactieve cursus voor leerlingen van ongeveer 14 jaar. Je leert werken met microcontrollers, programmeren in Arduino (C++) en MicroPython, en je vindt veel voorbeelden en uitleg.
+Deze 
+[website](https://guybuys.github.io/CursusMicrocontrollers/) is een *interactieve* cursus voor leerlingen van ongeveer 14 jaar. Je leert werken met microcontrollers, programmeren in Arduino (C++) en MicroPython, en je vindt veel voorbeelden en uitleg.
 
 ## Starten
 
