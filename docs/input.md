@@ -1,6 +1,6 @@
 # Input – Dingen meten
 
-Input betekent dat de microcontroller informatie ontvangt uit de buitenwereld. Dit kan bijvoorbeeld een knop, een sensor of een schakelaar zijn.
+Input betekent dat de microcontroller informatie ontvangt uit *de buitenwereld*. Dit kan bijvoorbeeld een knop, een sensor of een schakelaar zijn.
 
 ## Het concept van digitale input
 
@@ -28,13 +28,37 @@ Zo werkt digitale input ook: de microcontroller meet of er spanning staat op een
 
 ## Schema-voorstelling
 
-Net zoals bij output kunnen we dit voorstellen in een schema:
+Net zoals bij **output** kunnen we dit voorstellen in een **schema**:
 
 ![Input schema](img/ac_input_dt.png)
 
-> De microcontroller werkt als een digitale voltmeter: hij meet alleen of er wel of geen spanning staat, niet hoeveel spanning er precies is.
+> De microcontroller werkt als een ***digitale* voltmeter**: hij meet alleen of er **wel** of **geen** spanning staat, niet *hoeveel* spanning er precies is.
 
-## Extra: Schmitt Trigger - waarom niet gewoon bij 2,5V omschakelen?
+## Input lezen in code
+
+### In C++ (Arduino)
+
+In **C++** lees je een digitale ingang uit met de functie `digitalRead()`:
+
+```cpp
+// cpp
+bool knopStatus = digitalRead(4);  // Lees pin 4 uit
+```
+Je krijgt dan `HIGH` (of `true`) terug als er spanning op de pin staat, of `LOW` (of `false`) als er geen spanning staat.
+
+> Opmerking, in het bovenstaande voorbeeld wordt er een variabele **knopStatus** aangemaakt om de waarde van *digitalRead* in op te vangen. Wanneer die variabele reeds bestaat in het programma, is het datatype `bool` in het begin van de lijn niet meer nodig.
+
+### In MicroPython
+
+In **MicroPython** ziet het er opnieuw net iets anders uit. Daar moeten we eerst aangeven dat *knop* aan pin 4 is aangesloten. *Hoe* dat moet, volgt later. Je leest een digitale ingang uit met de *methode* `.value()`:
+
+```python
+# MicroPython
+knop_status = knop.value()  # Lees de knop uit
+```
+Je krijgt dan `1` (of `True`) terug als er spanning op de pin staat, of `0` (of `False`) als er geen spanning staat.
+
+## Schmitt Trigger - waarom niet gewoon bij 2,5V omschakelen?
 
 Je zou denken: "Waarom schakelt de microcontroller niet gewoon om bij 2,5V (de helft van 5V)?"  
 Het probleem is dat spanningen kunnen **trillen** of **ruis** kunnen hebben. Als de spanning heel langzaam stijgt of daalt rond 2,5V, zou de uitgang heel vaak kunnen omschakelen tussen 0 en 1.
