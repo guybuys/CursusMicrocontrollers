@@ -78,6 +78,25 @@ Deze **verschillende** drempelwaardes maken het systeem **stabieler** en voorkom
 
 > Dit heet **hysterese** (of *hysteresis* in het Engels) - een slim trucje om storing te voorkomen!
 
+## Drukknopschakelaars
+
+In de bovenstaande uitleg, sloten we een **wisselschakelaar** (of SPDT schakelaar) aan op de **ingang** van de microcontroller. Ondanks dat dit perfect werkt, gaan we dit in de praktijk niet veel zien. De meeste **drukknopschakelaars** hebben slechts **2 contacten** en deze zijn ***open*** wanneer er niet op gedrukt wordt en ***gesloten*** wanneer er op gedrukt wordt. Om dit type schakelaar aan te sluiten, moeten we het circuit een beetje uitbreiden. Dit is dan ook de reden waarom we de uitleg van de input aanvankelijk met een ander type schakelaar hebben gedaan, zodat het circuit eenvoudiger en dus begrijpbaarder is.
+
+Wanneer we de wisselschakelaar vervangen door een *normaal-open* (of SPST) schakelaar, ziet het schema er bijvoorbeeld zo uit:
+
+![Input SPST zonder weerstand](img/ac_input_pbnr.png)
+
+De schakeling zoals ze hierboven afgebeeld is, zal niet werken; het is voor de interne voltmeter niet mogelijk om een verschil te detecteren tussen wanneer de schakelaar ingedrukt (gesloten) is en wanneer hij niet ingedrukt (open) is. Om het circuit wel te laten werken, voegen we een weerstand toe die de spanning "naar boven" trekt wanneer de schakelaar open is. Dit noemen we een **pull-up** weerstand.
+
+![Input SPST met pull-up weerstand](img/ac_input_pbpu.png)
+
+Let op: de spanning is **hoog** wanneer de drukknopschakelaar **niet ingedrukt** is en **laag** wanneer hij **ingedrukt** is. Dit is dan ook een **actief laag** signaal.
+
+---
+We kunnen de drukknopschakelaar en de weerstand omdraaien om er een **actief hoog** signaal van te maken:
+
+![Input SPST met pull-down weerstand](img/ac_input_pbpd.png)
+
 ## Van concept naar praktijk
 
 In de praktijk gebeurt digitale input vaak via een **GPIO-pin** van de microcontroller. Hoe je dit precies programmeert in **C++** en **MicroPython**, leer je in het hoofdstuk over GPIO.
