@@ -80,13 +80,13 @@ Deze **verschillende** drempelwaardes maken het systeem **stabieler** en voorkom
 
 ## Drukknopschakelaars
 
-In de bovenstaande uitleg, sloten we een **wisselschakelaar** (of SPDT schakelaar) aan op de **ingang** van de microcontroller. Ondanks dat dit perfect werkt, gaan we dit in de praktijk niet veel zien. De meeste **drukknopschakelaars** hebben slechts **2 contacten** en deze zijn ***open*** wanneer er niet op gedrukt wordt en ***gesloten*** wanneer er op gedrukt wordt. Om dit type schakelaar aan te sluiten, moeten we het circuit een beetje uitbreiden. Dit is dan ook de reden waarom we de uitleg van de input aanvankelijk met een ander type schakelaar hebben gedaan, zodat het circuit eenvoudiger en dus begrijpbaarder is.
+In de bovenstaande uitleg sloten we een **wisselschakelaar** (of SPDT schakelaar) aan op de **ingang** van de microcontroller. Ondanks dat dit perfect werkt, gaan we dit in de praktijk niet veel zien. De meeste **drukknopschakelaars** hebben slechts **2 contacten** en deze zijn ***open*** wanneer er niet op gedrukt wordt en ***gesloten*** wanneer er op gedrukt wordt. Om dit type schakelaar aan te sluiten, moeten we het circuit een beetje uitbreiden. Dit is dan ook de reden waarom we de uitleg van de input aanvankelijk met een ander type schakelaar hebben gedaan, zodat het circuit eenvoudiger en dus begrijpbaarder is.
 
 Wanneer we de wisselschakelaar vervangen door een *normaal-open* (of SPST) schakelaar, ziet het schema er bijvoorbeeld zo uit:
 
 ![Input SPST zonder weerstand](img/ac_input_pbnr.png)
 
-De schakeling zoals ze hierboven afgebeeld is, zal niet werken; het is voor de interne voltmeter niet mogelijk om een verschil te detecteren tussen wanneer de schakelaar ingedrukt (gesloten) is en wanneer hij niet ingedrukt (open) is. Om het circuit wel te laten werken, voegen we een weerstand toe die de spanning "naar boven" trekt wanneer de schakelaar open is. Dit noemen we een **pull-up** weerstand.
+De schakeling zoals hierboven afgebeeld, zal niet werken; de interne voltmeter kan geen verschil detecteren tussen wanneer de schakelaar ingedrukt (gesloten) is en wanneer hij niet ingedrukt (open) is. Om het circuit wel te laten werken, voegen we een weerstand toe die de spanning "naar boven" trekt wanneer de schakelaar open is. Dit noemen we een **pull-up** weerstand.
 
 ![Input SPST met pull-up weerstand](img/ac_input_pbpu.png)
 
@@ -97,10 +97,28 @@ We kunnen de drukknopschakelaar en de weerstand omdraaien om er een **actief hoo
 
 ![Input SPST met pull-down weerstand](img/ac_input_pbpd.png)
 
-## Van concept naar praktijk
+### Weerstandswaarde
 
-In de praktijk gebeurt digitale input vaak via een **GPIO-pin** van de microcontroller. Hoe je dit precies programmeert in **C++** en **MicroPython**, leer je in het hoofdstuk over GPIO.
+De **waarde** van de pull-up of pull-down **weerstand** is niet zo kritisch. Meestal wordt een weerstand met een waarde **tussen 10kΩ en 100kΩ** gebruikt. Wanneer de waarde lager dan 10kΩ is, loopt er meer stroom dan nodig door de weerstand wanneer de drukknopschakelaar ingedrukt wordt. Wanneer de waarde te hoog is, meer dan 100kΩ, is de spanningsverandering mogelijk te klein om opgemerkt te worden door de ingang.
+
+## Interne pull-up en pull-down
+
+De meeste microcontrollers hebben de mogelijkheid om gebruik te maken van een **interne pull-up weerstand**. Dit wil zeggen dat de pull-up weerstand in de microcontroller zit en dat er geen externe weerstand toegevoegd moet worden. Het schema ziet er dan zo uit:
+
+![Input SPST met interne pull-up weerstand](img/ac_input_pbipu.png)
+
+Uitwendig moet de drukknopschakelaar aangesloten worden tussen de **ground** en de input pin van de microcontroller. 
 
 ---
 
-*Lees verder op de pagina ['GPIO'](gpio.md) hoe je dit met een microcontroller doet.*
+Bij sommige microcontrollers is het ook mogelijk om een interne pull-down te gebruiken. Dat ziet er dan zo uit:
+
+![Input SPST met interne pull-down weerstand](img/ac_input_pbipd.png)
+
+De drukknopschakelaar wordt nu aangesloten tussen de **VCC** en de input pin.
+
+> De **Arduino Uno R3** beschikt **niet** over een interne **pull-down** weerstand!
+
+---
+
+*Lees verder op de pagina ['GPIO'](gpio.md) hoe je deze instellingen met een microcontroller doet.*
