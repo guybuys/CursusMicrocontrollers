@@ -485,12 +485,27 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Drukknopschakelaars">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#weerstandswaarde" class="md-nav__link">
+    <span class="md-ellipsis">
+      Weerstandswaarde
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#van-concept-naar-praktijk" class="md-nav__link">
+  <a href="#interne-pull-up-en-pull-down" class="md-nav__link">
     <span class="md-ellipsis">
-      Van concept naar praktijk
+      Interne pull-up en pull-down
     </span>
   </a>
   
@@ -716,12 +731,27 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Drukknopschakelaars">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#weerstandswaarde" class="md-nav__link">
+    <span class="md-ellipsis">
+      Weerstandswaarde
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#van-concept-naar-praktijk" class="md-nav__link">
+  <a href="#interne-pull-up-en-pull-down" class="md-nav__link">
     <span class="md-ellipsis">
-      Van concept naar praktijk
+      Interne pull-up en pull-down
     </span>
   </a>
   
@@ -812,19 +842,30 @@ Een microcontroller gebruikt daarom een <strong>Schmitt Trigger</strong>. Dit be
 <p>Dit heet <strong>hysterese</strong> (of <em>hysteresis</em> in het Engels) - een slim trucje om storing te voorkomen!</p>
 </blockquote>
 <h2 id="drukknopschakelaars">Drukknopschakelaars</h2>
-<p>In de bovenstaande uitleg, sloten we een <strong>wisselschakelaar</strong> (of SPDT schakelaar) aan op de <strong>ingang</strong> van de microcontroller. Ondanks dat dit perfect werkt, gaan we dit in de praktijk niet veel zien. De meeste <strong>drukknopschakelaars</strong> hebben slechts <strong>2 contacten</strong> en deze zijn <strong><em>open</em></strong> wanneer er niet op gedrukt wordt en <strong><em>gesloten</em></strong> wanneer er op gedrukt wordt. Om dit type schakelaar aan te sluiten, moeten we het circuit een beetje uitbreiden. Dit is dan ook de reden waarom we de uitleg van de input aanvankelijk met een ander type schakelaar hebben gedaan, zodat het circuit eenvoudiger en dus begrijpbaarder is.</p>
+<p>In de bovenstaande uitleg sloten we een <strong>wisselschakelaar</strong> (of SPDT schakelaar) aan op de <strong>ingang</strong> van de microcontroller. Ondanks dat dit perfect werkt, gaan we dit in de praktijk niet veel zien. De meeste <strong>drukknopschakelaars</strong> hebben slechts <strong>2 contacten</strong> en deze zijn <strong><em>open</em></strong> wanneer er niet op gedrukt wordt en <strong><em>gesloten</em></strong> wanneer er op gedrukt wordt. Om dit type schakelaar aan te sluiten, moeten we het circuit een beetje uitbreiden. Dit is dan ook de reden waarom we de uitleg van de input aanvankelijk met een ander type schakelaar hebben gedaan, zodat het circuit eenvoudiger en dus begrijpbaarder is.</p>
 <p>Wanneer we de wisselschakelaar vervangen door een <em>normaal-open</em> (of SPST) schakelaar, ziet het schema er bijvoorbeeld zo uit:</p>
 <p><img alt="Input SPST zonder weerstand" src="../img/ac_input_pbnr.png" /></p>
-<p>De schakeling zoals ze hierboven afgebeeld is, zal niet werken; het is voor de interne voltmeter niet mogelijk om een verschil te detecteren tussen wanneer de schakelaar ingedrukt (gesloten) is en wanneer hij niet ingedrukt (open) is. Om het circuit wel te laten werken, voegen we een weerstand toe die de spanning "naar boven" trekt wanneer de schakelaar open is. Dit noemen we een <strong>pull-up</strong> weerstand.</p>
+<p>De schakeling zoals hierboven afgebeeld, zal niet werken; de interne voltmeter kan geen verschil detecteren tussen wanneer de schakelaar ingedrukt (gesloten) is en wanneer hij niet ingedrukt (open) is. Om het circuit wel te laten werken, voegen we een weerstand toe die de spanning "naar boven" trekt wanneer de schakelaar open is. Dit noemen we een <strong>pull-up</strong> weerstand.</p>
 <p><img alt="Input SPST met pull-up weerstand" src="../img/ac_input_pbpu.png" /></p>
 <p>Let op: de spanning is <strong>hoog</strong> wanneer de drukknopschakelaar <strong>niet ingedrukt</strong> is en <strong>laag</strong> wanneer hij <strong>ingedrukt</strong> is. Dit is dan ook een <strong>actief laag</strong> signaal.</p>
 <hr />
 <p>We kunnen de drukknopschakelaar en de weerstand omdraaien om er een <strong>actief hoog</strong> signaal van te maken:</p>
 <p><img alt="Input SPST met pull-down weerstand" src="../img/ac_input_pbpd.png" /></p>
-<h2 id="van-concept-naar-praktijk">Van concept naar praktijk</h2>
-<p>In de praktijk gebeurt digitale input vaak via een <strong>GPIO-pin</strong> van de microcontroller. Hoe je dit precies programmeert in <strong>C++</strong> en <strong>MicroPython</strong>, leer je in het hoofdstuk over GPIO.</p>
+<h3 id="weerstandswaarde">Weerstandswaarde</h3>
+<p>De <strong>waarde</strong> van de pull-up of pull-down <strong>weerstand</strong> is niet zo kritisch. Meestal wordt een weerstand met een waarde <strong>tussen 10kΩ en 100kΩ</strong> gebruikt. Wanneer de waarde lager dan 10kΩ is, loopt er meer stroom dan nodig door de weerstand wanneer de drukknopschakelaar ingedrukt wordt. Wanneer de waarde te hoog is, meer dan 100kΩ, is de spanningsverandering mogelijk te klein om opgemerkt te worden door de ingang.</p>
+<h2 id="interne-pull-up-en-pull-down">Interne pull-up en pull-down</h2>
+<p>De meeste microcontrollers hebben de mogelijkheid om gebruik te maken van een <strong>interne pull-up weerstand</strong>. Dit wil zeggen dat de pull-up weerstand in de microcontroller zit en dat er geen externe weerstand toegevoegd moet worden. Het schema ziet er dan zo uit:</p>
+<p><img alt="Input SPST met interne pull-up weerstand" src="../img/ac_input_pbipu.png" /></p>
+<p>Uitwendig moet de drukknopschakelaar aangesloten worden tussen de <strong>ground</strong> en de input pin van de microcontroller. </p>
 <hr />
-<p><em>Lees verder op de pagina <a href="../gpio/">'GPIO'</a> hoe je dit met een microcontroller doet.</em></p>
+<p>Bij sommige microcontrollers is het ook mogelijk om een interne pull-down te gebruiken. Dat ziet er dan zo uit:</p>
+<p><img alt="Input SPST met interne pull-down weerstand" src="../img/ac_input_pbipd.png" /></p>
+<p>De drukknopschakelaar wordt nu aangesloten tussen de <strong>VCC</strong> en de input pin.</p>
+<blockquote>
+<p>De <strong>Arduino Uno R3</strong> beschikt <strong>niet</strong> over een interne <strong>pull-down</strong> weerstand!</p>
+</blockquote>
+<hr />
+<p><em>Lees verder op de pagina <a href="../gpio/">'GPIO'</a> hoe je deze instellingen met een microcontroller doet.</em></p>
 
 
 
