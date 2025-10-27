@@ -67,6 +67,70 @@ knop_ingedrukt = False  # Knop niet ingedrukt
 
 > Een boolean is dus een handige manier om met *ja/nee*-vragen in je programma te werken!
 
+## Boolean operatoren
+
+Een **operator** is een symbool dat een bewerking uitvoert op één of meer waarden.  
+Bij booleans hebben we drie belangrijke operatoren: **NOT**, **AND** en **OR**.
+
+### NOT operator (omkeren)
+De **NOT** operator keert een boolean waarde om:
+- `NOT true` wordt `false`
+- `NOT false` wordt `true`
+
+**Gebruik:** Om het tegenovergestelde van een conditie te krijgen.  
+Bijvoorbeeld: "Als de knop NIET ingedrukt is..."
+
+### AND operator (beide waar)
+De **AND** operator geeft alleen `true` als **beide** waarden `true` zijn:
+- `true AND true` = `true`
+- `true AND false` = `false`
+- `false AND true` = `false`
+- `false AND false` = `false`
+
+**Gebruik:** Om te controleren of meerdere voorwaarden tegelijk waar zijn.  
+Bijvoorbeeld: "Als knop A ingedrukt is EN knop B ingedrukt is..."
+
+### OR operator (één van beide waar)
+De **OR** operator geeft `true` als **minstens één** van de waarden `true` is:
+- `true OR true` = `true`
+- `true OR false` = `true`
+- `false OR true` = `true`
+- `false OR false` = `false`
+
+**Gebruik:** Om te controleren of één van meerdere voorwaarden waar is.  
+Bijvoorbeeld: "Als knop A ingedrukt is OF knop B ingedrukt is..."
+
+### Syntax in C++
+
+```cpp
+bool knop1 = true;
+bool knop2 = false;
+
+// NOT operator (!)
+bool nietKnop1 = !knop1;          // false
+
+// AND operator (&&)
+bool beideKnoppen = knop1 && knop2;  // false
+
+// OR operator (||)
+bool eenVanBeide = knop1 || knop2;   // true
+
+```
+Syntax in MicroPython
+```python
+knop1 = True
+knop2 = False
+
+# NOT operator (not)
+niet_knop1 = not knop1          # False
+
+# AND operator (and)
+beide_knoppen = knop1 and knop2  # False
+
+# OR operator (or)
+een_van_beide = knop1 or knop2   # True
+```
+
 ---
 ## Extra: Naamgeving van variabelen
 

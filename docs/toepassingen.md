@@ -1,5 +1,18 @@
 # Samenspel en toepassingen
 
+## Simpel project met LEDs en drukknoppen
+`Arduino UNO`
+
+[Arduino project met drukknoppen en LED's](https://wokwi.com/projects/445986971000642561)
+
+`Raspberry Pi Pico`
+
+[MicroPython project met drukknoppen en LED's](https://wokwi.com/projects/445980918449142785)
+
+
+
+
+
 ## Input + Output combineren
 Dimmen van een LED met een potmeter, of een knop die de toonhoogte van een buzzer verandert.
 
