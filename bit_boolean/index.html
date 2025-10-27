@@ -435,6 +435,57 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#boolean-operatoren" class="md-nav__link">
+    <span class="md-ellipsis">
+      Boolean operatoren
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Boolean operatoren">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#not-operator-omkeren" class="md-nav__link">
+    <span class="md-ellipsis">
+      NOT operator (omkeren)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#and-operator-beide-waar" class="md-nav__link">
+    <span class="md-ellipsis">
+      AND operator (beide waar)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#or-operator-een-van-beide-waar" class="md-nav__link">
+    <span class="md-ellipsis">
+      OR operator (één van beide waar)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#syntax-in-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      Syntax in C++
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#extra-naamgeving-van-variabelen" class="md-nav__link">
     <span class="md-ellipsis">
       Extra: Naamgeving van variabelen
@@ -701,6 +752,57 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#boolean-operatoren" class="md-nav__link">
+    <span class="md-ellipsis">
+      Boolean operatoren
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Boolean operatoren">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#not-operator-omkeren" class="md-nav__link">
+    <span class="md-ellipsis">
+      NOT operator (omkeren)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#and-operator-beide-waar" class="md-nav__link">
+    <span class="md-ellipsis">
+      AND operator (beide waar)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#or-operator-een-van-beide-waar" class="md-nav__link">
+    <span class="md-ellipsis">
+      OR operator (één van beide waar)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#syntax-in-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      Syntax in C++
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#extra-naamgeving-van-variabelen" class="md-nav__link">
     <span class="md-ellipsis">
       Extra: Naamgeving van variabelen
@@ -783,6 +885,57 @@ Ook hier geldt: <strong>0</strong> is <code>False</code> en <strong>1</strong> i
 <blockquote>
 <p>Een boolean is dus een handige manier om met <em>ja/nee</em>-vragen in je programma te werken!</p>
 </blockquote>
+<h2 id="boolean-operatoren">Boolean operatoren</h2>
+<p>Een <strong>operator</strong> is een symbool dat een bewerking uitvoert op één of meer waarden.<br />
+Bij booleans hebben we drie belangrijke operatoren: <strong>NOT</strong>, <strong>AND</strong> en <strong>OR</strong>.</p>
+<h3 id="not-operator-omkeren">NOT operator (omkeren)</h3>
+<p>De <strong>NOT</strong> operator keert een boolean waarde om:
+- <code>NOT true</code> wordt <code>false</code>
+- <code>NOT false</code> wordt <code>true</code></p>
+<p><strong>Gebruik:</strong> Om het tegenovergestelde van een conditie te krijgen.<br />
+Bijvoorbeeld: "Als de knop NIET ingedrukt is..."</p>
+<h3 id="and-operator-beide-waar">AND operator (beide waar)</h3>
+<p>De <strong>AND</strong> operator geeft alleen <code>true</code> als <strong>beide</strong> waarden <code>true</code> zijn:
+- <code>true AND true</code> = <code>true</code>
+- <code>true AND false</code> = <code>false</code>
+- <code>false AND true</code> = <code>false</code>
+- <code>false AND false</code> = <code>false</code></p>
+<p><strong>Gebruik:</strong> Om te controleren of meerdere voorwaarden tegelijk waar zijn.<br />
+Bijvoorbeeld: "Als knop A ingedrukt is EN knop B ingedrukt is..."</p>
+<h3 id="or-operator-een-van-beide-waar">OR operator (één van beide waar)</h3>
+<p>De <strong>OR</strong> operator geeft <code>true</code> als <strong>minstens één</strong> van de waarden <code>true</code> is:
+- <code>true OR true</code> = <code>true</code>
+- <code>true OR false</code> = <code>true</code>
+- <code>false OR true</code> = <code>true</code>
+- <code>false OR false</code> = <code>false</code></p>
+<p><strong>Gebruik:</strong> Om te controleren of één van meerdere voorwaarden waar is.<br />
+Bijvoorbeeld: "Als knop A ingedrukt is OF knop B ingedrukt is..."</p>
+<h3 id="syntax-in-c">Syntax in C++</h3>
+<p><div class="highlight"><pre><span></span><code><span class="kt">bool</span><span class="w"> </span><span class="n">knop1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">knop2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+
+<span class="c1">// NOT operator (!)</span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">nietKnop1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">!</span><span class="n">knop1</span><span class="p">;</span><span class="w">          </span><span class="c1">// false</span>
+
+<span class="c1">// AND operator (&amp;&amp;)</span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">beideKnoppen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">knop1</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">knop2</span><span class="p">;</span><span class="w">  </span><span class="c1">// false</span>
+
+<span class="c1">// OR operator (||)</span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">eenVanBeide</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">knop1</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">knop2</span><span class="p">;</span><span class="w">   </span><span class="c1">// true</span>
+</code></pre></div>
+Syntax in MicroPython
+<div class="highlight"><pre><span></span><code><span class="n">knop1</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">knop2</span> <span class="o">=</span> <span class="kc">False</span>
+
+<span class="c1"># NOT operator (not)</span>
+<span class="n">niet_knop1</span> <span class="o">=</span> <span class="ow">not</span> <span class="n">knop1</span>          <span class="c1"># False</span>
+
+<span class="c1"># AND operator (and)</span>
+<span class="n">beide_knoppen</span> <span class="o">=</span> <span class="n">knop1</span> <span class="ow">and</span> <span class="n">knop2</span>  <span class="c1"># False</span>
+
+<span class="c1"># OR operator (or)</span>
+<span class="n">een_van_beide</span> <span class="o">=</span> <span class="n">knop1</span> <span class="ow">or</span> <span class="n">knop2</span>   <span class="c1"># True</span>
+</code></pre></div></p>
 <hr />
 <h2 id="extra-naamgeving-van-variabelen">Extra: Naamgeving van variabelen</h2>
 <p>Probeer altijd een naam te kiezen die <strong>duidelijk</strong> maakt wat de variabele voorstelt.</p>
