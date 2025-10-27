@@ -7,7 +7,7 @@
 
 GPIO is de brug tussen de concepten input/output en de echte hardware. We kunnen een *vereenvoudigde* GPIO schematisch zo voorstellen:
 
-<img src="img/ac_gpio_input.png" alt="GPIO" style="width: 50%;">
+![GPIO input schema](img/ac_gpio_input.png)
 
 Dit is de **standaard configuratie** van een **GPIO**. Tenzij we de configuratie van een pin veranderen, is de GPIO zoals hierboven geconfigureerd. Alle **"inwendige schakelaars"** zijn open dus de GPIO gedraagt zich als een **input**.
 
@@ -47,7 +47,7 @@ waarde = button.value()
 
 We zetten onze *vereenvoudigde* GPIO in *input-pull-up* mode door *schakelaar* **Q4** te sluiten:
 
-<img src="img/ac_gpio_input_pullup.png" alt="GPIO" style="width: 50%;">
+![GPIO input-pullup schema](img/ac_gpio_input_pullup.png)
 
 In **C++** stellen we de GPIO opnieuw met **pinMode** in:
 
@@ -68,7 +68,7 @@ button = Pin(14, Pin.IN, Pin.PULL_UP)
 
 We zetten onze *vereenvoudigde* GPIO in *input-pull-down* mode door *schakelaar* **Q3** te sluiten:
 
-<img src="img/ac_gpio_input_pulldown.png" alt="GPIO" style="width: 50%;">
+![GPIO input-pulldown schema](img/ac_gpio_input_pulldown.png)
 
 In **C++** stellen we de GPIO opnieuw met **pinMode** in:
 
@@ -90,13 +90,13 @@ Wanneer we de GPIO in output mode zetten, wordt de pin verbonden met **GND** of 
 
 **OUTPUT-mode, LAAG**
 
-<img src="img/ac_gpio_output_low.png" alt="GPIO" style="width: 50%;">
+![GPIO output low schema](img/ac_gpio_output_low.png)
 
 Dit wordt gedaan door alleen de *inwendige schakelaar* Q1 te sluiten. De GPIO pin wordt intern met GND verbonden.
 
 **OUTPUT-mode, HOOG**
 
-<img src="img/ac_gpio_output_HIGH.png" alt="GPIO" style="width: 50%;">
+![GPIO output high schema](img/ac_gpio_output_HIGH.png)
 
 Dit wordt gedaan door alleen de *inwendige schakelaar* Q2 te sluiten. De GPIO pin wordt intern met VCC verbonden.
 
