@@ -732,7 +732,7 @@
 <li>GPIO als input: bijvoorbeeld een knop uitlezen.</li>
 </ul>
 <p>GPIO is de brug tussen de concepten input/output en de echte hardware. We kunnen een <em>vereenvoudigde</em> GPIO schematisch zo voorstellen:</p>
-<p><img src="img/ac_gpio_input.png" alt="GPIO" style="width: 50%;"></p>
+<p><img alt="GPIO input schema" src="../img/ac_gpio_input.png" /></p>
 <p>Dit is de <strong>standaard configuratie</strong> van een <strong>GPIO</strong>. Tenzij we de configuratie van een pin veranderen, is de GPIO zoals hierboven geconfigureerd. Alle <strong>"inwendige schakelaars"</strong> zijn open dus de GPIO gedraagt zich als een <strong>input</strong>.</p>
 <h2 id="gpio-in-input-mode">GPIO in "input" mode</h2>
 <p>In <strong>C++</strong> kunnen we de status van een ingang lezen door middel van het pin nummer (<code>digitalRead(&lt;pin_nummer&gt;)</code>). Als een bepaalde GPIO altijd als <em>input</em> gebruikt gaat worden, moet je dit dus niet specifiek instellen. Maar als tijdens je programma de GPIO in een andere mode gebruikt hebt en je wil hem terug als ingang instellen, kan dat op deze manier:</p>
@@ -758,7 +758,7 @@ Eigenlijk lijkt in <strong>MicroPython</strong> een GPIO op een <strong>object</
 </code></pre></div>
 <h2 id="gpio-in-input-pull-up-mode">GPIO in "input-pull-up" mode</h2>
 <p>We zetten onze <em>vereenvoudigde</em> GPIO in <em>input-pull-up</em> mode door <em>schakelaar</em> <strong>Q4</strong> te sluiten:</p>
-<p><img src="img/ac_gpio_input_pullup.png" alt="GPIO" style="width: 50%;"></p>
+<p><img alt="GPIO input-pullup schema" src="../img/ac_gpio_input_pullup.png" /></p>
 <p>In <strong>C++</strong> stellen we de GPIO opnieuw met <strong>pinMode</strong> in:</p>
 <p><div class="highlight"><pre><span></span><code><span class="c1">// cpp</span>
 <span class="n">pinMode</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span><span class="w"> </span><span class="n">INPUT_PULLUP</span><span class="p">);</span><span class="w">  </span><span class="c1">// zet pin 14 in INPUT-PULLUP mode</span>
@@ -772,7 +772,7 @@ Ook in <strong>MicroPython</strong> gebeurt het op een gelijkaardige manier, all
 <h2 id="gpio-in-input-pull-down-mode">GPIO in "input-pull-down" mode</h2>
 <p><strong>Niet alle microcontrollers</strong> hebben deze mogelijkheid. Bijvoorbeeld de veelgebruikte <strong>Arduino UNO r3</strong> heeft geen interne pull-down weerstanden. Daarmee is deze optie niet beschikbaar. In de praktijk worden <strong>pull-up weerstanden</strong> veel vaker gebruikt dan <strong>pull-down weerstanden</strong>, dus het is vaak geen probleem. Voor de microcontrollers die het wel hebben, zoals de <strong>ESP-32</strong>, beschrijven we deze <strong>pull-down</strong> mode.</p>
 <p>We zetten onze <em>vereenvoudigde</em> GPIO in <em>input-pull-down</em> mode door <em>schakelaar</em> <strong>Q3</strong> te sluiten:</p>
-<p><img src="img/ac_gpio_input_pulldown.png" alt="GPIO" style="width: 50%;"></p>
+<p><img alt="GPIO input-pulldown schema" src="../img/ac_gpio_input_pulldown.png" /></p>
 <p>In <strong>C++</strong> stellen we de GPIO opnieuw met <strong>pinMode</strong> in:</p>
 <p><div class="highlight"><pre><span></span><code><span class="c1">// cpp</span>
 <span class="n">pinMode</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span><span class="w"> </span><span class="n">INPUT_PULLDOWN</span><span class="p">);</span><span class="w">  </span><span class="c1">// zet pin 14 in INPUT-PULLDOWN mode</span>
@@ -786,10 +786,10 @@ Ook in <strong>MicroPython</strong> gebeurt het op een gelijkaardige manier als 
 <h2 id="gpio-in-output-mode">GPIO in "output" mode</h2>
 <p>Wanneer we de GPIO in output mode zetten, wordt de pin verbonden met <strong>GND</strong> of <strong>VCC</strong>. Hoe we dat doen, hadden we al in het hoofdstuk van de <strong>output</strong> gezien. Schematisch ziet het er eigenlijk wel iets anders uit dan met de "interne SPDT" schakelaar, al is de werking compleet hetzelfde. De 2 mogelijkheden in output mode zijn deze:</p>
 <p><strong>OUTPUT-mode, LAAG</strong></p>
-<p><img src="img/ac_gpio_output_low.png" alt="GPIO" style="width: 50%;"></p>
+<p><img alt="GPIO output low schema" src="../img/ac_gpio_output_low.png" /></p>
 <p>Dit wordt gedaan door alleen de <em>inwendige schakelaar</em> Q1 te sluiten. De GPIO pin wordt intern met GND verbonden.</p>
 <p><strong>OUTPUT-mode, HOOG</strong></p>
-<p><img src="img/ac_gpio_output_HIGH.png" alt="GPIO" style="width: 50%;"></p>
+<p><img alt="GPIO output high schema" src="img/ac_gpio_output_HIGH.png" /></p>
 <p>Dit wordt gedaan door alleen de <em>inwendige schakelaar</em> Q2 te sluiten. De GPIO pin wordt intern met VCC verbonden.</p>
 <p>Een GPIO in <strong>C++</strong> in output-mode te zetten, doen we zo:</p>
 <p><div class="highlight"><pre><span></span><code><span class="c1">// cpp</span>
