@@ -45,4 +45,3 @@ led = PWM(Pin(25))
 led.duty_u16(32768) # halve helderheid
 ```
 
-![Plaats voor schema potmeter/LED](PLACEHOLDER_POTMETER_LED_SCHEMA)

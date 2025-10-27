@@ -96,7 +96,7 @@ Dit wordt gedaan door alleen de *inwendige schakelaar* Q1 te sluiten. De GPIO pi
 
 **OUTPUT-mode, HOOG**
 
-![GPIO output high schema](img/ac_gpio_output_HIGH.png)
+![GPIO output high schema](img/ac_gpio_output_high.png)
 
 Dit wordt gedaan door alleen de *inwendige schakelaar* Q2 te sluiten. De GPIO pin wordt intern met VCC verbonden.
 
