@@ -497,6 +497,24 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#unsigned-char" class="md-nav__link">
+    <span class="md-ellipsis">
+      unsigned char
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#char" class="md-nav__link">
+    <span class="md-ellipsis">
+      char
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#unsigned-int" class="md-nav__link">
     <span class="md-ellipsis">
       unsigned int
@@ -509,15 +527,6 @@
   <a href="#signed-int" class="md-nav__link">
     <span class="md-ellipsis">
       (signed) int
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#char" class="md-nav__link">
-    <span class="md-ellipsis">
-      char
     </span>
   </a>
   
@@ -756,6 +765,24 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#unsigned-char" class="md-nav__link">
+    <span class="md-ellipsis">
+      unsigned char
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#char" class="md-nav__link">
+    <span class="md-ellipsis">
+      char
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#unsigned-int" class="md-nav__link">
     <span class="md-ellipsis">
       unsigned int
@@ -768,15 +795,6 @@
   <a href="#signed-int" class="md-nav__link">
     <span class="md-ellipsis">
       (signed) int
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#char" class="md-nav__link">
-    <span class="md-ellipsis">
-      char
     </span>
   </a>
   
@@ -894,12 +912,14 @@ Maar wat als we meer verschillende waarden of grotere getallen willen opslaan? D
 <h3 id="met-8-bits-kun-je-256-verschillende-waarden-maken">Met 8 bits kun je 256 verschillende waarden maken</h3>
 <p>Stel je voor dat je <strong>8 lampjes</strong> naast elkaar hebt. Elk lampje kan <strong>aan</strong> (1) of <strong>uit</strong> (0) zijn.<br />
 Door verschillende combinaties te maken, kun je <strong>256 verschillende patronen</strong> creëren!</p>
-<p>Voorbeelden:
-- <code>00000000</code> = 0
-- <code>00000001</code> = 1<br />
-- <code>00000010</code> = 2
-- <code>00000011</code> = 3
-- <code>11111111</code> = 255</p>
+<p>Voorbeelden:</p>
+<ul>
+<li><code>00000000</code> = 0</li>
+<li><code>00000001</code> = 1  </li>
+<li><code>00000010</code> = 2</li>
+<li><code>00000011</code> = 3</li>
+<li><code>11111111</code> = 255</li>
+</ul>
 <blockquote>
 <p>Met <strong>8 bits</strong> kun je dus getallen van <strong>0 tot 255</strong> voorstellen!</p>
 </blockquote>
@@ -950,8 +970,56 @@ Door verschillende combinaties te maken, kun je <strong>256 verschillende patron
 <hr />
 <h2 id="datatypes-in-c-arduino">Datatypes in C++ (Arduino)</h2>
 <p>In <strong>C++</strong> moet je altijd aangeven welk <strong>datatype</strong> je gebruikt. Dit helpt de computer om te weten hoeveel geheugen hij moet reserveren.</p>
+<h3 id="unsigned-char">unsigned char</h3>
+<p><strong>Klein geheel getal zonder minteken (8 bits)</strong></p>
+<p><div class="highlight"><pre><span></span><code><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">helderheid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">255</span><span class="p">;</span><span class="w">  </span><span class="c1">// Kan waarden van 0 tot 255 bevatten</span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">percentage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">75</span><span class="p">;</span><span class="w">   </span><span class="c1">// Perfect voor percentages</span>
+</code></pre></div>
+<strong>Gebruik:</strong> Voor kleine getallen die precies in de 8-bit range passen:</p>
+<ul>
+<li>LED helderheid (0-255)</li>
+<li>Percentages (0-100)</li>
+<li>Sensor waarden die al geschaald zijn naar 0-255</li>
+<li>RGB kleurwaarden (rood, groen, blauw elk 0-255)<blockquote>
+<p>Zie je het verband? Dit gebruikt precies de 8 bits die we net hebben uitgelegd!</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="char">char</h3>
+<p><strong>Karakter of klein getal</strong>
+<div class="highlight"><pre><span></span><code><span class="kt">char</span><span class="w"> </span><span class="n">letter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;A&#39;</span><span class="p">;</span><span class="w">     </span><span class="c1">// Voor letters</span>
+<span class="kt">char</span><span class="w"> </span><span class="n">kleinGetal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">42</span><span class="p">;</span><span class="w">  </span><span class="c1">// Voor getallen van -128 tot +127</span>
+</code></pre></div>
+<strong>Waarom heet dit datatype 'char'?</strong></p>
+<p><code>char</code> is de afkorting van <strong>'character'</strong> (karakter). Oorspronkelijk was dit datatype bedoeld om letters en tekens op te slaan.</p>
+<p><strong>Het geheim:</strong> Karakters worden eigenlijk opgeslagen als <strong>kleine gehele getallen</strong>!
+Elk karakter heeft een nummer in de ASCII-tabel:</p>
+<ul>
+<li>'A' = 65</li>
+<li>'B' = 66</li>
+<li>'0' = 48</li>
+<li>'1' = 49</li>
+</ul>
+<blockquote>
+<p><strong>Let op!</strong> Bij een karakter staat er in C++ steeds een enkele quote <code>'</code> voor en na het karakter. </p>
+</blockquote>
+<p><strong>Voorbeelden:</strong>
+<div class="highlight"><pre><span></span><code><span class="kt">char</span><span class="w"> </span><span class="n">letter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;A&#39;</span><span class="p">;</span><span class="w">        </span><span class="c1">// Slaat eigenlijk het getal 65 op</span>
+<span class="kt">char</span><span class="w"> </span><span class="n">getal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">65</span><span class="p">;</span><span class="w">          </span><span class="c1">// Dit is hetzelfde als &#39;A&#39;!</span>
+<span class="kt">char</span><span class="w"> </span><span class="n">cijfer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;5&#39;</span><span class="p">;</span><span class="w">        </span><span class="c1">// Slaat het getal 53 op (niet het getal 5!)</span>
+</code></pre></div>
+<strong>Gebruik:</strong></p>
+<ul>
+<li>Voor een letter of teken </li>
+<li>Voor heel kleine getallen (-128 tot +127) om geheugen te besparen</li>
+<li>Bij communicatie waar elke byte telt</li>
+</ul>
+<blockquote>
+<p><strong>Interessant:</strong> Je kunt <em>rekenen</em> met karakters! 'A' + 1 geeft 'B'.</p>
+</blockquote>
 <h3 id="unsigned-int">unsigned int</h3>
-<p><strong>Geheel getal zonder minteken</strong></p>
+<p><strong>Geheel <em>groter</em> getal zonder minteken</strong></p>
+<p>Hiervoor worden 16 bits gebruikt</p>
 <p><div class="highlight"><pre><span></span><code><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">teller</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">  </span><span class="c1">// Kan waarden van 0 tot 65535 bevatten</span>
 </code></pre></div>
 <strong>Gebruik:</strong> Voor getallen die nooit negatief worden, zoals:</p>
@@ -969,16 +1037,6 @@ Door verschillende combinaties te maken, kun je <strong>256 verschillende patron
 <li>Temperatuur (kan onder 0°C zijn)</li>
 <li>Positie (links/rechts van een startpunt)</li>
 <li>Verschil tussen twee metingen</li>
-</ul>
-<h3 id="char">char</h3>
-<p><strong>Karakter of klein getal</strong>
-<div class="highlight"><pre><span></span><code><span class="kt">char</span><span class="w"> </span><span class="n">letter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;A&#39;</span><span class="p">;</span><span class="w">     </span><span class="c1">// Voor letters</span>
-<span class="kt">char</span><span class="w"> </span><span class="n">kleinGetal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">42</span><span class="p">;</span><span class="w">  </span><span class="c1">// Voor getallen van -128 tot +127</span>
-</code></pre></div>
-<strong>Gebruik:</strong></p>
-<ul>
-<li>Voor enkele letters of tekens</li>
-<li>Voor heel kleine getallen (om geheugen te besparen)</li>
 </ul>
 <h3 id="float">float</h3>
 <p><strong>Kommagetal (decimaal getal)</strong></p>
