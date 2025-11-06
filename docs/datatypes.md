@@ -11,6 +11,7 @@ Stel je voor dat je **8 lampjes** naast elkaar hebt. Elk lampje kan **aan** (1) 
 Door verschillende combinaties te maken, kun je **256 verschillende patronen** creëren!
 
 Voorbeelden:
+
 - `00000000` = 0
 - `00000001` = 1  
 - `00000010` = 2
@@ -35,13 +36,64 @@ Bijvoorbeeld: het getal 42 zou er zo uitzien:
 - **Kleuren**: Elk van de kleuren rood, groen en blauw gebruikt 8 bits (0-255).
 
 ---
-
 ## Datatypes in C++ (Arduino)
 
 In **C++** moet je altijd aangeven welk **datatype** je gebruikt. Dit helpt de computer om te weten hoeveel geheugen hij moet reserveren.
 
+### unsigned char
+**Klein geheel getal zonder minteken (8 bits)**
+
+```cpp
+unsigned char helderheid = 255;  // Kan waarden van 0 tot 255 bevatten
+unsigned char percentage = 75;   // Perfect voor percentages
+```
+**Gebruik:** Voor kleine getallen die precies in de 8-bit range passen:
+
+- LED helderheid (0-255)
+- Percentages (0-100)
+- Sensor waarden die al geschaald zijn naar 0-255
+- RGB kleurwaarden (rood, groen, blauw elk 0-255)
+> Zie je het verband? Dit gebruikt precies de 8 bits die we net hebben uitgelegd!
+
+### char 
+**Karakter of klein getal**
+```cpp
+char letter = 'A';     // Voor letters
+char kleinGetal = 42;  // Voor getallen van -128 tot +127
+```
+**Waarom heet dit datatype 'char'?**
+
+`char` is de afkorting van **'character'** (karakter). Oorspronkelijk was dit datatype bedoeld om letters en tekens op te slaan.
+
+**Het geheim:** Karakters worden eigenlijk opgeslagen als **kleine gehele getallen**!
+Elk karakter heeft een nummer in de ASCII-tabel:
+
+- 'A' = 65
+- 'B' = 66
+- '0' = 48
+- '1' = 49
+
+> **Let op!** Bij een karakter staat er in C++ steeds een enkele quote ``` ' ``` voor en na het karakter. 
+
+**Voorbeelden:**
+```cpp
+char letter = 'A';        // Slaat eigenlijk het getal 65 op
+char getal = 65;          // Dit is hetzelfde als 'A'!
+char cijfer = '5';        // Slaat het getal 53 op (niet het getal 5!)
+```
+**Gebruik:**
+
+- Voor een letter of teken 
+- Voor heel kleine getallen (-128 tot +127) om geheugen te besparen
+- Bij communicatie waar elke byte telt
+
+> **Interessant:** Je kunt *rekenen* met karakters! 'A' + 1 geeft 'B'.
+
+
 ### unsigned int 
-**Geheel getal zonder minteken**
+**Geheel *groter* getal zonder minteken**
+ 
+ Hiervoor worden 16 bits gebruikt
 
 ```cpp
 unsigned int teller = 0;  // Kan waarden van 0 tot 65535 bevatten
@@ -63,17 +115,6 @@ int temperatuur = -5;  // Kan waarden van -32768 tot +32767 bevatten
 - Temperatuur (kan onder 0°C zijn)
 - Positie (links/rechts van een startpunt)
 - Verschil tussen twee metingen
-
-### char 
-**Karakter of klein getal**
-```cpp
-char letter = 'A';     // Voor letters
-char kleinGetal = 42;  // Voor getallen van -128 tot +127
-```
-**Gebruik:**
-
-- Voor enkele letters of tekens
-- Voor heel kleine getallen (om geheugen te besparen)
 
 ### float
 **Kommagetal (decimaal getal)**
