@@ -24,7 +24,7 @@
     
     
       
-        <title>Bit en Boolean – de kleinste eenheid - Cursus Microcontrollers</title>
+        <title>Bit en Boolean - Cursus Microcontrollers</title>
       
     
     
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Bit en Boolean – de kleinste eenheid
+              Bit en Boolean
             
           </span>
         </div>
@@ -255,7 +255,7 @@
   
   
   <span class="md-ellipsis">
-    Inhoud
+    Inhoudstabel
     
   </span>
   
@@ -330,7 +330,7 @@
   
   
   <span class="md-ellipsis">
-    Bit en Boolean – de kleinste eenheid
+    Bit en Boolean
     
   </span>
   
@@ -343,7 +343,7 @@
   
   
   <span class="md-ellipsis">
-    Bit en Boolean – de kleinste eenheid
+    Bit en Boolean
     
   </span>
   
@@ -514,7 +514,7 @@
   
   
   <span class="md-ellipsis">
-    Output – dingen aansturen
+    Output
     
   </span>
   
@@ -536,7 +536,7 @@
   
   
   <span class="md-ellipsis">
-    Input – dingen meten
+    Input
     
   </span>
   
@@ -558,7 +558,7 @@
   
   
   <span class="md-ellipsis">
-    GPIO – Input/Output in de praktijk
+    GPIO
     
   </span>
   
@@ -580,7 +580,29 @@
   
   
   <span class="md-ellipsis">
-    Meer datatypes
+    Datatypes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../eerste_programma/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Je eerste programma
     
   </span>
   
@@ -602,7 +624,7 @@
   
   
   <span class="md-ellipsis">
-    Analoge signalen en PWM
+    Analoog en PWM
     
   </span>
   
@@ -624,7 +646,7 @@
   
   
   <span class="md-ellipsis">
-    Samenspel en toepassingen
+    Toepassingen
     
   </span>
   
@@ -830,7 +852,7 @@
 <h1 id="bit-en-boolean-de-kleinste-eenheid">Bit en Boolean – de kleinste eenheid</h1>
 <h2 id="wat-is-een-bit">Wat is een bit?</h2>
 <p>Een <strong>bit</strong> is de kleinste eenheid van informatie in een computer.<br />
-Een bit kan maar 2 waarden hebben: alleen de waarde <strong>0</strong> of <strong>1</strong>. </p>
+Een bit kan maar 2 waarden hebben: alleen de waarde <strong>0</strong> of <strong>1</strong>.</p>
 <p>Deze 2 waarden kunnen, afhankelijk van de context, anders genoemd worden, zo kan een <strong>0</strong> ook <em>uit, laag</em> of <em>onwaar</em> genoemd worden en een <strong>1</strong> op zijn beurt <em>aan, hoog</em> of <em>waar</em>.</p>
 <h2 id="wat-is-een-variabele">Wat is een variabele?</h2>
 <p>Een <strong>variabele</strong> is een naam voor een stukje geheugen in de computer waar je informatie in kunt opslaan.  </p>
@@ -856,7 +878,7 @@ Een bit kan maar 2 waarden hebben: alleen de waarde <strong>0</strong> of <stron
 <h2 id="boolean-in-code">Boolean in code</h2>
 <p>In programmeertalen gebruik je het datatype <strong>boolean</strong> om met waar/onwaar te werken.</p>
 <h3 id="in-c">In C++</h3>
-<p>In C++ moet je het datatype van een variabele altijd <strong>expliciet</strong> vermelden. </p>
+<p>In C++ moet je het datatype van een variabele altijd <strong>expliciet</strong> vermelden.</p>
 <p>Bij een boolean betekent <strong>0</strong> hetzelfde als <code>false</code> en <strong>1</strong> hetzelfde als <code>true</code>.</p>
 <div class="highlight"><pre><span></span><code><span class="c1">// cpp</span>
 <span class="kt">bool</span><span class="w"> </span><span class="n">ledAan</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w">   </span><span class="c1">// LED aan</span>
@@ -889,29 +911,35 @@ Ook hier geldt: <strong>0</strong> is <code>False</code> en <strong>1</strong> i
 <p>Een <strong>operator</strong> is een symbool dat een bewerking uitvoert op één of meer waarden.<br />
 Bij booleans hebben we drie belangrijke operatoren: <strong>NOT</strong>, <strong>AND</strong> en <strong>OR</strong>.</p>
 <h3 id="not-operator-omkeren">NOT operator (omkeren)</h3>
-<p>De <strong>NOT</strong> operator keert een boolean waarde om:
-- <code>NOT true</code> wordt <code>false</code>
-- <code>NOT false</code> wordt <code>true</code></p>
+<p>De <strong>NOT</strong> operator keert een boolean waarde om:</p>
+<ul>
+<li><code>NOT true</code> wordt <code>false</code></li>
+<li><code>NOT false</code> wordt <code>true</code></li>
+</ul>
 <p><strong>Gebruik:</strong> Om het tegenovergestelde van een conditie te krijgen.<br />
 Bijvoorbeeld: "Als de knop NIET ingedrukt is..."</p>
 <h3 id="and-operator-beide-waar">AND operator (beide waar)</h3>
-<p>De <strong>AND</strong> operator geeft alleen <code>true</code> als <strong>beide</strong> waarden <code>true</code> zijn:
-- <code>true AND true</code> = <code>true</code>
-- <code>true AND false</code> = <code>false</code>
-- <code>false AND true</code> = <code>false</code>
-- <code>false AND false</code> = <code>false</code></p>
+<p>De <strong>AND</strong> operator geeft alleen <code>true</code> als <strong>beide</strong> waarden <code>true</code> zijn:</p>
+<ul>
+<li><code>true AND true</code> = <code>true</code></li>
+<li><code>true AND false</code> = <code>false</code></li>
+<li><code>false AND true</code> = <code>false</code></li>
+<li><code>false AND false</code> = <code>false</code></li>
+</ul>
 <p><strong>Gebruik:</strong> Om te controleren of meerdere voorwaarden tegelijk waar zijn.<br />
 Bijvoorbeeld: "Als knop A ingedrukt is EN knop B ingedrukt is..."</p>
 <h3 id="or-operator-een-van-beide-waar">OR operator (één van beide waar)</h3>
-<p>De <strong>OR</strong> operator geeft <code>true</code> als <strong>minstens één</strong> van de waarden <code>true</code> is:
-- <code>true OR true</code> = <code>true</code>
-- <code>true OR false</code> = <code>true</code>
-- <code>false OR true</code> = <code>true</code>
-- <code>false OR false</code> = <code>false</code></p>
+<p>De <strong>OR</strong> operator geeft <code>true</code> als <strong>minstens één</strong> van de waarden <code>true</code> is:</p>
+<ul>
+<li><code>true OR true</code> = <code>true</code></li>
+<li><code>true OR false</code> = <code>true</code></li>
+<li><code>false OR true</code> = <code>true</code></li>
+<li><code>false OR false</code> = <code>false</code></li>
+</ul>
 <p><strong>Gebruik:</strong> Om te controleren of één van meerdere voorwaarden waar is.<br />
 Bijvoorbeeld: "Als knop A ingedrukt is OF knop B ingedrukt is..."</p>
 <h3 id="syntax-in-c">Syntax in C++</h3>
-<p><div class="highlight"><pre><span></span><code><span class="kt">bool</span><span class="w"> </span><span class="n">knop1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="kt">bool</span><span class="w"> </span><span class="n">knop1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
 <span class="kt">bool</span><span class="w"> </span><span class="n">knop2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
 
 <span class="c1">// NOT operator (!)</span>
@@ -923,7 +951,7 @@ Bijvoorbeeld: "Als knop A ingedrukt is OF knop B ingedrukt is..."</p>
 <span class="c1">// OR operator (||)</span>
 <span class="kt">bool</span><span class="w"> </span><span class="n">eenVanBeide</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">knop1</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">knop2</span><span class="p">;</span><span class="w">   </span><span class="c1">// true</span>
 </code></pre></div>
-Syntax in MicroPython
+<p>Syntax in MicroPython</p>
 <div class="highlight"><pre><span></span><code><span class="n">knop1</span> <span class="o">=</span> <span class="kc">True</span>
 <span class="n">knop2</span> <span class="o">=</span> <span class="kc">False</span>
 
@@ -935,7 +963,7 @@ Syntax in MicroPython
 
 <span class="c1"># OR operator (or)</span>
 <span class="n">een_van_beide</span> <span class="o">=</span> <span class="n">knop1</span> <span class="ow">or</span> <span class="n">knop2</span>   <span class="c1"># True</span>
-</code></pre></div></p>
+</code></pre></div>
 <hr />
 <h2 id="extra-naamgeving-van-variabelen">Extra: Naamgeving van variabelen</h2>
 <p>Probeer altijd een naam te kiezen die <strong>duidelijk</strong> maakt wat de variabele voorstelt.</p>
@@ -954,7 +982,7 @@ Dit maakt je code beter leesbaar en begrijpelijk voor anderen (en jezelf!).</p>
 </li>
 </ul>
 <blockquote>
-<p>Het is <strong>niet verplicht</strong>, maar het volgen van deze <em>conventies</em> maakt je code <strong>overzichtelijker</strong>! 
+<p>Het is <strong>niet verplicht</strong>, maar het volgen van deze <em>conventies</em> maakt je code <strong>overzichtelijker</strong>!
 Het volgen van conventies maakt je code overzichtelijker en wordt vaak gewaardeerd door docenten en programmeurs.</p>
 </blockquote>
 

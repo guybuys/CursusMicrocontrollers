@@ -24,7 +24,7 @@
     
     
       
-        <title>GPIO – Input/Output in de praktijk - Cursus Microcontrollers</title>
+        <title>GPIO - Cursus Microcontrollers</title>
       
     
     
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              GPIO – Input/Output in de praktijk
+              GPIO
             
           </span>
         </div>
@@ -255,7 +255,7 @@
   
   
   <span class="md-ellipsis">
-    Inhoud
+    Inhoudstabel
     
   </span>
   
@@ -321,7 +321,7 @@
   
   
   <span class="md-ellipsis">
-    Bit en Boolean – de kleinste eenheid
+    Bit en Boolean
     
   </span>
   
@@ -343,7 +343,7 @@
   
   
   <span class="md-ellipsis">
-    Output – dingen aansturen
+    Output
     
   </span>
   
@@ -365,7 +365,7 @@
   
   
   <span class="md-ellipsis">
-    Input – dingen meten
+    Input
     
   </span>
   
@@ -396,7 +396,7 @@
   
   
   <span class="md-ellipsis">
-    GPIO – Input/Output in de praktijk
+    GPIO
     
   </span>
   
@@ -409,7 +409,7 @@
   
   
   <span class="md-ellipsis">
-    GPIO – Input/Output in de praktijk
+    GPIO
     
   </span>
   
@@ -465,14 +465,29 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#micropython-from-machine-import-pin-pin-12-als-output-led-pin12-pinout" class="md-nav__link">
+    <nav class="md-nav" aria-label="GPIO in &#34;output&#34; mode">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#output-mode-laag" class="md-nav__link">
     <span class="md-ellipsis">
-      # MicroPython from machine import Pin # Pin 12 als output led = Pin(12, Pin.OUT)
+      OUTPUT-mode, LAAG
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output-mode-hoog" class="md-nav__link">
+    <span class="md-ellipsis">
+      OUTPUT-mode, HOOG
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -529,7 +544,29 @@
   
   
   <span class="md-ellipsis">
-    Meer datatypes
+    Datatypes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../eerste_programma/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Je eerste programma
     
   </span>
   
@@ -551,7 +588,7 @@
   
   
   <span class="md-ellipsis">
-    Analoge signalen en PWM
+    Analoog en PWM
     
   </span>
   
@@ -573,7 +610,7 @@
   
   
   <span class="md-ellipsis">
-    Samenspel en toepassingen
+    Toepassingen
     
   </span>
   
@@ -665,14 +702,29 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#micropython-from-machine-import-pin-pin-12-als-output-led-pin12-pinout" class="md-nav__link">
+    <nav class="md-nav" aria-label="GPIO in &#34;output&#34; mode">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#output-mode-laag" class="md-nav__link">
     <span class="md-ellipsis">
-      # MicroPython from machine import Pin # Pin 12 als output led = Pin(12, Pin.OUT)
+      OUTPUT-mode, LAAG
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output-mode-hoog" class="md-nav__link">
+    <span class="md-ellipsis">
+      OUTPUT-mode, HOOG
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -736,21 +788,21 @@
 <p>Dit is de <strong>standaard configuratie</strong> van een <strong>GPIO</strong>. Tenzij we de configuratie van een pin veranderen, is de GPIO zoals hierboven geconfigureerd. Alle <strong>"inwendige schakelaars"</strong> zijn open dus de GPIO gedraagt zich als een <strong>input</strong>.</p>
 <h2 id="gpio-in-input-mode">GPIO in "input" mode</h2>
 <p>In <strong>C++</strong> kunnen we de status van een ingang lezen door middel van het pin nummer (<code>digitalRead(&lt;pin_nummer&gt;)</code>). Als een bepaalde GPIO altijd als <em>input</em> gebruikt gaat worden, moet je dit dus niet specifiek instellen. Maar als tijdens je programma de GPIO in een andere mode gebruikt hebt en je wil hem terug als ingang instellen, kan dat op deze manier:</p>
-<p><div class="highlight"><pre><span></span><code><span class="c1">// cpp</span>
+<div class="highlight"><pre><span></span><code><span class="c1">// cpp</span>
 <span class="n">pinMode</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span><span class="w"> </span><span class="n">INPUT</span><span class="p">);</span><span class="w">  </span><span class="c1">// zet pin 14 in INPUT mode</span>
 </code></pre></div>
-In <strong>MicroPython</strong> gaat het een beetje anders. In het deel over de <strong>output</strong> en <strong>input</strong>, zagen we dat we moeten aangeven waarvoor een pin gebruikt wordt en dat je die dan pas kunt gebruiken. Hier gaan we eindelijk zien hoe dat moet gebeuren.</p>
-<p>Een verschil tussen <strong>Arduino</strong> en <strong>MicroPython</strong> is dat bij <strong>Arduino</strong> de <em>bibliotheken</em> die nodig zijn om een GPIO te gebruiken, standaart toegangkelijk zijn. In <strong>MicroPython</strong> moet je de bibliotheek bovenaan je code aanroepen. Dat gebeurt zo:
+<p>In <strong>MicroPython</strong> gaat het een beetje anders. In het deel over de <strong>output</strong> en <strong>input</strong>, zagen we dat we moeten aangeven waarvoor een pin gebruikt wordt en dat je die dan pas kunt gebruiken. Hier gaan we eindelijk zien hoe dat moet gebeuren.</p>
+<p>Een verschil tussen <strong>Arduino</strong> en <strong>MicroPython</strong> is dat bij <strong>Arduino</strong> de <em>bibliotheken</em> die nodig zijn om een GPIO te gebruiken, standaart toegangkelijk zijn. In <strong>MicroPython</strong> moet je de bibliotheek bovenaan je code aanroepen. Dat gebeurt zo:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># MicroPython</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">machine</span><span class="w"> </span><span class="kn">import</span> <span class="n">Pin</span>
 </code></pre></div>
-Als dit bovenaan in de code staat, kan je in je verdere code GPIO's <em>configureren</em> (is in de gewenste mode zetten) en gebruiken. Het <em>configureren</em> als input gaat dan zo:</p>
-<p><div class="highlight"><pre><span></span><code><span class="c1"># MicroPython</span>
+<p>Als dit bovenaan in de code staat, kan je in je verdere code GPIO's <em>configureren</em> (is in de gewenste mode zetten) en gebruiken. Het <em>configureren</em> als input gaat dan zo:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># MicroPython</span>
 
 <span class="c1"># Pin 14 als gewone input</span>
 <span class="n">button</span> <span class="o">=</span> <span class="n">Pin</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">IN</span><span class="p">)</span>
 </code></pre></div>
-Eigenlijk lijkt in <strong>MicroPython</strong> een GPIO op een <strong>object</strong> dat eigenschappen heeft. We gaan de details hiervan later nog bekijken maar het komt er voorlopig op neer dat je de GPIO een betekenisvolle naam geeft. </p>
+<p>Eigenlijk lijkt in <strong>MicroPython</strong> een GPIO op een <strong>object</strong> dat eigenschappen heeft. We gaan de details hiervan later nog bekijken maar het komt er voorlopig op neer dat je de GPIO een betekenisvolle naam geeft.</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># MicroPython</span>
 
 <span class="c1"># De input waarde inlezen</span>
@@ -760,24 +812,24 @@ Eigenlijk lijkt in <strong>MicroPython</strong> een GPIO op een <strong>object</
 <p>We zetten onze <em>vereenvoudigde</em> GPIO in <em>input-pull-up</em> mode door <em>schakelaar</em> <strong>Q4</strong> te sluiten:</p>
 <p><img alt="GPIO input-pullup schema" src="../img/ac_gpio_input_pullup.png" /></p>
 <p>In <strong>C++</strong> stellen we de GPIO opnieuw met <strong>pinMode</strong> in:</p>
-<p><div class="highlight"><pre><span></span><code><span class="c1">// cpp</span>
+<div class="highlight"><pre><span></span><code><span class="c1">// cpp</span>
 <span class="n">pinMode</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span><span class="w"> </span><span class="n">INPUT_PULLUP</span><span class="p">);</span><span class="w">  </span><span class="c1">// zet pin 14 in INPUT-PULLUP mode</span>
 </code></pre></div>
-Ook in <strong>MicroPython</strong> gebeurt het op een gelijkaardige manier, alleen komt er nu een <em>argument</em> (tussen de haakjes) bij. Het is alsof we zeggen dat de GPIO een <em>input</em> is <strong>en</strong> dat de <em>pull-up weerstand</em> moet aangezet worden.
+<p>Ook in <strong>MicroPython</strong> gebeurt het op een gelijkaardige manier, alleen komt er nu een <em>argument</em> (tussen de haakjes) bij. Het is alsof we zeggen dat de GPIO een <em>input</em> is <strong>en</strong> dat de <em>pull-up weerstand</em> moet aangezet worden.</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># MicroPython</span>
 
 <span class="c1"># Pin 14 als input met pull-up weerstand </span>
 <span class="n">button</span> <span class="o">=</span> <span class="n">Pin</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">IN</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">PULL_UP</span><span class="p">)</span>  
-</code></pre></div></p>
+</code></pre></div>
 <h2 id="gpio-in-input-pull-down-mode">GPIO in "input-pull-down" mode</h2>
 <p><strong>Niet alle microcontrollers</strong> hebben deze mogelijkheid. Bijvoorbeeld de veelgebruikte <strong>Arduino UNO r3</strong> heeft geen interne pull-down weerstanden. Daarmee is deze optie niet beschikbaar. In de praktijk worden <strong>pull-up weerstanden</strong> veel vaker gebruikt dan <strong>pull-down weerstanden</strong>, dus het is vaak geen probleem. Voor de microcontrollers die het wel hebben, zoals de <strong>ESP-32</strong>, beschrijven we deze <strong>pull-down</strong> mode.</p>
 <p>We zetten onze <em>vereenvoudigde</em> GPIO in <em>input-pull-down</em> mode door <em>schakelaar</em> <strong>Q3</strong> te sluiten:</p>
 <p><img alt="GPIO input-pulldown schema" src="../img/ac_gpio_input_pulldown.png" /></p>
 <p>In <strong>C++</strong> stellen we de GPIO opnieuw met <strong>pinMode</strong> in:</p>
-<p><div class="highlight"><pre><span></span><code><span class="c1">// cpp</span>
+<div class="highlight"><pre><span></span><code><span class="c1">// cpp</span>
 <span class="n">pinMode</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span><span class="w"> </span><span class="n">INPUT_PULLDOWN</span><span class="p">);</span><span class="w">  </span><span class="c1">// zet pin 14 in INPUT-PULLDOWN mode</span>
 </code></pre></div>
-Ook in <strong>MicroPython</strong> gebeurt het op een gelijkaardige manier als bij de pull-up mode.</p>
+<p>Ook in <strong>MicroPython</strong> gebeurt het op een gelijkaardige manier als bij de pull-up mode.</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># MicroPython</span>
 
 <span class="c1"># Pin 14 als input met pull-down weerstand  </span>
@@ -785,23 +837,24 @@ Ook in <strong>MicroPython</strong> gebeurt het op een gelijkaardige manier als 
 </code></pre></div>
 <h2 id="gpio-in-output-mode">GPIO in "output" mode</h2>
 <p>Wanneer we de GPIO in output mode zetten, wordt de pin verbonden met <strong>GND</strong> of <strong>VCC</strong>. Hoe we dat doen, hadden we al in het hoofdstuk van de <strong>output</strong> gezien. Schematisch ziet het er eigenlijk wel iets anders uit dan met de "interne SPDT" schakelaar, al is de werking compleet hetzelfde. De 2 mogelijkheden in output mode zijn deze:</p>
-<p><strong>OUTPUT-mode, LAAG</strong></p>
+<h3 id="output-mode-laag">OUTPUT-mode, LAAG</h3>
 <p><img alt="GPIO output low schema" src="../img/ac_gpio_output_low.png" /></p>
 <p>Dit wordt gedaan door alleen de <em>inwendige schakelaar</em> Q1 te sluiten. De GPIO pin wordt intern met GND verbonden.</p>
-<p><strong>OUTPUT-mode, HOOG</strong></p>
+<h3 id="output-mode-hoog">OUTPUT-mode, HOOG</h3>
 <p><img alt="GPIO output high schema" src="../img/ac_gpio_output_high.png" /></p>
 <p>Dit wordt gedaan door alleen de <em>inwendige schakelaar</em> Q2 te sluiten. De GPIO pin wordt intern met VCC verbonden.</p>
 <p>Een GPIO in <strong>C++</strong> in output-mode te zetten, doen we zo:</p>
-<p><div class="highlight"><pre><span></span><code><span class="c1">// cpp</span>
+<div class="highlight"><pre><span></span><code><span class="c1">// cpp</span>
 <span class="n">pinMode</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span><span class="w">  </span><span class="c1">// zet pin 12 in OUTPUT mode</span>
 </code></pre></div>
-In <strong>MicroPython</strong> doen we het zo:</p>
-<h2 id="micropython-from-machine-import-pin-pin-12-als-output-led-pin12-pinout"><div class="highlight"><pre><span></span><code><span class="c1"># MicroPython</span>
+<p>In <strong>MicroPython</strong> doen we het zo:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># MicroPython</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">machine</span><span class="w"> </span><span class="kn">import</span> <span class="n">Pin</span>
 
 <span class="c1"># Pin 12 als output</span>
 <span class="n">led</span> <span class="o">=</span> <span class="n">Pin</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">OUT</span><span class="p">)</span>
-</code></pre></div></h2>
+</code></pre></div>
+<hr />
 <h2 id="samenvatting-gpio-configureren">Samenvatting: GPIO configureren</h2>
 <h3 id="c-arduino">C++ (Arduino)</h3>
 <table>
@@ -836,13 +889,13 @@ In <strong>MicroPython</strong> doen we het zo:</p>
 </tbody>
 </table>
 <p>*Niet beschikbaar op alle microcontrollers (bv. Arduino UNO r3)</p>
-<p><strong>Waarden lezen/schrijven:</strong>
+<p><strong>Waarden lezen/schrijven</strong>:</p>
 <div class="highlight"><pre><span></span><code><span class="c1">// Lezen</span>
 <span class="kt">bool</span><span class="w"> </span><span class="n">waarde</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">digitalRead</span><span class="p">(</span><span class="n">pin</span><span class="p">);</span>
 
 <span class="c1">// Schrijven  </span>
 <span class="n">digitalWrite</span><span class="p">(</span><span class="n">pin</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w">  </span><span class="c1">// of LOW</span>
-</code></pre></div></p>
+</code></pre></div>
 <h3 id="micropython">MicroPython</h3>
 <table>
 <thead>
@@ -875,16 +928,16 @@ In <strong>MicroPython</strong> doen we het zo:</p>
 </tr>
 </tbody>
 </table>
-<p><strong>Vergeet niet de bibliotheek te importeren:</strong>
+<p><strong>Vergeet niet de bibliotheek te importeren:</strong></p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">machine</span><span class="w"> </span><span class="kn">import</span> <span class="n">Pin</span>
 </code></pre></div>
-<strong>Waarden lezen/schrijven:</strong>
+<p><strong>Waarden lezen/schrijven:</strong></p>
 <div class="highlight"><pre><span></span><code><span class="c1"># Lezen</span>
 <span class="n">waarde</span> <span class="o">=</span> <span class="n">pin</span><span class="o">.</span><span class="n">value</span><span class="p">()</span>
 
 <span class="c1"># Schrijven</span>
 <span class="n">pin</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>    <span class="c1"># of 0, True, False</span>
-</code></pre></div></p>
+</code></pre></div>
 
 
 

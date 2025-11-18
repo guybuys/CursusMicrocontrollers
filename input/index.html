@@ -24,7 +24,7 @@
     
     
       
-        <title>Input – dingen meten - Cursus Microcontrollers</title>
+        <title>Input - Cursus Microcontrollers</title>
       
     
     
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Input – dingen meten
+              Input
             
           </span>
         </div>
@@ -255,7 +255,7 @@
   
   
   <span class="md-ellipsis">
-    Inhoud
+    Inhoudstabel
     
   </span>
   
@@ -321,7 +321,7 @@
   
   
   <span class="md-ellipsis">
-    Bit en Boolean – de kleinste eenheid
+    Bit en Boolean
     
   </span>
   
@@ -343,7 +343,7 @@
   
   
   <span class="md-ellipsis">
-    Output – dingen aansturen
+    Output
     
   </span>
   
@@ -374,7 +374,7 @@
   
   
   <span class="md-ellipsis">
-    Input – dingen meten
+    Input
     
   </span>
   
@@ -387,7 +387,7 @@
   
   
   <span class="md-ellipsis">
-    Input – dingen meten
+    Input
     
   </span>
   
@@ -531,7 +531,7 @@
   
   
   <span class="md-ellipsis">
-    GPIO – Input/Output in de praktijk
+    GPIO
     
   </span>
   
@@ -553,7 +553,29 @@
   
   
   <span class="md-ellipsis">
-    Meer datatypes
+    Datatypes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../eerste_programma/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Je eerste programma
     
   </span>
   
@@ -575,7 +597,7 @@
   
   
   <span class="md-ellipsis">
-    Analoge signalen en PWM
+    Analoog en PWM
     
   </span>
   
@@ -597,7 +619,7 @@
   
   
   <span class="md-ellipsis">
-    Samenspel en toepassingen
+    Toepassingen
     
   </span>
   
@@ -786,7 +808,7 @@
 <h2 id="voorbeelden-van-digitale-input">Voorbeelden van digitale input</h2>
 <ol>
 <li>
-<p><strong>Drukknop indrukken</strong>: </p>
+<p><strong>Drukknop indrukken</strong>:  </p>
 <ul>
 <li>Knop ingedrukt = True (spanning aanwezig)</li>
 <li>Knop niet ingedrukt = False (geen spanning)</li>
@@ -795,7 +817,7 @@
 <li>
 <p><strong>Schakelaar</strong>:</p>
 <ul>
-<li>Schakelaar aan = True </li>
+<li>Schakelaar aan = True  </li>
 <li>Schakelaar uit = False</li>
 </ul>
 </li>
@@ -816,26 +838,32 @@
 <h2 id="input-lezen-in-code">Input lezen in code</h2>
 <h3 id="in-c-arduino">In C++ (Arduino)</h3>
 <p>In <strong>C++</strong> lees je een digitale ingang uit met de functie <code>digitalRead()</code>:</p>
-<p><div class="highlight"><pre><span></span><code><span class="c1">// cpp</span>
+<div class="highlight"><pre><span></span><code><span class="c1">// cpp</span>
 <span class="kt">bool</span><span class="w"> </span><span class="n">knopStatus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">digitalRead</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span><span class="w">  </span><span class="c1">// Lees pin 4 uit</span>
 </code></pre></div>
-Je krijgt dan <code>HIGH</code> (of <code>true</code>) terug als er spanning op de pin staat, of <code>LOW</code> (of <code>false</code>) als er geen spanning staat.</p>
+<p>Je krijgt dan <code>HIGH</code> (of <code>true</code>) terug als er spanning op de pin staat, of <code>LOW</code> (of <code>false</code>) als er geen spanning staat.</p>
 <blockquote>
 <p>Opmerking, in het bovenstaande voorbeeld wordt er een variabele <strong>knopStatus</strong> aangemaakt om de waarde van <em>digitalRead</em> in op te vangen. Wanneer die variabele reeds bestaat in het programma, is het datatype <code>bool</code> in het begin van de lijn niet meer nodig.</p>
 </blockquote>
 <h3 id="in-micropython">In MicroPython</h3>
 <p>In <strong>MicroPython</strong> ziet het er opnieuw net iets anders uit. Daar moeten we eerst aangeven dat <em>knop</em> aan pin 4 is aangesloten. <em>Hoe</em> dat moet, volgt later. Je leest een digitale ingang uit met de <em>methode</em> <code>.value()</code>:</p>
-<p><div class="highlight"><pre><span></span><code><span class="c1"># MicroPython</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># MicroPython</span>
 <span class="n">knop_status</span> <span class="o">=</span> <span class="n">knop</span><span class="o">.</span><span class="n">value</span><span class="p">()</span>  <span class="c1"># Lees de knop uit</span>
 </code></pre></div>
-Je krijgt dan <code>1</code> (of <code>True</code>) terug als er spanning op de pin staat, of <code>0</code> (of <code>False</code>) als er geen spanning staat.</p>
+<p>Je krijgt dan <code>1</code> (of <code>True</code>) terug als er spanning op de pin staat, of <code>0</code> (of <code>False</code>) als er geen spanning staat.</p>
 <h2 id="schmitt-trigger-waarom-niet-gewoon-bij-25v-omschakelen">Schmitt Trigger - waarom niet gewoon bij 2,5V omschakelen?</h2>
 <p>Je zou denken: "Waarom schakelt de microcontroller niet gewoon om bij 2,5V (de helft van 5V)?"<br />
 Het probleem is dat spanningen kunnen <strong>trillen</strong> of <strong>ruis</strong> kunnen hebben. Als de spanning heel langzaam stijgt of daalt rond 2,5V, zou de uitgang heel vaak kunnen omschakelen tussen 0 en 1.</p>
 <p><strong>Oplossing: De Schmitt Trigger</strong><br />
-Een microcontroller gebruikt daarom een <strong>Schmitt Trigger</strong>. Dit betekent:
-- Bij <strong>stijgende</strong> spanning schakelt hij om van 0 naar 1 bij bijvoorbeeld <strong>3,0V</strong>
-- Bij <strong>dalende</strong> spanning schakelt hij om van 1 naar 0 bij bijvoorbeeld <strong>2,0V</strong></p>
+Een microcontroller gebruikt daarom een <strong>Schmitt Trigger</strong>. Dit betekent:</p>
+<ul>
+<li>
+<p>Bij <strong>stijgende</strong> spanning schakelt hij om van 0 naar 1 bij bijvoorbeeld <strong>3,0V</strong></p>
+</li>
+<li>
+<p>Bij <strong>dalende</strong> spanning schakelt hij om van 1 naar 0 bij bijvoorbeeld <strong>2,0V</strong></p>
+</li>
+</ul>
 <p><img alt="Schmitt Trigger diagram" src="../img/ac_schmitt_trigger_input.png" /></p>
 <p>Deze <strong>verschillende</strong> drempelwaardes maken het systeem <strong>stabieler</strong> en voorkomen ongewenste schakelingen door ruis.</p>
 <blockquote>
@@ -856,7 +884,7 @@ Een microcontroller gebruikt daarom een <strong>Schmitt Trigger</strong>. Dit be
 <h2 id="interne-pull-up-en-pull-down">Interne pull-up en pull-down</h2>
 <p>De meeste microcontrollers hebben de mogelijkheid om gebruik te maken van een <strong>interne pull-up weerstand</strong>. Dit wil zeggen dat de pull-up weerstand in de microcontroller zit en dat er geen externe weerstand toegevoegd moet worden. Het schema ziet er dan zo uit:</p>
 <p><img alt="Input SPST met interne pull-up weerstand" src="../img/ac_input_pbipu.png" /></p>
-<p>Uitwendig moet de drukknopschakelaar aangesloten worden tussen de <strong>ground</strong> en de input pin van de microcontroller. </p>
+<p>Uitwendig moet de drukknopschakelaar aangesloten worden tussen de <strong>ground</strong> en de input pin van de microcontroller.</p>
 <hr />
 <p>Bij sommige microcontrollers is het ook mogelijk om een interne pull-down te gebruiken. Dat ziet er dan zo uit:</p>
 <p><img alt="Input SPST met interne pull-down weerstand" src="../img/ac_input_pbipd.png" /></p>
