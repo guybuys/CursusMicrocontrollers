@@ -15,14 +15,14 @@ Zo werkt digitale input ook: de microcontroller meet of er spanning staat op een
 
 ## Voorbeelden van digitale input
 
-1. **Drukknop indrukken**: 
+1. **Drukknop indrukken**:  
 
     - Knop ingedrukt = True (spanning aanwezig)
     - Knop niet ingedrukt = False (geen spanning)
 
 2. **Schakelaar**:
 
-    - Schakelaar aan = True 
+    - Schakelaar aan = True  
     - Schakelaar uit = False
 
 3. **Eenvoudige sensor**:
@@ -48,6 +48,7 @@ In **C++** lees je een digitale ingang uit met de functie `digitalRead()`:
 // cpp
 bool knopStatus = digitalRead(4);  // Lees pin 4 uit
 ```
+
 Je krijgt dan `HIGH` (of `true`) terug als er spanning op de pin staat, of `LOW` (of `false`) als er geen spanning staat.
 
 > Opmerking, in het bovenstaande voorbeeld wordt er een variabele **knopStatus** aangemaakt om de waarde van *digitalRead* in op te vangen. Wanneer die variabele reeds bestaat in het programma, is het datatype `bool` in het begin van de lijn niet meer nodig.
@@ -60,6 +61,7 @@ In **MicroPython** ziet het er opnieuw net iets anders uit. Daar moeten we eerst
 # MicroPython
 knop_status = knop.value()  # Lees de knop uit
 ```
+
 Je krijgt dan `1` (of `True`) terug als er spanning op de pin staat, of `0` (of `False`) als er geen spanning staat.
 
 ## Schmitt Trigger - waarom niet gewoon bij 2,5V omschakelen?
@@ -69,7 +71,9 @@ Het probleem is dat spanningen kunnen **trillen** of **ruis** kunnen hebben. Als
 
 **Oplossing: De Schmitt Trigger**  
 Een microcontroller gebruikt daarom een **Schmitt Trigger**. Dit betekent:
+
 - Bij **stijgende** spanning schakelt hij om van 0 naar 1 bij bijvoorbeeld **3,0V**
+  
 - Bij **dalende** spanning schakelt hij om van 1 naar 0 bij bijvoorbeeld **2,0V**
 
 ![Schmitt Trigger diagram](img/ac_schmitt_trigger_input.png)
@@ -107,7 +111,7 @@ De meeste microcontrollers hebben de mogelijkheid om gebruik te maken van een **
 
 ![Input SPST met interne pull-up weerstand](img/ac_input_pbipu.png)
 
-Uitwendig moet de drukknopschakelaar aangesloten worden tussen de **ground** en de input pin van de microcontroller. 
+Uitwendig moet de drukknopschakelaar aangesloten worden tussen de **ground** en de input pin van de microcontroller.
 
 ---
 

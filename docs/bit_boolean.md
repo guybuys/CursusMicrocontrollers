@@ -1,8 +1,9 @@
 # Bit en Boolean – de kleinste eenheid
 
 ## Wat is een bit?
+
 Een **bit** is de kleinste eenheid van informatie in een computer.  
-Een bit kan maar 2 waarden hebben: alleen de waarde **0** of **1**. 
+Een bit kan maar 2 waarden hebben: alleen de waarde **0** of **1**.
 
 Deze 2 waarden kunnen, afhankelijk van de context, anders genoemd worden, zo kan een **0** ook *uit, laag* of *onwaar* genoemd worden en een **1** op zijn beurt *aan, hoog* of *waar*.
 
@@ -33,10 +34,12 @@ Een boolean kan maar twee waarden hebben (**0** of **1**), maar een *unsigned in
 > Het juiste ***datatype*** kiezen is belangrijk om je programma goed te laten werken!
 
 ## Boolean in code
+
 In programmeertalen gebruik je het datatype **boolean** om met waar/onwaar te werken.
 
 ### In C++
-In C++ moet je het datatype van een variabele altijd **expliciet** vermelden. 
+
+In C++ moet je het datatype van een variabele altijd **expliciet** vermelden.
 
 Bij een boolean betekent **0** hetzelfde als `false` en **1** hetzelfde als `true`.
 
@@ -45,9 +48,11 @@ Bij een boolean betekent **0** hetzelfde als `false` en **1** hetzelfde als `tru
 bool ledAan = true;   // LED aan
 bool knopIngedrukt = false; // Knop niet ingedrukt
 ```
+
 > In het bovenstaande voorbeeld, hebben we 2 variabelen gemaakt: `ledAan` en `knopIngedrukt`. Ze zijn van het *type* **bool** (boolean) en hebben de respectievelijke *waarde* `true` en `false`.
 
 ### In MicroPython
+
 In MicroPython hoef je het datatype van een variabele **niet expliciet** te vermelden. Python kiest zelf het type op basis van de waarde.
 
 Toch is het **heel belangrijk** om zelf goed te weten welk type je gebruikt.  
@@ -58,9 +63,11 @@ Ook hier geldt: **0** is `False` en **1** is `True`. Let op: in Python schrijf j
 led_aan = True      # LED aan
 knop_ingedrukt = False  # Knop niet ingedrukt
 ```
+
 > In het bovenstaande voorbeeld, hebben we 2 variabelen gemaakt: `led_aan` en `knop_ingedrukt`. We kunnen enkel aan de waarde zien dat ze van het *type* **boolean**  zijn: ze hebben namelijk de respectievelijke *waarde* `True` en `False`.
 
 ## Waar kom je bits en booleans tegen?
+
 - Bij het aansturen van uitgangen (LED aan/uit)
 - Bij het uitlezen van ingangen (knop ingedrukt of niet)
 - In logische beslissingen (if-statements)
@@ -73,7 +80,9 @@ Een **operator** is een symbool dat een bewerking uitvoert op één of meer waar
 Bij booleans hebben we drie belangrijke operatoren: **NOT**, **AND** en **OR**.
 
 ### NOT operator (omkeren)
+
 De **NOT** operator keert een boolean waarde om:
+
 - `NOT true` wordt `false`
 - `NOT false` wordt `true`
 
@@ -81,7 +90,9 @@ De **NOT** operator keert een boolean waarde om:
 Bijvoorbeeld: "Als de knop NIET ingedrukt is..."
 
 ### AND operator (beide waar)
+
 De **AND** operator geeft alleen `true` als **beide** waarden `true` zijn:
+
 - `true AND true` = `true`
 - `true AND false` = `false`
 - `false AND true` = `false`
@@ -91,7 +102,9 @@ De **AND** operator geeft alleen `true` als **beide** waarden `true` zijn:
 Bijvoorbeeld: "Als knop A ingedrukt is EN knop B ingedrukt is..."
 
 ### OR operator (één van beide waar)
+
 De **OR** operator geeft `true` als **minstens één** van de waarden `true` is:
+
 - `true OR true` = `true`
 - `true OR false` = `true`
 - `false OR true` = `true`
@@ -116,7 +129,9 @@ bool beideKnoppen = knop1 && knop2;  // false
 bool eenVanBeide = knop1 || knop2;   // true
 
 ```
+
 Syntax in MicroPython
+
 ```python
 knop1 = True
 knop2 = False
@@ -132,6 +147,7 @@ een_van_beide = knop1 or knop2   # True
 ```
 
 ---
+
 ## Extra: Naamgeving van variabelen
 
 Probeer altijd een naam te kiezen die **duidelijk** maakt wat de variabele voorstelt.
@@ -147,5 +163,5 @@ Dit maakt je code beter leesbaar en begrijpelijk voor anderen (en jezelf!).
   Hierbij worden woorden gescheiden door een *underscore* (_), alles in kleine letters.
   Bijvoorbeeld: `led_aan`, `knop_ingedrukt`
 
-> Het is **niet verplicht**, maar het volgen van deze *conventies* maakt je code **overzichtelijker**! 
+> Het is **niet verplicht**, maar het volgen van deze *conventies* maakt je code **overzichtelijker**!
 Het volgen van conventies maakt je code overzichtelijker en wordt vaak gewaardeerd door docenten en programmeurs.
