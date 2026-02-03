@@ -22,6 +22,7 @@ nav:
   - Datatypes: datatypes.md
   - Je eerste programma: eerste_programma.md
   - Analoog en PWM: analoog_pwm.md
+  - Seriële communicatie: seriele_communicatie.md
   - Toepassingen: toepassingen.md
   - Vooruitblik: vooruitblik.md
 markdown_extensions:

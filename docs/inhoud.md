@@ -9,5 +9,6 @@
 7. [Meer datatypes](datatypes.md)
 8. [Je eerste volledige programma](eerste_programma.md)
 9. [Analoge signalen en PWM](analoog_pwm.md)
-10. [Samenspel en toepassingen](toepassingen.md)
-11. [Vooruitblik](vooruitblik.md)
+10. [Seriële communicatie](seriele_communicatie.md)
+11. [Samenspel en toepassingen](toepassingen.md)
+12. [Vooruitblik](vooruitblik.md)

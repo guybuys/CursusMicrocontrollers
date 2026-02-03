@@ -123,7 +123,7 @@ void setup() {
 
 void loop() {
     // Lees knop uit
-    bool buttonPressed = digitalRead(buttonPin) == LOW;  // Pull-up: LOW = ingedrukt
+    bool buttonPressed = !digitalRead(buttonPin);  // Pull-up: signaal omdraaien
     
     // Stuur LED aan
     if (buttonPressed) {
