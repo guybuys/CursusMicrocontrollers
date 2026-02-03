@@ -31,6 +31,17 @@ In een **ASCII‑tabel** staat precies welk getal bij welk teken hoort. Zo kan e
 
 Vanaf hier kijken we hoe microcontrollers die getallen echt verzenden, bit voor bit, via seriële communicatie.
 
+## UART-signaal en baudrate
+
+Bij UART worden de bits achter elkaar verstuurd als **spanningsniveaus in de tijd**. Daarom is het belangrijk dat **zender en ontvanger dezelfde snelheid** gebruiken.
+
+- **Baudrate** = de snelheid van communiceren (bits per seconde)
+- Beide apparaten **moeten dezelfde baudrate** ingesteld hebben
+
+Als de snelheden niet overeenkomen, wordt elke bit op het verkeerde moment gelezen. Dat is een **veelvoorkomende reden** waarom seriële communicatie niet werkt.
+
+![Placeholder: UART timingdiagram](img/uart_timing_placeholder.png)
+
 ## Leerdoelen
 
 - Begrijpen wat UART/serial is
