@@ -12,6 +12,7 @@ theme:
       accent: orange
 nav:
   - Home: index.md
+  - Afdrukken: print_page/
   - Inhoudstabel: inhoud.md
   - Introductie: introductie.md
   - Componenten: componenten.md
@@ -34,5 +35,8 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.details
+plugins:
+  - search
+  - print-site
 extra_css:
   - overrides.css

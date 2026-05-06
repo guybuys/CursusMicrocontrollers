@@ -12,7 +12,7 @@ Deze
 ## Lokale installatie
 
 ```shell
-pip install mkdocs mkdocs-material
+pip install mkdocs mkdocs-material mkdocs-print-site-plugin
 ```
 
 ## Website starten
@@ -20,6 +20,8 @@ pip install mkdocs mkdocs-material
 ```shell
 mkdocs serve
 ```
+
+De printversie is daarna beschikbaar via `/print_page/` (en via de navigatie "Afdrukken").
 
 ## Publiceren op GitHub Pages
 
