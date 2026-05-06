@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
@@ -52,6 +52,10 @@
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
+    
+      <link rel="stylesheet" href="../css/print-site.css">
+    
+      <link rel="stylesheet" href="../css/print-site-material.css">
     
       <link rel="stylesheet" href="../overrides.css">
     
@@ -238,6 +242,33 @@
     
   
     Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../print_page/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Afdrukken
   
 
     
@@ -930,11 +961,11 @@ De serieweerstand voorkomt dat de LED kapot gaat door te veel stroom.
 <h2 id="schemas">Schema's</h2>
 <p>We gebruiken deze symbolen om schema's te tekenen, zodat we duidelijk kunnen maken hoe de componenten aangesloten worden. Je vind heel veel informatie over microcontroller borden zoals de Arduino. Soms vind je een tekening zoals hieronder die duidelijk maken hoe een Arduino aan een ander bord of component aangesloten moet worden.</p>
 <p><strong>Tekening:</strong> 
-   <img alt="fritzing tekening Arduino UNO R3 en BMP280" src="../img/ac_no_schematic_instructables.png" /></p>
+   <img alt="fritzing tekening Arduino UNO R3 en BMP280" src="img\ac_no_schematic_instructables.png" /></p>
 <p>Deze tekening komt van een website (<a href="https://www.instructables.com/How-to-Use-the-Adafruit-BMP280-Sensor-Arduino-Tuto/">bron: instructables.com</a>).</p>
 <p>Er wordt getoond hoe een BMP280 module, die temperatuur en luchtdruk kan meten, via een <em>breadbord</em> aangesloten wordt aan een Arduino R3. Deze tekening geeft een beschrijving van de aansluitingen maar het is <strong>geen schema</strong>. De verschillende onderdelen worden grafisch voorgesteld en <strong>niet</strong> met <strong>symbolen</strong>. Dit werkt meestal goed om kleine, gemakkelijke schakelingen na te bouwen maar het werkt niet zo goed voor grotere of complexere circuits of om te begrijpen hoe de schakeling werkt. Als we hetzelfde circuit <strong><em>schematisch</em></strong> willen voorstellen, kan het er bijvoorbeeld zo uit zien:</p>
 <p><strong>Schema:</strong> 
- <img alt="Schema Arduino UNO R3 en BMP280" src="../img/ac_schematic_like_instructables.png" /></p>
+ <img alt="Schema Arduino UNO R3 en BMP280" src="img\ac_schematic_like_instructables.png" /></p>
 <p>In tegenstelling met de tekening, zien we hier duidelijk dat <em>SDA</em> signaal van de microcontroller met <em>SDI</em> van de sensor verbonden wordt en het <em>SCL</em> signaal van de microcontroller met <em>SCK</em> van de sensor. Op dit moment weet je waarschijnlijk nog niet wat dat wil zeggen of waarom dat nuttig is maar wanneer je binnenkort meer weet over <em>seriële communicatie</em>, zal je het circuit veel beter begrijpen. Voorlopig moet je weten dat een tekening vooral bedoeld is om een circuit te kunnen nabouwen en een schema om het circuit te kunnen begrijpen <strong>en</strong> nabouwen.</p>
 
 
@@ -989,6 +1020,8 @@ De serieweerstand voorkomt dat de LED kapot gaat door te veel stroom.
     
     
       <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../js/print-site.js"></script>
       
     
   </body>

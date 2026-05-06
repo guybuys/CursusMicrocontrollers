@@ -1,0 +1,2204 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Leer microcontrollers programmeren met Arduino (C++) en MicroPython">
+      
+      
+        <meta name="author" content="Guy Buys">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Print Site - Cursus Microcontrollers</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/print-site.css">
+    
+      <link rel="stylesheet" href="../css/print-site-material.css">
+    
+      <link rel="stylesheet" href="../overrides.css">
+    
+    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
+        })
+        </script>
+        </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="pink">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#index" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Cursus Microcontrollers" class="md-header__button md-logo" aria-label="Cursus Microcontrollers" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Cursus Microcontrollers
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Print Site
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="pink"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="orange"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Cursus Microcontrollers" class="md-nav__button md-logo" aria-label="Cursus Microcontrollers" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Cursus Microcontrollers
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="./" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Afdrukken
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../inhoud/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inhoudstabel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introductie/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introductie
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../componenten/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Componenten
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bit_boolean/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bit en Boolean
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../output/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Output
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../input/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Input
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gpio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GPIO
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../datatypes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Datatypes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../eerste_programma/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Je eerste programma
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analoog_pwm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Analoog en PWM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../seriele_communicatie/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Seriële communicatie
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../toepassingen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Toepassingen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vooruitblik/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vooruitblik
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#index" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1 Home
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inhoud" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3 Inhoudstabel
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introductie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4 Introductie
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#componenten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5 Componenten
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bit_boolean" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6 Bit en Boolean
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7 Output
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8 Input
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gpio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9 GPIO
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#datatypes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10 Datatypes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eerste_programma" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11 Je eerste programma
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analoog_pwm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12 Analoog en PWM
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#seriele_communicatie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13 Seriële communicatie
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#toepassingen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14 Toepassingen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vooruitblik" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15 Vooruitblik
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<div id="print-site-page" class="print-site-enumerate-headings print-site-enumerate-figures">
+        <section class="print-page">
+            <div id="print-page-toc" data-toc-depth="3">
+                <nav role='navigation' class='print-page-toc-nav'>
+                <h1 class='print-page-toc-title'>Table of Contents</h1>
+                </nav>
+            </div>
+        </section>
+        <section class="print-page" id="index" heading-number="1"><h1 id="index-welkom-bij-de-cursus-microcontrollers">Welkom bij de cursus Microcontrollers</h1>
+<p>Deze website helpt je om microcontrollers te leren kennen, gebruiken en programmeren. In deze cursus bekijken we hoe dat kan met Arduino (C++) en met MicroPython. Kies een hoofdstuk in de inhoudstabel om te starten!</p>
+<p><img alt="Plaats voor afbeelding van microcontroller" src="../img/istockphoto-1446341913-1024x1024.jpg" /></p></section><section class="print-page" id="inhoud" heading-number="3"><h1 id="inhoud-inhoudstabel">Inhoudstabel</h1>
+<ol>
+<li><a href="#introductie">Introductie</a></li>
+<li><a href="#componenten">Componenten</a></li>
+<li><a href="#bit_boolean">Bit en Boolean – de kleinste eenheid</a></li>
+<li><a href="#output">Output – dingen aansturen</a></li>
+<li><a href="#input">Input – dingen meten</a></li>
+<li><a href="#gpio">GPIO – Input/Output in de praktijk</a></li>
+<li><a href="#datatypes">Meer datatypes</a></li>
+<li><a href="#eerste_programma">Je eerste volledige programma</a></li>
+<li><a href="#analoog_pwm">Analoge signalen en PWM</a></li>
+<li><a href="#seriele_communicatie">Seriële communicatie</a></li>
+<li><a href="#toepassingen">Samenspel en toepassingen</a></li>
+<li><a href="#vooruitblik">Vooruitblik</a></li>
+</ol></section><section class="print-page" id="introductie" heading-number="4"><h1 id="introductie-introductie">Introductie</h1>
+<h2 id="introductie-hoofdstuk-1-wat-is-een-microcontroller">Hoofdstuk 1 – Wat is een microcontroller?</h2>
+<h3 id="introductie-11-wat-is-een-microcontroller">1.1 Wat is een microcontroller?</h3>
+<p>Een microcontroller is een kleine computer op een chip. Hij kan drie dingen:</p>
+<ul>
+<li><strong>Meten</strong> (via ingangen of sensoren)</li>
+<li><strong>Denken</strong> (programma uitvoeren)</li>
+<li><strong>Sturen</strong> (via uitgangen, bijvoorbeeld een LED of motor aanzetten)</li>
+</ul>
+<p><strong>Voorbeelden:</strong></p>
+<ul>
+<li>Raspberry Pi Pico</li>
+<li>Arduino Uno</li>
+</ul>
+<p><img alt="Foto van Raspberry Pi Pico en Arduino UNO naast elkaar" src="../img/pico_arduino.jpg" /></p>
+<h3 id="introductie-12-verschil-met-een-computer">1.2 Verschil met een computer</h3>
+<p>Een laptop kan veel dingen tegelijk doen (internet, filmpjes, spelletjes).
+Een microcontroller doet meestal één taak, maar kan dat heel betrouwbaar en snel.
+Bijvoorbeeld: een wasmachine besturen, lampen automatisch schakelen of een robot laten bewegen.</p>
+<h3 id="introductie-13-programmeren">1.3 Programmeren</h3>
+<p>Er zijn vele verschillende mogelijkheden om microtrollers te programmeren. Wij gaan ons beperken tot <strong>C++</strong> en <strong>python</strong>.</p>
+<p>Alle <strong>Arduino</strong> borden zijn te programmeren in <strong>C++</strong>. Sommige (de meer krachtige) kunnen ook in <strong>MicroPython</strong> geprogrammeerd worden. Dit is eigenlijk een <em>light</em> versie van <strong>python</strong> met enkele bibliotheken die speciaal bedoeld zijn voor microcontrollers. Doorheen de verdere cursus gaan we steeds zowel de code in <strong>C++</strong> als <strong>MicroPython</strong> bespreken. Dit gebeurt in <em>"code blokken"</em> zoals hier:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// cpp</span>
+
+<span class="c1">// Hier staat commentaar in C ++</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># MicroPython</span>
+
+<span class="c1"># Hier staat commentaar in python</span>
+</code></pre></div>
+<h3 id="introductie-14-veilig-werken-met-elektronica">1.4 Veilig werken met elektronica</h3>
+<p>Microcontrollers werken meestal op 3.3V of 5V. Spanningen tot en met 24V zijn veilig voor mensen.</p>
+<p>Dit wil niet zeggen dat mensen veilig zijn voor microcontrollers.
+Het vermogen dat een microcontroller bord kan leveren is beperkt. Sluit nooit rechtstreeks een grote motor of lamp aan. Dit kan leiden tot te hoge stromen waardoor de microcontroller of het bord kapot kan gaan.</p>
+<p>Zoals in het hoofdstuk over componenten al vermeld werd: altijd een weerstand in serie zetten met een LED, anders kan er iets kapot gaan.</p>
+<p><img alt="Schema van LED met serieweerstand" src="../img/ac_source_led_res.png" /></p>
+<hr /></section><section class="print-page" id="componenten" heading-number="5"><h1 id="componenten-elektronische-componenten">Elektronische componenten</h1>
+<p>Hier vind je uitleg over de belangrijkste basiscomponenten die we nodig hebben bij het gebruik van microcontrollers of om de werking te beschrijven.</p>
+<h2 id="componenten-dc-spanningsbron">DC Spanningsbron</h2>
+<p><strong>Symbool:</strong> <img alt="Symbool DC bron" src="../img/ac_dc_bron.png" /></p>
+<p>De spanningsbron is de voeding voor je microcontroller. Dit kan een batterij zijn, een adapter of de USB-poort van je computer.</p>
+<h2 id="componenten-diode">Diode</h2>
+<p><strong>Symbool:</strong> <img alt="Symbool diode" src="../img/ac_diode.png" /></p>
+<p>Een diode laat stroom maar in één richting door. Zoals het in dit symbool staat, kan de stroom van boven naar onder stromen maar niet omgekeerd.</p>
+<h2 id="componenten-led-light-emitting-diode">LED (Light Emitting Diode)</h2>
+<p><strong>Symbool:</strong> <img alt="Symbool LED" src="../img/ac_led.png" /></p>
+<p>Een LED is een speciale diode, ze geeft licht als er voldoende stroom doorheen gaat. Gebruik altijd een serieweerstand om ervoor te zorgen dat er niet te veel stroom doorheen vloeit! Dan kan de LED of de uitgang van de microcontroller immers kapot gaan.</p>
+<h2 id="componenten-weerstand">Weerstand</h2>
+<p><strong>Symbool:</strong> <img alt="Symbool weerstand" src="../img/ac_weerstand.png" /></p>
+<p>Een weerstand beperkt de stroom in een circuit. Dit hebben we bijvoorbeeld nodig bij het aansluiten van een LED!</p>
+<!--
+## Serieweerstand bij LED
+
+- **Schema:** ![Schema LED met weerstand](img/schema_led_weerstand.png)
+
+De serieweerstand voorkomt dat de LED kapot gaat door te veel stroom.
+-->
+
+<h2 id="componenten-zekering-fuse">Zekering (Fuse)</h2>
+<p><strong>Symbool:</strong> <img alt="Symbool zekering" src="../img/ac_fuse.png" /></p>
+<p>Een zekering beschermt tegen te hoge stroom. Wanneer de stroom te groot wordt, zal de zekering gecontroleerd doorbranden. Let op: een zekering is geen weerstand, vele leerlingen tekenen een weerstand met het symbool van een zekering maar dat is helemaal verkeerd!</p>
+<h2 id="componenten-schakelaar-spdt">Schakelaar (SPDT)</h2>
+<ul>
+<li><strong>Afbeelding:</strong> <img alt="SPDT switch" src="../img/SPDT_drawing.png" /></li>
+<li><strong>Symbool:</strong> <img alt="Symbool SPDT switch" src="../img/ac_spdt.png" /></li>
+</ul>
+<p>Met een SPDT (Single Pole Dual Throw) schakelaar of tuimelschakelaar, kan je kiezen hoe "middelste" contact verbonden wordt. In het model op de foto, kan je zorgen dat het met geen van beiden contact maakt maar dit kan meestal niet. Het is ofwel verbonden met het ene, ofwel met het andere en daar zit slechts een zeer korte <em>"dode tijd"</em> tussen. Deze schakelaar komt later terug bij <strong>output</strong>.</p>
+<h2 id="componenten-microcontroller">Microcontroller</h2>
+<p><strong>Symbool:</strong> <img alt="Symbool ATmega328-p" src="../img/ac_ATmega328-p.png" /></p>
+<p>Dit is het symbool van de ATmega328-p. Deze microcontroller wordt ondermeer gebruikt op de <strong>Arduino UNO R3</strong>.</p>
+<p>Zoals je ziet, is het symbool eerder simpel, een rechthoek met veel aansluitingen. Dit is vaak het geval bij complexere componenten. Je zal merken dat <em>de grond</em> (GND of 0V) vaak onderaan staat en de <em>voedingsspanning</em> (VCC) in de regel bovenaan. Ook zullen <em>inputs</em> vaak links staan en <em>outputs</em> rechts. Hier komen we later nog terug, wanneer we beter weten wat <em>in- en outputs</em> zijn. De <em>signaalnamen</em> staan in de rechthoek terwijl de <em>pinnummers</em> buiten de rechthoek, naast de pinnen genoteerd staan.</p>
+<h2 id="componenten-microcontroller-bord">Microcontroller bord</h2>
+<p><strong>Symbool:</strong> <img alt="Symbool Arduino UNO R3" src="../img/ac_arduino_uno_r3.png" /></p>
+<p>Dit is het symbool van het microcontroller bord <strong>Arduino UNO R3</strong>. Zoals je kan zien, lijkt het heel erg op een symbool van de microcontroller maar het is niet helemaal hetzelfde. Een <strong>microcontroller</strong> is een component terwijl er op een <strong>microcontroller <em>bord</em></strong> meerdere componenten staan, waaronder de microcontroller zelf. Van deze extra componenten maken we abstractie (we tekenen ze niet). Enkel de pinnen waarmee we het bord verbinden, worden in het symbool getekend.</p>
+<h2 id="componenten-schemas">Schema's</h2>
+<p>We gebruiken deze symbolen om schema's te tekenen, zodat we duidelijk kunnen maken hoe de componenten aangesloten worden. Je vind heel veel informatie over microcontroller borden zoals de Arduino. Soms vind je een tekening zoals hieronder die duidelijk maken hoe een Arduino aan een ander bord of component aangesloten moet worden.</p>
+<p><strong>Tekening:</strong> 
+   <img alt="fritzing tekening Arduino UNO R3 en BMP280" src="../componenten/img\ac_no_schematic_instructables.png" /></p>
+<p>Deze tekening komt van een website (<a href="https://www.instructables.com/How-to-Use-the-Adafruit-BMP280-Sensor-Arduino-Tuto/">bron: instructables.com</a>).</p>
+<p>Er wordt getoond hoe een BMP280 module, die temperatuur en luchtdruk kan meten, via een <em>breadbord</em> aangesloten wordt aan een Arduino R3. Deze tekening geeft een beschrijving van de aansluitingen maar het is <strong>geen schema</strong>. De verschillende onderdelen worden grafisch voorgesteld en <strong>niet</strong> met <strong>symbolen</strong>. Dit werkt meestal goed om kleine, gemakkelijke schakelingen na te bouwen maar het werkt niet zo goed voor grotere of complexere circuits of om te begrijpen hoe de schakeling werkt. Als we hetzelfde circuit <strong><em>schematisch</em></strong> willen voorstellen, kan het er bijvoorbeeld zo uit zien:</p>
+<p><strong>Schema:</strong> 
+ <img alt="Schema Arduino UNO R3 en BMP280" src="../componenten/img\ac_schematic_like_instructables.png" /></p>
+<p>In tegenstelling met de tekening, zien we hier duidelijk dat <em>SDA</em> signaal van de microcontroller met <em>SDI</em> van de sensor verbonden wordt en het <em>SCL</em> signaal van de microcontroller met <em>SCK</em> van de sensor. Op dit moment weet je waarschijnlijk nog niet wat dat wil zeggen of waarom dat nuttig is maar wanneer je binnenkort meer weet over <em>seriële communicatie</em>, zal je het circuit veel beter begrijpen. Voorlopig moet je weten dat een tekening vooral bedoeld is om een circuit te kunnen nabouwen en een schema om het circuit te kunnen begrijpen <strong>en</strong> nabouwen.</p></section><section class="print-page" id="bit_boolean" heading-number="6"><h1 id="bit_boolean-bit-en-boolean-de-kleinste-eenheid">Bit en Boolean – de kleinste eenheid</h1>
+<h2 id="bit_boolean-wat-is-een-bit">Wat is een bit?</h2>
+<p>Een <strong>bit</strong> is de kleinste eenheid van informatie in een computer.<br />
+Een bit kan maar 2 waarden hebben: alleen de waarde <strong>0</strong> of <strong>1</strong>.</p>
+<p>Deze 2 waarden kunnen, afhankelijk van de context, anders genoemd worden, zo kan een <strong>0</strong> ook <em>uit, laag</em> of <em>onwaar</em> genoemd worden en een <strong>1</strong> op zijn beurt <em>aan, hoog</em> of <em>waar</em>.</p>
+<h2 id="bit_boolean-wat-is-een-variabele">Wat is een variabele?</h2>
+<p>Een <strong>variabele</strong> is een naam voor een stukje geheugen in de computer waar je informatie in kunt opslaan.  </p>
+<p>Je kunt een variabele zien als een doosje met een label erop: je stopt er een waarde in, en je kunt die waarde later weer gebruiken of veranderen. Door het gebruik van variabelen, kunnen we krachtige en leesbare programma's maken.</p>
+<p>Een variabele heeft altijd een <strong>naam</strong> en een <strong>datatype</strong>.</p>
+<blockquote>
+<p>Met variabelen kun je informatie onthouden met de naam van de <em>variabele</em> als <code>label</code>. Bijvoorbeeld: <code>spanning = 230</code> waarbij we naar de waarde <em>230</em> kunnen refereren als <em>spanning</em>.</p>
+</blockquote>
+<h2 id="bit_boolean-wat-zijn-datatypes">Wat zijn datatypes?</h2>
+<p>Een <strong>datatype</strong> bepaalt welk soort informatie een <em>variabele</em> kan opslaan in een programma.</p>
+<ul>
+<li>Voor een bit (waar/onwaar) gebruik je het datatype <strong>boolean</strong>.</li>
+<li>Andere datatypes, die we later nog uitgebreid gaan bespreken, bestaan uit meerdere bits. Bijvoorbeeld:</li>
+<li><strong>integer</strong>: een <strong><em>geheel getal</em></strong> of een getal zonder decimalen (meestal 8, 16 of 32 bits)</li>
+<li><strong>float</strong>: een  <strong><em>kommagetal</em></strong> of getal met decimalen</li>
+<li><strong>string</strong>: een stukje tekst</li>
+</ul>
+<p>Hoe meer bits een datatype heeft, hoe meer verschillende waarden je ermee kunt opslaan.  </p>
+<p>Een boolean kan maar twee waarden hebben (<strong>0</strong> of <strong>1</strong>), maar een <em>unsigned integer</em> (geheel getal zonder teken) van <strong>8 bits</strong> kan bijvoorbeeld waarden van <strong>0</strong> tot <strong>255</strong> bevatten.</p>
+<blockquote>
+<p>Het juiste <strong><em>datatype</em></strong> kiezen is belangrijk om je programma goed te laten werken!</p>
+</blockquote>
+<h2 id="bit_boolean-boolean-in-code">Boolean in code</h2>
+<p>In programmeertalen gebruik je het datatype <strong>boolean</strong> om met waar/onwaar te werken.</p>
+<h3 id="bit_boolean-in-c">In C++</h3>
+<p>In C++ moet je het datatype van een variabele altijd <strong>expliciet</strong> vermelden.</p>
+<p>Bij een boolean betekent <strong>0</strong> hetzelfde als <code>false</code> en <strong>1</strong> hetzelfde als <code>true</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// cpp</span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">ledAan</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w">   </span><span class="c1">// LED aan</span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">knopIngedrukt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"> </span><span class="c1">// Knop niet ingedrukt</span>
+</code></pre></div>
+<blockquote>
+<p>In het bovenstaande voorbeeld, hebben we 2 variabelen gemaakt: <code>ledAan</code> en <code>knopIngedrukt</code>. Ze zijn van het <em>type</em> <strong>bool</strong> (boolean) en hebben de respectievelijke <em>waarde</em> <code>true</code> en <code>false</code>.</p>
+</blockquote>
+<h3 id="bit_boolean-in-micropython">In MicroPython</h3>
+<p>In MicroPython hoef je het datatype van een variabele <strong>niet expliciet</strong> te vermelden. Python kiest zelf het type op basis van de waarde.</p>
+<p>Toch is het <strong>heel belangrijk</strong> om zelf goed te weten welk type je gebruikt.<br />
+Ook hier geldt: <strong>0</strong> is <code>False</code> en <strong>1</strong> is <code>True</code>. Let op: in Python schrijf je <em>True</em> en <em>False</em> altijd met een <strong>hoofdletter</strong>!</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># MicroPython</span>
+<span class="n">led_aan</span> <span class="o">=</span> <span class="kc">True</span>      <span class="c1"># LED aan</span>
+<span class="n">knop_ingedrukt</span> <span class="o">=</span> <span class="kc">False</span>  <span class="c1"># Knop niet ingedrukt</span>
+</code></pre></div>
+<blockquote>
+<p>In het bovenstaande voorbeeld, hebben we 2 variabelen gemaakt: <code>led_aan</code> en <code>knop_ingedrukt</code>. We kunnen enkel aan de waarde zien dat ze van het <em>type</em> <strong>boolean</strong>  zijn: ze hebben namelijk de respectievelijke <em>waarde</em> <code>True</code> en <code>False</code>.</p>
+</blockquote>
+<h2 id="bit_boolean-waar-kom-je-bits-en-booleans-tegen">Waar kom je bits en booleans tegen?</h2>
+<ul>
+<li>Bij het aansturen van uitgangen (LED aan/uit)</li>
+<li>Bij het uitlezen van ingangen (knop ingedrukt of niet)</li>
+<li>In logische beslissingen (if-statements)</li>
+</ul>
+<blockquote>
+<p>Een boolean is dus een handige manier om met <em>ja/nee</em>-vragen in je programma te werken!</p>
+</blockquote>
+<h2 id="bit_boolean-boolean-operatoren">Boolean operatoren</h2>
+<p>Een <strong>operator</strong> is een symbool dat een bewerking uitvoert op één of meer waarden.<br />
+Bij booleans hebben we drie belangrijke operatoren: <strong>NOT</strong>, <strong>AND</strong> en <strong>OR</strong>.</p>
+<h3 id="bit_boolean-not-operator-omkeren">NOT operator (omkeren)</h3>
+<p>De <strong>NOT</strong> operator keert een boolean waarde om:</p>
+<ul>
+<li><code>NOT true</code> wordt <code>false</code></li>
+<li><code>NOT false</code> wordt <code>true</code></li>
+</ul>
+<p><strong>Gebruik:</strong> Om het tegenovergestelde van een conditie te krijgen.<br />
+Bijvoorbeeld: "Als de knop NIET ingedrukt is..."</p>
+<h3 id="bit_boolean-and-operator-beide-waar">AND operator (beide waar)</h3>
+<p>De <strong>AND</strong> operator geeft alleen <code>true</code> als <strong>beide</strong> waarden <code>true</code> zijn:</p>
+<ul>
+<li><code>true AND true</code> = <code>true</code></li>
+<li><code>true AND false</code> = <code>false</code></li>
+<li><code>false AND true</code> = <code>false</code></li>
+<li><code>false AND false</code> = <code>false</code></li>
+</ul>
+<p><strong>Gebruik:</strong> Om te controleren of meerdere voorwaarden tegelijk waar zijn.<br />
+Bijvoorbeeld: "Als knop A ingedrukt is EN knop B ingedrukt is..."</p>
+<h3 id="bit_boolean-or-operator-een-van-beide-waar">OR operator (één van beide waar)</h3>
+<p>De <strong>OR</strong> operator geeft <code>true</code> als <strong>minstens één</strong> van de waarden <code>true</code> is:</p>
+<ul>
+<li><code>true OR true</code> = <code>true</code></li>
+<li><code>true OR false</code> = <code>true</code></li>
+<li><code>false OR true</code> = <code>true</code></li>
+<li><code>false OR false</code> = <code>false</code></li>
+</ul>
+<p><strong>Gebruik:</strong> Om te controleren of één van meerdere voorwaarden waar is.<br />
+Bijvoorbeeld: "Als knop A ingedrukt is OF knop B ingedrukt is..."</p>
+<h3 id="bit_boolean-syntax-in-c">Syntax in C++</h3>
+<div class="highlight"><pre><span></span><code><span class="kt">bool</span><span class="w"> </span><span class="n">knop1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">knop2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+
+<span class="c1">// NOT operator (!)</span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">nietKnop1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">!</span><span class="n">knop1</span><span class="p">;</span><span class="w">          </span><span class="c1">// false</span>
+
+<span class="c1">// AND operator (&amp;&amp;)</span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">beideKnoppen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">knop1</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">knop2</span><span class="p">;</span><span class="w">  </span><span class="c1">// false</span>
+
+<span class="c1">// OR operator (||)</span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">eenVanBeide</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">knop1</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">knop2</span><span class="p">;</span><span class="w">   </span><span class="c1">// true</span>
+</code></pre></div>
+<p>Syntax in MicroPython</p>
+<div class="highlight"><pre><span></span><code><span class="n">knop1</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">knop2</span> <span class="o">=</span> <span class="kc">False</span>
+
+<span class="c1"># NOT operator (not)</span>
+<span class="n">niet_knop1</span> <span class="o">=</span> <span class="ow">not</span> <span class="n">knop1</span>          <span class="c1"># False</span>
+
+<span class="c1"># AND operator (and)</span>
+<span class="n">beide_knoppen</span> <span class="o">=</span> <span class="n">knop1</span> <span class="ow">and</span> <span class="n">knop2</span>  <span class="c1"># False</span>
+
+<span class="c1"># OR operator (or)</span>
+<span class="n">een_van_beide</span> <span class="o">=</span> <span class="n">knop1</span> <span class="ow">or</span> <span class="n">knop2</span>   <span class="c1"># True</span>
+</code></pre></div>
+<hr />
+<h2 id="bit_boolean-extra-naamgeving-van-variabelen">Extra: Naamgeving van variabelen</h2>
+<p>Probeer altijd een naam te kiezen die <strong>duidelijk</strong> maakt wat de variabele voorstelt.</p>
+<p>Bij het kiezen van een <em>variabelenaam</em> is het handig om een duidelijke <em>conventie</em> te volgen.<br />
+Dit maakt je code beter leesbaar en begrijpelijk voor anderen (en jezelf!).</p>
+<ul>
+<li>
+<p><strong>In C++</strong> gebruiken programmeurs vaak de <strong>camelCase</strong>-notatie.<br />
+  Hierbij begint de naam met een kleine letter en elk nieuw woord krijgt een hoofdletter.
+  Bijvoorbeeld: <code>ledAan</code>, <code>knopIngedrukt</code></p>
+</li>
+<li>
+<p><strong>In MicroPython</strong> (en Python in het algemeen) wordt meestal de <strong>snake_case</strong>-notatie gebruikt.<br />
+  Hierbij worden woorden gescheiden door een <em>underscore</em> (_), alles in kleine letters.
+  Bijvoorbeeld: <code>led_aan</code>, <code>knop_ingedrukt</code></p>
+</li>
+</ul>
+<blockquote>
+<p>Het is <strong>niet verplicht</strong>, maar het volgen van deze <em>conventies</em> maakt je code <strong>overzichtelijker</strong>!
+Het volgen van conventies maakt je code overzichtelijker en wordt vaak gewaardeerd door docenten en programmeurs.</p>
+</blockquote></section><section class="print-page" id="output" heading-number="7"><h1 id="output-output-dingen-aansturen">Output – Dingen aansturen</h1>
+<p>Output betekent dat de microcontroller iets aanstuurt of laat gebeuren. Dit kan bijvoorbeeld een LED, een motor, een buzzer of een display zijn.</p>
+<p>We kunnen dit <em>voorstellen</em> door te denken aan een SPDT-schakelaar in de microcontroller die het signaal verbindt met <strong>VCC</strong> (de voedingsspanning, meestal 5V of 3,3V) of met <strong>GND</strong> (grond, ‘ground’ of 0V).</p>
+<p><strong>Schema:</strong>
+<img alt="Schema Actief Hoog Aan" src="../img/ac_output_ah_on.png" /></p>
+<p>In het bovenstaande voorbeeld zien we dat pin 3 aangesloten is aan een <strong>LED</strong> met een <strong>serie weerstand</strong>. De microcontroller (of het microcontroller bord) is ook aangesloten aan een spanningsbron of voeding. De uitgang op <em>pin 3</em> kan verbonden worden met ofwel <strong>VCC</strong> ofwel <strong>GND</strong>. Zoals in het schema te zien is, is de uitgang op dit moment verbonden met <strong>VCC</strong>, waardoor er stroom door de LED en serieweerstand loopt en de LED licht geeft.</p>
+<p>We bekijken nu hoe we in <strong>C++</strong>, de taal die <strong>Arduino</strong> gebruikt, de uitgang met <strong>VCC</strong> verbinden om de LED te laten branden:</p>
+<p><div class="highlight"><pre><span></span><code><span class="c1">// cpp</span>
+<span class="n">digitalWrite</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="p">);</span><span class="w"> </span><span class="c1">// Pin 3 hoog, LED aan</span>
+</code></pre></div>
+In <strong>MicroPython</strong> ziet het er net iets anders uit. Daar moeten we eerst aangeven dat <em>led</em> aan pin 3 is aangesloten. <em>Hoe</em> dat moet, volgt later.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># MicroPython</span>
+<span class="n">led</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="kc">True</span><span class="p">);</span> <span class="c1"># Uitgang hoog of LED aan</span>
+</code></pre></div>
+<p>We kunnen ook de LED uit zetten, zoals aangegeven in dit <strong>schema:</strong>
+<img alt="Schema Actief Hoog Uit" src="../img/ac_output_ah_off.png" /></p>
+<p>Er kan nu geen stroom van <strong>+</strong> naar <strong>-</strong> lopen. In de <em>code</em> doen we dit zo:</p>
+<p><div class="highlight"><pre><span></span><code><span class="c1">// cpp</span>
+<span class="n">digitalWrite</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="nb">false</span><span class="p">);</span><span class="w"> </span><span class="c1">// Pin 3 laag, LED uit</span>
+</code></pre></div>
+In <strong>MicroPython</strong> gaat het zo:
+<div class="highlight"><pre><span></span><code><span class="c1"># MicroPython</span>
+<span class="n">led</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="kc">False</span><span class="p">);</span> <span class="c1"># Uitgang laag of LED uit</span>
+</code></pre></div></p>
+<p>In het bovenstaande voorbeeld gaat de LED aan als de uitgang <strong><em>hoog</em></strong> staat en uit als de uitgang <strong><em>laag</em></strong> staat. Dit noemen we een <strong>actief hoog</strong> signaal.</p>
+<hr />
+<p>Het is ook mogelijk om de LED (of iets anders zoals een motor, ... ) op een andere manier aan te sluiten zodat deze licht geeft (of actief is) wanneer de uitgang <strong><em>laag</em></strong> staat. Dit noemen we een <strong>actief laag</strong> signaal.</p>
+<p><strong>Schema:</strong>
+<img alt="Schema Actief Laag Aan" src="../img/ac_output_al_on.png" /></p>
+<p>Dit schema en de werking zijn nagenoeg hetzelfde, maar de LED en de serieweerstand zijn aan <strong>VCC</strong> aangesloten in plaats van aan <strong>GND</strong>. Dit wil zeggen dat de LED nu zal licht geven wanneer de uitgang van de microcontroller met <strong>GND</strong> verbonden is en zal uit zijn wanneer hij met <strong>VCC</strong> verbonden is.</p>
+<p>Nu moeten we in de code (<strong>C++</strong> of <strong>MicroPython</strong>) de uitgang <strong><em>laag</em></strong> zetten om de LED te laten branden. Dit gebeurt met dezelfde code als hierboven om de uitgang <em>laag</em> te zetten:
+<div class="highlight"><pre><span></span><code><span class="c1">// cpp</span>
+<span class="n">digitalWrite</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="nb">false</span><span class="p">);</span><span class="w"> </span><span class="c1">// Pin 3 laag, LED aan</span>
+</code></pre></div>
+In <strong>MicroPython</strong> gaat het zo:
+<div class="highlight"><pre><span></span><code><span class="c1"># MicroPython</span>
+<span class="n">led</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="kc">False</span><span class="p">);</span> <span class="c1"># Uitgang laag of LED aan</span>
+</code></pre></div></p>
+<p>Om de LED uit te zetten, moeten we in dit geval de uitgang <strong><em>hoog</em></strong> (<code>true</code>) zetten:</p>
+<p><strong>Schema:</strong>
+<img alt="Schema Actief Laag Uit" src="../img/ac_output_al_off.png" />
+<div class="highlight"><pre><span></span><code><span class="c1">// cpp</span>
+<span class="n">digitalWrite</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="p">);</span><span class="w"> </span><span class="c1">// Pin 3 hoog, LED uit</span>
+</code></pre></div>
+In <strong>MicroPython</strong> gaat het zo:
+<div class="highlight"><pre><span></span><code><span class="c1"># MicroPython</span>
+<span class="n">led</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="kc">True</span><span class="p">);</span> <span class="c1"># Uitgang hoog of LED uit</span>
+</code></pre></div></p>
+<p>Een <code>1</code> of een <code>0</code>, <code>true</code> of <code>false</code>, <code>True</code> of <code>False</code> hebben in beide schema's dus een andere uitwerking. Het is belangrijk om hiermee rekening te houden!</p>
+<hr />
+<blockquote>
+<p>Let op!</p>
+</blockquote>
+<p>Bij Arduino kun je <code>HIGH</code> en <code>LOW</code> gebruiken als waarde voor digitale pinnen, bijvoorbeeld bij <strong>digitalWrite</strong>. Let op: dit zijn allemaal hoofdletters en werken alleen in de Arduino-omgeving. Voor <em>gewone</em> booleans in C++ gebruik je <code>true</code> en <code>false</code>. In andere C++-<em>omgevingen</em> werken <code>HIGH</code> en <code>LOW</code> meestal niet. In code ziet het er dan zo uit: </p>
+<p><div class="highlight"><pre><span></span><code><span class="c1">// cpp</span>
+<span class="n">digitalWrite</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w"> </span><span class="c1">// Pin 3 hoog, LED uit</span>
+</code></pre></div>
+In <strong>MicroPython</strong> bestaan <strong>HIGH</strong> en <strong>LOW</strong> niet maar je kan in plaats van <code>False</code> of <code>True</code> ook <code>0</code> of <code>1</code> gebruiken:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># MicroPython</span>
+<span class="n">led</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span> <span class="c1"># Uitgang hoog of LED uit</span>
+</code></pre></div></section><section class="print-page" id="input" heading-number="8"><h1 id="input-input-dingen-meten">Input – Dingen meten</h1>
+<p>Input betekent dat de microcontroller informatie ontvangt uit <em>de buitenwereld</em>. Dit kan bijvoorbeeld een knop, een sensor of een schakelaar zijn.</p>
+<h2 id="input-het-concept-van-digitale-input">Het concept van digitale input</h2>
+<p>Stel je voor dat je een heel <strong>eenvoudige voltmeter</strong> hebt die maar twee waarden kan weergeven:</p>
+<ul>
+<li><strong>True</strong> (waar) = er staat spanning op de ingang</li>
+<li><strong>False</strong> (onwaar) = er staat geen spanning op de ingang</li>
+</ul>
+<p>Deze voltmeter kan dus alleen maar <strong>ja</strong> of <strong>nee</strong> antwoorden op de vraag: "Is er spanning?"</p>
+<p>Zo werkt digitale input ook: de microcontroller meet of er spanning staat op een pin en geeft als antwoord een <strong>boolean</strong> terug.</p>
+<h2 id="input-voorbeelden-van-digitale-input">Voorbeelden van digitale input</h2>
+<ol>
+<li>
+<p><strong>Drukknop indrukken</strong>:  </p>
+<ul>
+<li>Knop ingedrukt = True (spanning aanwezig)</li>
+<li>Knop niet ingedrukt = False (geen spanning)</li>
+</ul>
+</li>
+<li>
+<p><strong>Schakelaar</strong>:</p>
+<ul>
+<li>Schakelaar aan = True  </li>
+<li>Schakelaar uit = False</li>
+</ul>
+</li>
+<li>
+<p><strong>Eenvoudige sensor</strong>:</p>
+<ul>
+<li>Object gedetecteerd = True</li>
+<li>Geen object = False</li>
+</ul>
+</li>
+</ol>
+<h2 id="input-schema-voorstelling">Schema-voorstelling</h2>
+<p>Net zoals bij <strong>output</strong> kunnen we dit voorstellen in een <strong>schema</strong>:</p>
+<p><img alt="Input schema" src="../img/ac_input_dt.png" /></p>
+<blockquote>
+<p>De microcontroller werkt als een <strong><em>digitale</em> voltmeter</strong>: hij meet alleen of er <strong>wel</strong> of <strong>geen</strong> spanning staat, niet <em>hoeveel</em> spanning er precies is.</p>
+</blockquote>
+<h2 id="input-input-lezen-in-code">Input lezen in code</h2>
+<h3 id="input-in-c-arduino">In C++ (Arduino)</h3>
+<p>In <strong>C++</strong> lees je een digitale ingang uit met de functie <code>digitalRead()</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// cpp</span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">knopStatus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">digitalRead</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span><span class="w">  </span><span class="c1">// Lees pin 4 uit</span>
+</code></pre></div>
+<p>Je krijgt dan <code>HIGH</code> (of <code>true</code>) terug als er spanning op de pin staat, of <code>LOW</code> (of <code>false</code>) als er geen spanning staat.</p>
+<blockquote>
+<p>Opmerking, in het bovenstaande voorbeeld wordt er een variabele <strong>knopStatus</strong> aangemaakt om de waarde van <em>digitalRead</em> in op te vangen. Wanneer die variabele reeds bestaat in het programma, is het datatype <code>bool</code> in het begin van de lijn niet meer nodig.</p>
+</blockquote>
+<h3 id="input-in-micropython">In MicroPython</h3>
+<p>In <strong>MicroPython</strong> ziet het er opnieuw net iets anders uit. Daar moeten we eerst aangeven dat <em>knop</em> aan pin 4 is aangesloten. <em>Hoe</em> dat moet, volgt later. Je leest een digitale ingang uit met de <em>methode</em> <code>.value()</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># MicroPython</span>
+<span class="n">knop_status</span> <span class="o">=</span> <span class="n">knop</span><span class="o">.</span><span class="n">value</span><span class="p">()</span>  <span class="c1"># Lees de knop uit</span>
+</code></pre></div>
+<p>Je krijgt dan <code>1</code> (of <code>True</code>) terug als er spanning op de pin staat, of <code>0</code> (of <code>False</code>) als er geen spanning staat.</p>
+<h2 id="input-schmitt-trigger-waarom-niet-gewoon-bij-25v-omschakelen">Schmitt Trigger - waarom niet gewoon bij 2,5V omschakelen?</h2>
+<p>Je zou denken: "Waarom schakelt de microcontroller niet gewoon om bij 2,5V (de helft van 5V)?"<br />
+Het probleem is dat spanningen kunnen <strong>trillen</strong> of <strong>ruis</strong> kunnen hebben. Als de spanning heel langzaam stijgt of daalt rond 2,5V, zou de uitgang heel vaak kunnen omschakelen tussen 0 en 1.</p>
+<p><strong>Oplossing: De Schmitt Trigger</strong><br />
+Een microcontroller gebruikt daarom een <strong>Schmitt Trigger</strong>. Dit betekent:</p>
+<ul>
+<li>
+<p>Bij <strong>stijgende</strong> spanning schakelt hij om van 0 naar 1 bij bijvoorbeeld <strong>3,0V</strong></p>
+</li>
+<li>
+<p>Bij <strong>dalende</strong> spanning schakelt hij om van 1 naar 0 bij bijvoorbeeld <strong>2,0V</strong></p>
+</li>
+</ul>
+<p><img alt="Schmitt Trigger diagram" src="../img/ac_schmitt_trigger_input.png" /></p>
+<p>Deze <strong>verschillende</strong> drempelwaardes maken het systeem <strong>stabieler</strong> en voorkomen ongewenste schakelingen door ruis.</p>
+<blockquote>
+<p>Dit heet <strong>hysterese</strong> (of <em>hysteresis</em> in het Engels) - een slim trucje om storing te voorkomen!</p>
+</blockquote>
+<h2 id="input-drukknopschakelaars">Drukknopschakelaars</h2>
+<p>In de bovenstaande uitleg sloten we een <strong>wisselschakelaar</strong> (of SPDT schakelaar) aan op de <strong>ingang</strong> van de microcontroller. Ondanks dat dit perfect werkt, gaan we dit in de praktijk niet veel zien. De meeste <strong>drukknopschakelaars</strong> hebben slechts <strong>2 contacten</strong> en deze zijn <strong><em>open</em></strong> wanneer er niet op gedrukt wordt en <strong><em>gesloten</em></strong> wanneer er op gedrukt wordt. Om dit type schakelaar aan te sluiten, moeten we het circuit een beetje uitbreiden. Dit is dan ook de reden waarom we de uitleg van de input aanvankelijk met een ander type schakelaar hebben gedaan, zodat het circuit eenvoudiger en dus begrijpbaarder is.</p>
+<p>Wanneer we de wisselschakelaar vervangen door een <em>normaal-open</em> (of SPST) schakelaar, ziet het schema er bijvoorbeeld zo uit:</p>
+<p><img alt="Input SPST zonder weerstand" src="../img/ac_input_pbnr.png" /></p>
+<p>De schakeling zoals hierboven afgebeeld, zal niet werken; de interne voltmeter kan geen verschil detecteren tussen wanneer de schakelaar ingedrukt (gesloten) is en wanneer hij niet ingedrukt (open) is. Om het circuit wel te laten werken, voegen we een weerstand toe die de spanning "naar boven" trekt wanneer de schakelaar open is. Dit noemen we een <strong>pull-up</strong> weerstand.</p>
+<p><img alt="Input SPST met pull-up weerstand" src="../img/ac_input_pbpu.png" /></p>
+<p>Let op: de spanning is <strong>hoog</strong> wanneer de drukknopschakelaar <strong>niet ingedrukt</strong> is en <strong>laag</strong> wanneer hij <strong>ingedrukt</strong> is. Dit is dan ook een <strong>actief laag</strong> signaal.</p>
+<hr />
+<p>We kunnen de drukknopschakelaar en de weerstand omdraaien om er een <strong>actief hoog</strong> signaal van te maken:</p>
+<p><img alt="Input SPST met pull-down weerstand" src="../img/ac_input_pbpd.png" /></p>
+<h3 id="input-weerstandswaarde">Weerstandswaarde</h3>
+<p>De <strong>waarde</strong> van de pull-up of pull-down <strong>weerstand</strong> is niet zo kritisch. Meestal wordt een weerstand met een waarde <strong>tussen 10kΩ en 100kΩ</strong> gebruikt. Wanneer de waarde lager dan 10kΩ is, loopt er meer stroom dan nodig door de weerstand wanneer de drukknopschakelaar ingedrukt wordt. Wanneer de waarde te hoog is, meer dan 100kΩ, is de spanningsverandering mogelijk te klein om opgemerkt te worden door de ingang.</p>
+<h2 id="input-interne-pull-up-en-pull-down">Interne pull-up en pull-down</h2>
+<p>De meeste microcontrollers hebben de mogelijkheid om gebruik te maken van een <strong>interne pull-up weerstand</strong>. Dit wil zeggen dat de pull-up weerstand in de microcontroller zit en dat er geen externe weerstand toegevoegd moet worden. Het schema ziet er dan zo uit:</p>
+<p><img alt="Input SPST met interne pull-up weerstand" src="../img/ac_input_pbipu.png" /></p>
+<p>Uitwendig moet de drukknopschakelaar aangesloten worden tussen de <strong>ground</strong> en de input pin van de microcontroller.</p>
+<hr />
+<p>Bij sommige microcontrollers is het ook mogelijk om een interne pull-down te gebruiken. Dat ziet er dan zo uit:</p>
+<p><img alt="Input SPST met interne pull-down weerstand" src="../img/ac_input_pbipd.png" /></p>
+<p>De drukknopschakelaar wordt nu aangesloten tussen de <strong>VCC</strong> en de input pin.</p>
+<blockquote>
+<p>De <strong>Arduino Uno R3</strong> beschikt <strong>niet</strong> over een interne <strong>pull-down</strong> weerstand!</p>
+</blockquote>
+<hr />
+<p><em>Lees verder op de pagina <a href="#gpio">'GPIO'</a> hoe je deze instellingen met een microcontroller doet.</em></p></section><section class="print-page" id="gpio" heading-number="9"><h1 id="gpio-gpio-general-purpose-inputoutput">GPIO – General Purpose Input/Output</h1>
+<p><strong>GPIO</strong> staat voor <strong>General Purpose Input/Output</strong>. Dit zijn de <strong>pinnen</strong> op een microcontroller die je kunt instellen om ze te <strong>gebruiken</strong> als <strong>input</strong> (iets meten) <strong>of output</strong> (iets aansturen).</p>
+<ul>
+<li>GPIO als output: bijvoorbeeld een LED aan/uit zetten.</li>
+<li>GPIO als input: bijvoorbeeld een knop uitlezen.</li>
+</ul>
+<p>GPIO is de brug tussen de concepten input/output en de echte hardware. We kunnen een <em>vereenvoudigde</em> GPIO schematisch zo voorstellen:</p>
+<p><img alt="GPIO input schema" src="../img/ac_gpio_input.png" /></p>
+<p>Dit is de <strong>standaard configuratie</strong> van een <strong>GPIO</strong>. Tenzij we de configuratie van een pin veranderen, is de GPIO zoals hierboven geconfigureerd. Alle <strong>"inwendige schakelaars"</strong> zijn open dus de GPIO gedraagt zich als een <strong>input</strong>.</p>
+<h2 id="gpio-gpio-in-input-mode">GPIO in "input" mode</h2>
+<p>In <strong>C++</strong> kunnen we de status van een ingang lezen door middel van het pin nummer (<code>digitalRead(&lt;pin_nummer&gt;)</code>). Als een bepaalde GPIO altijd als <em>input</em> gebruikt gaat worden, moet je dit dus niet specifiek instellen. Maar als tijdens je programma de GPIO in een andere mode gebruikt hebt en je wil hem terug als ingang instellen, kan dat op deze manier:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// cpp</span>
+<span class="n">pinMode</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span><span class="w"> </span><span class="n">INPUT</span><span class="p">);</span><span class="w">  </span><span class="c1">// zet pin 14 in INPUT mode</span>
+</code></pre></div>
+<p>In <strong>MicroPython</strong> gaat het een beetje anders. In het deel over de <strong>output</strong> en <strong>input</strong>, zagen we dat we moeten aangeven waarvoor een pin gebruikt wordt en dat je die dan pas kunt gebruiken. Hier gaan we eindelijk zien hoe dat moet gebeuren.</p>
+<p>Een verschil tussen <strong>Arduino</strong> en <strong>MicroPython</strong> is dat bij <strong>Arduino</strong> de <em>bibliotheken</em> die nodig zijn om een GPIO te gebruiken, standaart toegangkelijk zijn. In <strong>MicroPython</strong> moet je de bibliotheek bovenaan je code aanroepen. Dat gebeurt zo:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># MicroPython</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">machine</span><span class="w"> </span><span class="kn">import</span> <span class="n">Pin</span>
+</code></pre></div>
+<p>Als dit bovenaan in de code staat, kan je in je verdere code GPIO's <em>configureren</em> (is in de gewenste mode zetten) en gebruiken. Het <em>configureren</em> als input gaat dan zo:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># MicroPython</span>
+
+<span class="c1"># Pin 14 als gewone input</span>
+<span class="n">button</span> <span class="o">=</span> <span class="n">Pin</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">IN</span><span class="p">)</span>
+</code></pre></div>
+<p>Eigenlijk lijkt in <strong>MicroPython</strong> een GPIO op een <strong>object</strong> dat eigenschappen heeft. We gaan de details hiervan later nog bekijken maar het komt er voorlopig op neer dat je de GPIO een betekenisvolle naam geeft.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># MicroPython</span>
+
+<span class="c1"># De input waarde inlezen</span>
+<span class="n">waarde</span> <span class="o">=</span> <span class="n">button</span><span class="o">.</span><span class="n">value</span><span class="p">()</span>
+</code></pre></div>
+<h2 id="gpio-gpio-in-input-pull-up-mode">GPIO in "input-pull-up" mode</h2>
+<p>We zetten onze <em>vereenvoudigde</em> GPIO in <em>input-pull-up</em> mode door <em>schakelaar</em> <strong>Q4</strong> te sluiten:</p>
+<p><img alt="GPIO input-pullup schema" src="../img/ac_gpio_input_pullup.png" /></p>
+<p>In <strong>C++</strong> stellen we de GPIO opnieuw met <strong>pinMode</strong> in:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// cpp</span>
+<span class="n">pinMode</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span><span class="w"> </span><span class="n">INPUT_PULLUP</span><span class="p">);</span><span class="w">  </span><span class="c1">// zet pin 14 in INPUT-PULLUP mode</span>
+</code></pre></div>
+<p>Ook in <strong>MicroPython</strong> gebeurt het op een gelijkaardige manier, alleen komt er nu een <em>argument</em> (tussen de haakjes) bij. Het is alsof we zeggen dat de GPIO een <em>input</em> is <strong>en</strong> dat de <em>pull-up weerstand</em> moet aangezet worden.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># MicroPython</span>
+
+<span class="c1"># Pin 14 als input met pull-up weerstand </span>
+<span class="n">button</span> <span class="o">=</span> <span class="n">Pin</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">IN</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">PULL_UP</span><span class="p">)</span>  
+</code></pre></div>
+<h2 id="gpio-gpio-in-input-pull-down-mode">GPIO in "input-pull-down" mode</h2>
+<p><strong>Niet alle microcontrollers</strong> hebben deze mogelijkheid. Bijvoorbeeld de veelgebruikte <strong>Arduino UNO r3</strong> heeft geen interne pull-down weerstanden. Daarmee is deze optie niet beschikbaar. In de praktijk worden <strong>pull-up weerstanden</strong> veel vaker gebruikt dan <strong>pull-down weerstanden</strong>, dus het is vaak geen probleem. Voor de microcontrollers die het wel hebben, zoals de <strong>ESP-32</strong>, beschrijven we deze <strong>pull-down</strong> mode.</p>
+<p>We zetten onze <em>vereenvoudigde</em> GPIO in <em>input-pull-down</em> mode door <em>schakelaar</em> <strong>Q3</strong> te sluiten:</p>
+<p><img alt="GPIO input-pulldown schema" src="../img/ac_gpio_input_pulldown.png" /></p>
+<p>In <strong>C++</strong> stellen we de GPIO opnieuw met <strong>pinMode</strong> in:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// cpp</span>
+<span class="n">pinMode</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span><span class="w"> </span><span class="n">INPUT_PULLDOWN</span><span class="p">);</span><span class="w">  </span><span class="c1">// zet pin 14 in INPUT-PULLDOWN mode</span>
+</code></pre></div>
+<p>Ook in <strong>MicroPython</strong> gebeurt het op een gelijkaardige manier als bij de pull-up mode.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># MicroPython</span>
+
+<span class="c1"># Pin 14 als input met pull-down weerstand  </span>
+<span class="n">button</span> <span class="o">=</span> <span class="n">Pin</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">IN</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">PULL_DOWN</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="gpio-gpio-in-output-mode">GPIO in "output" mode</h2>
+<p>Wanneer we de GPIO in output mode zetten, wordt de pin verbonden met <strong>GND</strong> of <strong>VCC</strong>. Hoe we dat doen, hadden we al in het hoofdstuk van de <strong>output</strong> gezien. Schematisch ziet het er eigenlijk wel iets anders uit dan met de "interne SPDT" schakelaar, al is de werking compleet hetzelfde. De 2 mogelijkheden in output mode zijn deze:</p>
+<h3 id="gpio-output-mode-laag">OUTPUT-mode, LAAG</h3>
+<p><img alt="GPIO output low schema" src="../img/ac_gpio_output_low.png" /></p>
+<p>Dit wordt gedaan door alleen de <em>inwendige schakelaar</em> Q1 te sluiten. De GPIO pin wordt intern met GND verbonden.</p>
+<h3 id="gpio-output-mode-hoog">OUTPUT-mode, HOOG</h3>
+<p><img alt="GPIO output high schema" src="../img/ac_gpio_output_high.png" /></p>
+<p>Dit wordt gedaan door alleen de <em>inwendige schakelaar</em> Q2 te sluiten. De GPIO pin wordt intern met VCC verbonden.</p>
+<p>Een GPIO in <strong>C++</strong> in output-mode te zetten, doen we zo:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// cpp</span>
+<span class="n">pinMode</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span><span class="w">  </span><span class="c1">// zet pin 12 in OUTPUT mode</span>
+</code></pre></div>
+<p>In <strong>MicroPython</strong> doen we het zo:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># MicroPython</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">machine</span><span class="w"> </span><span class="kn">import</span> <span class="n">Pin</span>
+
+<span class="c1"># Pin 12 als output</span>
+<span class="n">led</span> <span class="o">=</span> <span class="n">Pin</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">OUT</span><span class="p">)</span>
+</code></pre></div>
+<hr />
+<h2 id="gpio-samenvatting-gpio-configureren">Samenvatting: GPIO configureren</h2>
+<h3 id="gpio-c-arduino">C++ (Arduino)</h3>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Instructie</th>
+<th>Gebruik</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Input</strong></td>
+<td><code>pinMode(pin, INPUT);</code></td>
+<td>Gewone ingang, externe pull-up/down nodig</td>
+</tr>
+<tr>
+<td><strong>Input Pull-up</strong></td>
+<td><code>pinMode(pin, INPUT_PULLUP);</code></td>
+<td>Ingang met interne pull-up weerstand</td>
+</tr>
+<tr>
+<td><strong>Input Pull-down</strong></td>
+<td><code>pinMode(pin, INPUT_PULLDOWN);</code></td>
+<td>Ingang met interne pull-down weerstand*</td>
+</tr>
+<tr>
+<td><strong>Output</strong></td>
+<td><code>pinMode(pin, OUTPUT);</code></td>
+<td>Uitgang (hoog/laag)</td>
+</tr>
+</tbody>
+</table>
+<p>*Niet beschikbaar op alle microcontrollers (bv. Arduino UNO r3)</p>
+<p><strong>Waarden lezen/schrijven</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Lezen</span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">waarde</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">digitalRead</span><span class="p">(</span><span class="n">pin</span><span class="p">);</span>
+
+<span class="c1">// Schrijven  </span>
+<span class="n">digitalWrite</span><span class="p">(</span><span class="n">pin</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w">  </span><span class="c1">// of LOW</span>
+</code></pre></div>
+<h3 id="gpio-micropython">MicroPython</h3>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Instructie</th>
+<th>Gebruik</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Input</strong></td>
+<td><code>pin = Pin(nummer, Pin.IN)</code></td>
+<td>Gewone ingang, externe pull-up/down nodig</td>
+</tr>
+<tr>
+<td><strong>Input Pull-up</strong></td>
+<td><code>pin = Pin(nummer, Pin.IN, Pin.PULL_UP)</code></td>
+<td>Ingang met interne pull-up weerstand</td>
+</tr>
+<tr>
+<td><strong>Input Pull-down</strong></td>
+<td><code>pin = Pin(nummer, Pin.IN, Pin.PULL_DOWN)</code></td>
+<td>Ingang met interne pull-down weerstand</td>
+</tr>
+<tr>
+<td><strong>Output</strong></td>
+<td><code>pin = Pin(nummer, Pin.OUT)</code></td>
+<td>Uitgang (hoog/laag)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Vergeet niet de bibliotheek te importeren:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">machine</span><span class="w"> </span><span class="kn">import</span> <span class="n">Pin</span>
+</code></pre></div>
+<p><strong>Waarden lezen/schrijven:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Lezen</span>
+<span class="n">waarde</span> <span class="o">=</span> <span class="n">pin</span><span class="o">.</span><span class="n">value</span><span class="p">()</span>
+
+<span class="c1"># Schrijven</span>
+<span class="n">pin</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>    <span class="c1"># of 0, True, False</span>
+</code></pre></div></section><section class="print-page" id="datatypes" heading-number="10"><h1 id="datatypes-meer-datatypes">Meer datatypes</h1>
+<h2 id="datatypes-van-1-bit-naar-8-bits">Van 1 bit naar 8 bits</h2>
+<p>We hebben al gezien dat <strong>1 bit</strong> maar 2 waarden kan hebben: <strong>0</strong> of <strong>1</strong>.<br />
+Maar wat als we meer verschillende waarden of grotere getallen willen opslaan? Dan combineren we meerdere bits!</p>
+<h3 id="datatypes-met-8-bits-kun-je-256-verschillende-waarden-maken">Met 8 bits kun je 256 verschillende waarden maken</h3>
+<p>Stel je voor dat je <strong>8 lampjes</strong> naast elkaar hebt. Elk lampje kan <strong>aan</strong> (1) of <strong>uit</strong> (0) zijn.<br />
+Door verschillende combinaties te maken, kun je <strong>256 verschillende patronen</strong> creëren!</p>
+<p>Voorbeelden:</p>
+<ul>
+<li><code>00000000</code> = 0</li>
+<li><code>00000001</code> = 1  </li>
+<li><code>00000010</code> = 2</li>
+<li><code>00000011</code> = 3</li>
+<li><code>11111111</code> = 255</li>
+</ul>
+<blockquote>
+<p>Met <strong>8 bits</strong> kun je dus getallen van <strong>0 tot 255</strong> voorstellen!</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Bit 7</th>
+<th>Bit 6</th>
+<th>Bit 5</th>
+<th>Bit 4</th>
+<th>Bit 3</th>
+<th>Bit 2</th>
+<th>Bit 1</th>
+<th>Bit 0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2⁷</td>
+<td>2⁶</td>
+<td>2⁵</td>
+<td>2⁴</td>
+<td>2³</td>
+<td>2²</td>
+<td>2¹</td>
+<td>2⁰</td>
+</tr>
+<tr>
+<td>128</td>
+<td>64</td>
+<td>32</td>
+<td>16</td>
+<td>8</td>
+<td>4</td>
+<td>2</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>Bijvoorbeeld: het getal 42 zou er zo uitzien:</p>
+<p>42 = 32 + 8 + 2 = <code>00101010</code></p>
+<h3 id="datatypes-waarom-is-dit-handig">Waarom is dit handig?</h3>
+<ul>
+<li><strong>Tellen</strong>: In plaats van alleen 0 en 1, kun je nu tot 255 tellen.</li>
+<li><strong>Sensoren</strong>: Een temperatuursensor kan waarden van 0°C tot 255°C meten.</li>
+<li><strong>Kleuren</strong>: Elk van de kleuren rood, groen en blauw gebruikt 8 bits (0-255).</li>
+</ul>
+<hr />
+<h2 id="datatypes-datatypes-in-c-arduino">Datatypes in C++ (Arduino)</h2>
+<p>In <strong>C++</strong> moet je altijd aangeven welk <strong>datatype</strong> je gebruikt. Dit helpt de computer om te weten hoeveel geheugen hij moet reserveren.</p>
+<h3 id="datatypes-unsigned-char">unsigned char</h3>
+<h4 id="datatypes-klein-geheel-getal-zonder-minteken-8-bits">Klein geheel getal zonder minteken (8 bits)</h4>
+<div class="highlight"><pre><span></span><code><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">helderheid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">255</span><span class="p">;</span><span class="w">  </span><span class="c1">// Kan waarden van 0 tot 255 bevatten</span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">percentage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">75</span><span class="p">;</span><span class="w">   </span><span class="c1">// Perfect voor percentages</span>
+</code></pre></div>
+<p><strong>Gebruik:</strong> Voor kleine getallen die precies in de 8-bit range passen:</p>
+<ul>
+<li>LED helderheid (0-255)</li>
+<li>Percentages (0-100)</li>
+<li>Sensor waarden die al geschaald zijn naar 0-255</li>
+<li>RGB kleurwaarden (rood, groen, blauw elk 0-255)</li>
+</ul>
+<blockquote>
+<p>Zie je het verband? Dit gebruikt precies de 8 bits die we net hebben uitgelegd!</p>
+</blockquote>
+<h3 id="datatypes-char">char</h3>
+<h4 id="datatypes-karakter-of-klein-getal">Karakter of klein getal</h4>
+<div class="highlight"><pre><span></span><code><span class="kt">char</span><span class="w"> </span><span class="n">letter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;A&#39;</span><span class="p">;</span><span class="w">     </span><span class="c1">// Voor letters</span>
+<span class="kt">char</span><span class="w"> </span><span class="n">kleinGetal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">42</span><span class="p">;</span><span class="w">  </span><span class="c1">// Voor getallen van -128 tot +127</span>
+</code></pre></div>
+<p><strong>Waarom heet dit datatype 'char'?</strong></p>
+<p><code>char</code> is de afkorting van <strong>'character'</strong> (karakter). Oorspronkelijk was dit datatype bedoeld om letters en tekens op te slaan.</p>
+<p><strong>Het geheim:</strong> Karakters worden eigenlijk opgeslagen als <strong>kleine gehele getallen</strong>!
+Elk karakter heeft een nummer in de ASCII-tabel:</p>
+<ul>
+<li>'A' = 65</li>
+<li>'B' = 66</li>
+<li>'0' = 48</li>
+<li>'1' = 49</li>
+</ul>
+<blockquote>
+<p><strong>Let op!</strong> Bij een karakter staat er in C++ steeds een enkele quote <code>'</code> voor en na het karakter.</p>
+</blockquote>
+<p><strong>Voorbeelden:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="kt">char</span><span class="w"> </span><span class="n">letter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;A&#39;</span><span class="p">;</span><span class="w">        </span><span class="c1">// Slaat eigenlijk het getal 65 op</span>
+<span class="kt">char</span><span class="w"> </span><span class="n">getal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">65</span><span class="p">;</span><span class="w">          </span><span class="c1">// Dit is hetzelfde als &#39;A&#39;!</span>
+<span class="kt">char</span><span class="w"> </span><span class="n">cijfer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;5&#39;</span><span class="p">;</span><span class="w">        </span><span class="c1">// Slaat het getal 53 op (niet het getal 5!)</span>
+</code></pre></div>
+<p><strong>Gebruik:</strong></p>
+<ul>
+<li>Voor een letter of teken</li>
+<li>Voor heel kleine getallen (-128 tot +127) om geheugen te besparen</li>
+<li>Bij communicatie waar elke byte telt</li>
+</ul>
+<blockquote>
+<p><strong>Interessant:</strong> Je kunt <em>rekenen</em> met karakters! 'A' + 1 geeft 'B'.</p>
+</blockquote>
+<h3 id="datatypes-unsigned-int">unsigned int</h3>
+<p><strong>Geheel <em>groter</em> getal zonder minteken</strong></p>
+<p>Hiervoor worden 16 bits gebruikt</p>
+<div class="highlight"><pre><span></span><code><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">teller</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">  </span><span class="c1">// Kan waarden van 0 tot 65535 bevatten</span>
+</code></pre></div>
+<p><strong>Gebruik:</strong> Voor getallen die nooit negatief worden, zoals:</p>
+<ul>
+<li>Aantal keer dat je op een knop drukt</li>
+<li>Sensor waarden (0-1023 van een potmeter)</li>
+<li>Tijd in milliseconden</li>
+</ul>
+<h3 id="datatypes-signed-int">(signed) int</h3>
+<h4 id="datatypes-geheel-getal-met-minteken">Geheel getal met minteken</h4>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">temperatuur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">-5</span><span class="p">;</span><span class="w">  </span><span class="c1">// Kan waarden van -32768 tot +32767 bevatten</span>
+</code></pre></div>
+<p><strong>Gebruik:</strong> Voor getallen die ook negatief kunnen zijn, zoals:</p>
+<ul>
+<li>Temperatuur (kan onder 0°C zijn)</li>
+<li>Positie (links/rechts van een startpunt)</li>
+<li>Verschil tussen twee metingen</li>
+</ul>
+<h3 id="datatypes-float">float</h3>
+<h4 id="datatypes-kommagetal-decimaal-getal">Kommagetal (decimaal getal)</h4>
+<div class="highlight"><pre><span></span><code><span class="kt">float</span><span class="w"> </span><span class="n">temperatuur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">23.5</span><span class="p">;</span><span class="w">     </span><span class="c1">// Kan decimalen hebben</span>
+<span class="kt">float</span><span class="w"> </span><span class="n">spanning</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.14159</span><span class="p">;</span><span class="w">     </span><span class="c1">// Pi met decimalen</span>
+</code></pre></div>
+<p><strong>Wat is een float?</strong></p>
+<p>Een <strong>float</strong> is een getal met een <strong>komma</strong> (eigenlijk punt in code). Het kan dus ook <strong><em>gebroken</em> getallen</strong> voorstellen.</p>
+<p><strong>Voorbeelden:</strong></p>
+<ul>
+<li>Temperatuur: <code>20.3°C</code> in plaats van alleen <code>20°C</code></li>
+<li>Spanning: <code>3.7V</code> in plaats van alleen <code>3V</code></li>
+<li>Afstand: <code>12.45 meter</code></li>
+</ul>
+<p><strong>Gebruik:</strong> Voor metingen die preciezer moeten zijn dan hele getallen:</p>
+<ul>
+<li>Temperatuursensoren (23.4°C)</li>
+<li>Spanningsmetingen (3.7V)</li>
+<li>Afstandsmetingen (15.6 cm)</li>
+<li>Berekeningen (gemiddelden, procenten)</li>
+</ul>
+<p><strong>Let op:</strong> Floats zijn <strong>minder nauwkeurig</strong> dan je denkt! Soms krijg je <code>3.9999999</code> in plaats van <code>4.0</code>. Dit komt omdat ze <em>binair</em> opgeslagen worden.</p>
+<h2 id="datatypes-datatypes-in-micropython">Datatypes in MicroPython</h2>
+<p>In <strong>MicroPython</strong> hoef je het datatype <strong>niet expliciet</strong> te vermelden. Python kiest automatisch het juiste type op basis van de waarde die je opslaat.</p>
+<p><strong>Maar</strong>: Het is nog steeds belangrijk dat <strong>jij</strong> weet welk datatype je gebruikt!</p>
+<h3 id="datatypes-gehele-getallen-integers">Gehele getallen (integers)</h3>
+<div class="highlight"><pre><span></span><code><span class="n">teller</span> <span class="o">=</span> <span class="mi">0</span>        <span class="c1"># Python kiest automatisch &#39;int&#39;</span>
+<span class="n">temperatuur</span> <span class="o">=</span> <span class="o">-</span><span class="mi">5</span>  <span class="c1"># Ook een &#39;int&#39;, maar kan negatief zijn</span>
+</code></pre></div>
+<p><strong>Python is slim:</strong> Het maakt automatisch genoeg ruimte voor je getal, ook als het heel groot wordt!</p>
+<h3 id="datatypes-karakters-en-tekst-strings">Karakters en tekst (strings)</h3>
+<div class="highlight"><pre><span></span><code><span class="n">letter</span> <span class="o">=</span> <span class="s1">&#39;A&#39;</span>           <span class="c1"># Eén karakter</span>
+<span class="n">tekst</span> <span class="o">=</span> <span class="s2">&quot;Hallo wereld&quot;</span> <span class="c1"># Hele zin</span>
+</code></pre></div>
+<h3 id="datatypes-kommagetallen-floats">Kommagetallen (floats)</h3>
+<div class="highlight"><pre><span></span><code><span class="n">temperatuur</span> <span class="o">=</span> <span class="mf">23.5</span>      <span class="c1"># Python herkent automatisch dat dit een float is</span>
+<span class="n">spanning</span> <span class="o">=</span> <span class="mf">3.14159</span>      <span class="c1"># Ook een float</span>
+</code></pre></div>
+<p><strong>Python is nog slimmer:</strong> Het herkent automatisch of je getal een <strong>integer</strong> (geheel getal) of <strong>float</strong> (kommagetal) is!</p>
+<div class="highlight"><pre><span></span><code><span class="n">geheel_getal</span> <span class="o">=</span> <span class="mi">25</span>        <span class="c1"># Dit is een int</span>
+<span class="n">komma_getal</span> <span class="o">=</span> <span class="mf">25.0</span>       <span class="c1"># Dit is een float (let op de .0)</span>
+</code></pre></div>
+<h2 id="datatypes-samenvatting">Samenvatting</h2>
+<h3 id="datatypes-c-arduino">C++ (Arduino)</h3>
+<ul>
+<li>Je moet het datatype aangeven</li>
+<li>Beperkte ruimte per datatype</li>
+<li>Sneller en gebruikt minder geheugen</li>
+</ul>
+<h3 id="datatypes-micropython">MicroPython</h3>
+<ul>
+<li>Python <strong>kiest</strong> automatisch het datatype</li>
+<li>Onbeperkte ruimte (binnen grenzen van de microcontroller)</li>
+<li>Langzamer maar gemakkelijker te programmeren</li>
+</ul>
+<blockquote>
+<p>Tip: Ook in Python is het handig om te weten welk type je gebruikt, vooral bij sensoren die bepaalde waardenbereiken hebben!</p>
+</blockquote></section><section class="print-page" id="eerste_programma" heading-number="11"><h1 id="eerste_programma-je-eerste-volledige-programma">Je eerste volledige programma</h1>
+<p>Nu we de basisconcepten kennen (input, output, GPIO, datatypes), gaan we een <strong>volledig programma</strong> schrijven!<br />
+We leren hoe je je code moet structureren en hoe de microcontroller deze uitvoert.</p>
+<hr />
+<h2 id="eerste_programma-de-structuur-van-een-programma">De structuur van een programma</h2>
+<h3 id="eerste_programma-in-c-arduino">In C++ (Arduino)</h3>
+<p>Een Arduino-programma bestaat altijd uit <strong>twee hoofdfuncties</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Deze code wordt EENMAAL uitgevoerd bij het opstarten</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Deze code wordt HERHAALDELIJK uitgevoerd (eindeloze lus)</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>setup()</strong> - Voorbereiding</p>
+<ul>
+<li>Wordt één keer uitgevoerd wanneer de Arduino opstart</li>
+<li>Hier configureer je de GPIO pinnen</li>
+<li>Hier start je seriële communicatie, die we later nog zullen zien</li>
+<li>Hier stel je startwaardes in</li>
+</ul>
+<p><strong>loop()</strong> - Hoofdprogramma</p>
+<ul>
+<li>Wordt oneindig herhaald</li>
+<li>Hier lees je bijvoorbeeld sensoren uit</li>
+<li>Hier neem je beslissingen</li>
+<li>Hier stuur je actuatoren (zoals motoren, LEDs, ...) aan</li>
+</ul>
+<h3 id="eerste_programma-in-micropython">In MicroPython</h3>
+<p>In MicroPython schrijf je je programma van <strong>boven naar beneden</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">machine</span><span class="w"> </span><span class="kn">import</span> <span class="n">Pin</span>
+
+<span class="c1"># Configuratie (vergelijkbaar met Arduino&#39;s setup)</span>
+<span class="n">led</span> <span class="o">=</span> <span class="n">Pin</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">OUT</span><span class="p">)</span>
+<span class="n">button</span> <span class="o">=</span> <span class="n">Pin</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">IN</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">PULL_UP</span><span class="p">)</span>
+
+<span class="c1"># Hoofdprogramma (vergelijkbaar met Arduino&#39;s loop)</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="c1"># Deze code wordt oneindig herhaald</span>
+    <span class="k">pass</span>
+</code></pre></div>
+<p><strong>Bovenaan</strong> - Voorbereiding</p>
+<ul>
+<li>Bibliotheken importeren</li>
+<li>GPIO pinnen configureren</li>
+<li>Variabelen initialiseren</li>
+</ul>
+<p><strong>while True:</strong> - Hoofdprogramma</p>
+<ul>
+<li>Oneindig herhalende lus (zoals Arduino's loop)</li>
+<li>Hier komt je hoofdcode</li>
+</ul>
+<hr />
+<h2 id="eerste_programma-voorbeeld-1-led-knipperen">Voorbeeld 1: LED knipperen</h2>
+<p>C++ (Arduino)</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Configuratie</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">ledPin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">13</span><span class="p">;</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Eenmalige voorbereiding</span>
+<span class="w">    </span><span class="n">pinMode</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Herhaal oneindig</span>
+<span class="w">    </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w">  </span><span class="c1">// LED aan</span>
+<span class="w">    </span><span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span><span class="w">                 </span><span class="c1">// Wacht 1 seconde</span>
+<span class="w">    </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span><span class="w">   </span><span class="c1">// LED uit</span>
+<span class="w">    </span><span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span><span class="w">                 </span><span class="c1">// Wacht 1 seconde</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>MicroPython</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">machine</span><span class="w"> </span><span class="kn">import</span> <span class="n">Pin</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+
+<span class="c1"># Configuratie</span>
+<span class="n">led</span> <span class="o">=</span> <span class="n">Pin</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">OUT</span><span class="p">)</span>
+
+<span class="c1"># Hoofdprogramma</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">led</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>      <span class="c1"># LED aan</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>     <span class="c1"># Wacht 1 seconde</span>
+    <span class="n">led</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>      <span class="c1"># LED uit</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>     <span class="c1"># Wacht 1 seconde</span>
+</code></pre></div>
+<hr />
+<h2 id="eerste_programma-voorbeeld-2-led-met-knop-besturen">Voorbeeld 2: LED met knop besturen</h2>
+<p>C++ (Arduino)</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Pin configuratie</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">ledPin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">13</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">buttonPin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Configureer pinnen (eenmalig)</span>
+<span class="w">    </span><span class="n">pinMode</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
+<span class="w">    </span><span class="n">pinMode</span><span class="p">(</span><span class="n">buttonPin</span><span class="p">,</span><span class="w"> </span><span class="n">INPUT_PULLUP</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Lees knop uit</span>
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">buttonPressed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">!</span><span class="n">digitalRead</span><span class="p">(</span><span class="n">buttonPin</span><span class="p">);</span><span class="w">  </span><span class="c1">// Pull-up: signaal omdraaien</span>
+
+<span class="w">    </span><span class="c1">// Stuur LED aan</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">buttonPressed</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w">  </span><span class="c1">// LED aan</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span><span class="w">   </span><span class="c1">// LED uit</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>MicroPython</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">machine</span><span class="w"> </span><span class="kn">import</span> <span class="n">Pin</span>
+
+<span class="c1"># Configuratie</span>
+<span class="n">led</span> <span class="o">=</span> <span class="n">Pin</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">OUT</span><span class="p">)</span>
+<span class="n">button</span> <span class="o">=</span> <span class="n">Pin</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">IN</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">PULL_UP</span><span class="p">)</span>
+
+<span class="c1"># Hoofdprogramma</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="c1"># Lees knop uit</span>
+    <span class="n">button_pressed</span> <span class="o">=</span> <span class="ow">not</span> <span class="n">button</span><span class="o">.</span><span class="n">value</span><span class="p">()</span>  <span class="c1"># Pull-up: False = ingedrukt</span>
+
+    <span class="c1"># Stuur LED aan</span>
+    <span class="k">if</span> <span class="n">button_pressed</span><span class="p">:</span>
+        <span class="n">led</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># LED aan</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">led</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>  <span class="c1"># LED uit</span>
+</code></pre></div>
+<hr />
+<h2 id="eerste_programma-voorbeeld-3-teller-met-knop">Voorbeeld 3: Teller met knop</h2>
+<p>C++ (Arduino)</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Pin configuratie</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">buttonPin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+
+<span class="c1">// Variabelen</span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">teller</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">vorigeKnopStatus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">HIGH</span><span class="p">;</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">pinMode</span><span class="p">(</span><span class="n">buttonPin</span><span class="p">,</span><span class="w"> </span><span class="n">INPUT_PULLUP</span><span class="p">);</span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span><span class="w">  </span><span class="c1">// Start seriële communicatie</span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Teller gestart!&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Lees huidige knopstatus</span>
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">huidigeKnopStatus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">digitalRead</span><span class="p">(</span><span class="n">buttonPin</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// Detecteer druk op knop (overgang van HIGH naar LOW)</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">vorigeKnopStatus</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">HIGH</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">huidigeKnopStatus</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">LOW</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">teller</span><span class="o">++</span><span class="p">;</span><span class="w">  </span><span class="c1">// Verhoog teller</span>
+<span class="w">        </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;Teller: &quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">teller</span><span class="p">);</span>
+<span class="w">        </span><span class="n">delay</span><span class="p">(</span><span class="mi">50</span><span class="p">);</span><span class="w">  </span><span class="c1">// Korte pauze voor debouncing</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Onthoud status voor volgende loop</span>
+<span class="w">    </span><span class="n">vorigeKnopStatus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">huidigeKnopStatus</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>MicroPython</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">machine</span><span class="w"> </span><span class="kn">import</span> <span class="n">Pin</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+
+<span class="c1"># Configuratie</span>
+<span class="n">button</span> <span class="o">=</span> <span class="n">Pin</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">IN</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">PULL_UP</span><span class="p">)</span>
+
+<span class="c1"># Variabelen</span>
+<span class="n">teller</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">vorige_knop_status</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Teller gestart!&quot;</span><span class="p">)</span>
+
+<span class="c1"># Hoofdprogramma</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="c1"># Lees huidige knopstatus</span>
+    <span class="n">huidige_knop_status</span> <span class="o">=</span> <span class="n">button</span><span class="o">.</span><span class="n">value</span><span class="p">()</span>
+
+    <span class="c1"># Detecteer druk op knop (overgang van True naar False)</span>
+    <span class="k">if</span> <span class="n">vorige_knop_status</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">huidige_knop_status</span><span class="p">:</span>
+        <span class="n">teller</span> <span class="o">+=</span> <span class="mi">1</span>  <span class="c1"># Verhoog teller</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Teller: </span><span class="si">{</span><span class="n">teller</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.05</span><span class="p">)</span>  <span class="c1"># Korte pauze voor debouncing</span>
+
+    <span class="c1"># Onthoud status voor volgende loop</span>
+    <span class="n">vorige_knop_status</span> <span class="o">=</span> <span class="n">huidige_knop_status</span>
+</code></pre></div>
+<hr />
+<h2 id="eerste_programma-belangrijke-concepten">Belangrijke concepten</h2>
+<ol>
+<li>
+<p>Variabelen buiten de lus</p>
+<p><strong>C++:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">teller</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">  </span><span class="c1">// Buiten setup() en loop()</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">teller</span><span class="o">++</span><span class="p">;</span><span class="w">  </span><span class="c1">// Behoudt zijn waarde tussen loops</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>MicroPython:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="n">teller</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># Boven de while-lus</span>
+
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">teller</span> <span class="o">+=</span> <span class="mi">1</span>  <span class="c1"># Behoudt zijn waarde tussen loops</span>
+</code></pre></div>
+</li>
+<li>
+<p>Debouncing</p>
+<p>Knoppen kunnen "stuiteren" (bounce) bij het indrukken, waardoor meerdere signalen gedetecteerd worden.</p>
+<p><strong>Oplossingen:</strong></p>
+</li>
+<li>
+<p>Korte <code>delay()</code> of <code>time.sleep()</code> na detectie</p>
+</li>
+<li>Status alleen veranderen bij overgang (van HIGH naar LOW)</li>
+<li>
+<p>Hardware debouncing met condensator</p>
+</li>
+<li>
+<p>Timing
+    <strong>C++:</strong></p>
+</li>
+<li>
+<p><code>delay(milliseconden)</code> - Blokkeert het programma</p>
+</li>
+<li>
+<p><code>millis()</code> - Geeft tijd sinds opstart (niet-blokkerend)</p>
+<p><strong>MicroPython:</strong></p>
+</li>
+<li>
+<p><code>time.sleep(seconden)</code> - Blokkeert het programma</p>
+</li>
+<li><code>time.ticks_ms()</code> - Geeft tijd sinds opstart (niet-blokkerend)</li>
+</ol>
+<hr />
+<h2 id="eerste_programma-oefeningen">Oefeningen</h2>
+<ol>
+<li>
+<p>Knipperende LED met variabele snelheid</p>
+</li>
+<li>
+<p>Maak een LED die knippert</p>
+</li>
+<li>Gebruik een variabele voor de knippersnelheid</li>
+<li>
+<p>Verander de snelheid tijdens het programma</p>
+</li>
+<li>
+<p>Twee knoppen, twee LED's</p>
+<ul>
+<li>Knop A bedient LED 1</li>
+<li>Knop B bedient LED 2</li>
+<li>Beide onafhankelijk van elkaar</li>
+</ul>
+</li>
+</ol>
+<!--  
+3. Toerenteller
+
+    - Tel hoe vaak een knop is ingedrukt
+    - Toon het aantal op de seriële monitor
+    - Reset de teller na 10 drukken
+--></section><section class="print-page" id="analoog_pwm" heading-number="12"><h1 id="analoog_pwm-analoge-signalen-en-pwm">Analoge signalen en PWM</h1>
+<h2 id="analoog_pwm-adc-analog-to-digital-converter">ADC (Analog-to-Digital Converter)</h2>
+<p>Sommige pinnen kunnen een spanning meten (0–3.3 V).</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Arduino (C++) voorbeeld</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">potPin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">A0</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">waarde</span><span class="p">;</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">waarde</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">analogRead</span><span class="p">(</span><span class="n">potPin</span><span class="p">);</span><span class="w"> </span><span class="c1">// 0–1023</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">waarde</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># MicroPython voorbeeld</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">machine</span><span class="w"> </span><span class="kn">import</span> <span class="n">ADC</span><span class="p">,</span> <span class="n">Pin</span>
+<span class="n">pot</span> <span class="o">=</span> <span class="n">ADC</span><span class="p">(</span><span class="n">Pin</span><span class="p">(</span><span class="mi">26</span><span class="p">))</span>
+<span class="n">waarde</span> <span class="o">=</span> <span class="n">pot</span><span class="o">.</span><span class="n">read_u16</span><span class="p">()</span> <span class="c1"># 0–65535</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">waarde</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="analoog_pwm-pwm-pulse-width-modulation">PWM (Pulse Width Modulation)</h2>
+<p>LED dimmen door het signaal snel aan/uit te schakelen.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Arduino (C++) voorbeeld</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">ledPin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">9</span><span class="p">;</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">analogWrite</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span><span class="w"> </span><span class="mi">128</span><span class="p">);</span><span class="w"> </span><span class="c1">// halve helderheid</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># MicroPython voorbeeld</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">machine</span><span class="w"> </span><span class="kn">import</span> <span class="n">PWM</span><span class="p">,</span> <span class="n">Pin</span>
+<span class="n">led</span> <span class="o">=</span> <span class="n">PWM</span><span class="p">(</span><span class="n">Pin</span><span class="p">(</span><span class="mi">25</span><span class="p">))</span>
+<span class="n">led</span><span class="o">.</span><span class="n">duty_u16</span><span class="p">(</span><span class="mi">32768</span><span class="p">)</span> <span class="c1"># halve helderheid</span>
+</code></pre></div></section><section class="print-page" id="seriele_communicatie" heading-number="13"><h1 id="seriele_communicatie-seriele-communicatie">Seriële communicatie</h1>
+<p>Seriële communicatie is een manier om gegevens bit voor bit te verzenden tussen twee apparaten. Het is eenvoudig, betrouwbaar en zit standaard op bijna elke microcontroller.</p>
+<h2 id="seriele_communicatie-inleiding-communiceren-met-pulsen">Inleiding: communiceren met pulsen</h2>
+<p>Stel je voor dat je geen letters kunt sturen, maar alleen een lampje dat <strong>aan</strong> of <strong>uit</strong> kan. Door dat lampje op het juiste moment te laten knipperen, kun je toch een boodschap doorgeven. Dat is in essentie <strong>binair</strong>: twee toestanden die veranderen in functie van de tijd.</p>
+<p>Een bekend voorbeeld is <strong>morsecode</strong>. Daarin zijn er <strong>korte</strong> en <strong>lange</strong> signalen (punt en streep). Het beroemde SOS‑signaal is:</p>
+<ul>
+<li><strong>S</strong> = <code>...</code> (kort‑kort‑kort)</li>
+<li><strong>O</strong> = <code>---</code> (lang‑lang‑lang)</li>
+<li><strong>S</strong> = <code>...</code> (kort‑kort‑kort)</li>
+</ul>
+<p>Zo kun je met alleen aan/uit toch betekenis overbrengen. Dat idee is de basis van digitale communicatie.</p>
+<p><img alt="Placeholder: morse SOS timingdiagram" src="../seriele_communicatie/img/morse_sos_placeholder.png" /></p>
+<h2 id="seriele_communicatie-van-morse-naar-ascii">Van morse naar ASCII</h2>
+<p>Morse is handig voor mensen, maar computers gebruiken liever vaste afspraken: <strong>elke letter krijgt een getal</strong>. Die afspraak heet <strong>ASCII</strong> (American Standard Code for Information Interchange).</p>
+<p>Voorbeelden:</p>
+<ul>
+<li><code>A</code> = 65</li>
+<li><code>B</code> = 66</li>
+<li><code>a</code> = 97</li>
+<li><code>0</code> = 48</li>
+</ul>
+<p>In een <strong>ASCII‑tabel</strong> staat precies welk getal bij welk teken hoort. Zo kan een computer een letter sturen als een <strong>getal</strong>, en dat getal wordt door de ontvanger weer omgezet naar hetzelfde teken.</p>
+<p>Vanaf hier kijken we hoe microcontrollers die getallen echt verzenden, bit voor bit, via seriële communicatie.</p>
+<h2 id="seriele_communicatie-uart-signaal-en-baudrate">UART-signaal en baudrate</h2>
+<p>Bij UART worden de bits achter elkaar verstuurd als <strong>spanningsniveaus in de tijd</strong>. Daarom is het belangrijk dat <strong>zender en ontvanger dezelfde snelheid</strong> gebruiken.</p>
+<ul>
+<li><strong>Baudrate</strong> = de snelheid van communiceren (bits per seconde)</li>
+<li>Beide apparaten <strong>moeten dezelfde baudrate</strong> ingesteld hebben</li>
+</ul>
+<p>Als de snelheden niet overeenkomen, wordt elke bit op het verkeerde moment gelezen. Dat is een <strong>veelvoorkomende reden</strong> waarom seriële communicatie niet werkt.</p>
+<p><img alt="Placeholder: UART timingdiagram" src="../seriele_communicatie/img/uart_timing_placeholder.png" /></p>
+<h2 id="seriele_communicatie-leerdoelen">Leerdoelen</h2>
+<ul>
+<li>Begrijpen wat UART/serial is</li>
+<li>Weten wat baudrate, databits, pariteit en stopbits betekenen</li>
+<li>Een basisverbinding kunnen maken tussen microcontroller en PC of tussen twee microcontrollers</li>
+</ul>
+<h2 id="seriele_communicatie-hoe-werkt-het">Hoe werkt het?</h2>
+<p>Bij UART (Universal Asynchronous Receiver/Transmitter) sturen apparaten data asynchroon: er is geen aparte kloklijn nodig. In plaats daarvan spreken beide kanten dezelfde <strong>baudrate</strong> af (bijv. 9600, 115200). Elke byte krijgt een startbit, databits, een optionele pariteitsbit en een stopbit.</p>
+<h2 id="seriele_communicatie-belangrijkste-begrippen">Belangrijkste begrippen</h2>
+<ul>
+<li><strong>Baudrate</strong>: snelheid in bits per seconde.</li>
+<li><strong>Databits</strong>: meestal 8 bits per byte.</li>
+<li><strong>Pariteit</strong>: extra foutcontrole (vaak <code>None</code>).</li>
+<li><strong>Stopbits</strong>: meestal 1.</li>
+</ul>
+<h2 id="seriele_communicatie-bekabeling">Bekabeling</h2>
+<p>Een basisverbinding (TTL‑niveau) heeft minimaal:</p>
+<ul>
+<li><strong>TX → RX</strong> (kruisen!)</li>
+<li><strong>RX → TX</strong></li>
+<li><strong>GND ↔ GND</strong></li>
+</ul>
+<p>Let op: seriële pinnen werken op logische niveaus (bijv. 5V of 3.3V). Gebruik een level shifter als de spanningen verschillen.</p>
+<h2 id="seriele_communicatie-voorbeeld-arduino">Voorbeeld (Arduino)</h2>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Hallo via serial!&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="seriele_communicatie-voorbeeld-micropython">Voorbeeld (MicroPython)</h2>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">machine</span><span class="w"> </span><span class="kn">import</span> <span class="n">UART</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+
+<span class="n">uart</span> <span class="o">=</span> <span class="n">UART</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">9600</span><span class="p">)</span>
+
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">uart</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Hallo via serial!</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="seriele_communicatie-toepassingen">Toepassingen</h2>
+<ul>
+<li>Debuggen via de seriële monitor</li>
+<li>Data loggen naar een PC</li>
+<li>Communicatie tussen meerdere microcontrollers</li>
+</ul>
+<h2 id="seriele_communicatie-oefening">Oefening</h2>
+<ul>
+<li>Stuur om de seconde een tellerwaarde via de seriële poort.</li>
+<li>Laat de ontvanger de waarde terugsturen (echo) en toon dit op de seriële monitor.</li>
+</ul></section><section class="print-page" id="toepassingen" heading-number="14"><h1 id="toepassingen-samenspel-en-toepassingen">Samenspel en toepassingen</h1>
+<h2 id="toepassingen-simpel-project-met-leds-en-drukknoppen">Simpel project met LEDs en drukknoppen</h2>
+<p><code>Arduino UNO</code></p>
+<p><a href="https://wokwi.com/projects/445986971000642561">Arduino project met drukknoppen en LED's</a></p>
+<p><code>Raspberry Pi Pico</code></p>
+<p><a href="https://wokwi.com/projects/445980918449142785">MicroPython project met drukknoppen en LED's</a></p>
+<h2 id="toepassingen-input-output-combineren">Input + Output combineren</h2>
+<p>Dimmen van een LED met een potmeter, of een knop die de toonhoogte van een buzzer verandert.</p>
+<h3 id="toepassingen-mini-verkeerslicht">Mini verkeerslicht</h3>
+<div class="highlight"><pre><span></span><code><span class="c1">// Arduino (C++) voorbeeld</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">ledR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="n">ledG</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">11</span><span class="p">,</span><span class="w"> </span><span class="n">ledY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w"> </span><span class="n">button</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">ledR</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
+<span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">ledG</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
+<span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">ledY</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
+<span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">button</span><span class="p">,</span><span class="w"> </span><span class="n">INPUT</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">digitalRead</span><span class="p">(</span><span class="n">button</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">HIGH</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">ledR</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span>
+<span class="w">    </span><span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+<span class="w">    </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">ledR</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
+<span class="w">    </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">ledG</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span>
+<span class="w">    </span><span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+<span class="w">    </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">ledG</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
+<span class="w">    </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">ledY</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span>
+<span class="w">    </span><span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+<span class="w">    </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">ledY</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># MicroPython voorbeeld</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">machine</span><span class="w"> </span><span class="kn">import</span> <span class="n">Pin</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+<span class="n">ledR</span> <span class="o">=</span> <span class="n">Pin</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">OUT</span><span class="p">)</span>
+<span class="n">ledG</span> <span class="o">=</span> <span class="n">Pin</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">OUT</span><span class="p">)</span>
+<span class="n">ledY</span> <span class="o">=</span> <span class="n">Pin</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">OUT</span><span class="p">)</span>
+<span class="n">button</span> <span class="o">=</span> <span class="n">Pin</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">IN</span><span class="p">)</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">button</span><span class="o">.</span><span class="n">value</span><span class="p">():</span>
+        <span class="n">ledR</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">ledR</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">ledG</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">ledG</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">ledY</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
+        <span class="n">ledY</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</code></pre></div>
+<blockquote>
+<p><strong>Projectideeën:</strong>
+- Reaction game met knop en LED
+- Toonhoogte veranderen met knop en buzzer</p>
+</blockquote>
+<!--![Plaats voor verkeerslicht-schema](PLACEHOLDER_VERKEERSLICHT_SCHEMA)--></section><section class="print-page" id="vooruitblik" heading-number="15"><h1 id="vooruitblik-vooruitblik">Vooruitblik</h1>
+<h2 id="vooruitblik-andere-datatypes">Andere datatypes</h2>
+<ul>
+<li>float (kommagetallen)</li>
+<li>string (tekst)</li>
+</ul>
+<h2 id="vooruitblik-serial-communicatie">Serial communicatie</h2>
+<p>Met de computer praten via de seriële poort.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Arduino (C++) voorbeeld</span>
+<span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Hallo!&quot;</span><span class="p">);</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># MicroPython voorbeeld</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hallo!&quot;</span><span class="p">)</span>
+</code></pre></div>
+<blockquote>
+<p>Later kun je uitbreiden met vb sensoren, displays en motoren!</p>
+</blockquote></section></div><style>.print-site-enumerate-headings #index > h1:before { content: '1 ' }
+
+                .print-site-enumerate-headings #index h2:before { content: '1.' counter(counter-index-2) ' ' }
+                .print-site-enumerate-headings #index h2 {  counter-reset: counter-index-3 ;  counter-increment: counter-index-2 }
+            
+                .print-site-enumerate-headings #index h3:before { content: '1.' counter(counter-index-2) '.' counter(counter-index-3) ' ' }
+                .print-site-enumerate-headings #index h3 {  counter-increment: counter-index-3 }
+            
+.print-site-enumerate-headings #inhoud > h1:before { content: '3 ' }
+
+                .print-site-enumerate-headings #inhoud h2:before { content: '3.' counter(counter-inhoud-2) ' ' }
+                .print-site-enumerate-headings #inhoud h2 {  counter-reset: counter-inhoud-3 ;  counter-increment: counter-inhoud-2 }
+            
+                .print-site-enumerate-headings #inhoud h3:before { content: '3.' counter(counter-inhoud-2) '.' counter(counter-inhoud-3) ' ' }
+                .print-site-enumerate-headings #inhoud h3 {  counter-increment: counter-inhoud-3 }
+            
+.print-site-enumerate-headings #introductie > h1:before { content: '4 ' }
+
+                .print-site-enumerate-headings #introductie h2:before { content: '4.' counter(counter-introductie-2) ' ' }
+                .print-site-enumerate-headings #introductie h2 {  counter-reset: counter-introductie-3 ;  counter-increment: counter-introductie-2 }
+            
+                .print-site-enumerate-headings #introductie h3:before { content: '4.' counter(counter-introductie-2) '.' counter(counter-introductie-3) ' ' }
+                .print-site-enumerate-headings #introductie h3 {  counter-increment: counter-introductie-3 }
+            
+.print-site-enumerate-headings #componenten > h1:before { content: '5 ' }
+
+                .print-site-enumerate-headings #componenten h2:before { content: '5.' counter(counter-componenten-2) ' ' }
+                .print-site-enumerate-headings #componenten h2 {  counter-reset: counter-componenten-3 ;  counter-increment: counter-componenten-2 }
+            
+                .print-site-enumerate-headings #componenten h3:before { content: '5.' counter(counter-componenten-2) '.' counter(counter-componenten-3) ' ' }
+                .print-site-enumerate-headings #componenten h3 {  counter-increment: counter-componenten-3 }
+            
+.print-site-enumerate-headings #bit_boolean > h1:before { content: '6 ' }
+
+                .print-site-enumerate-headings #bit_boolean h2:before { content: '6.' counter(counter-bit_boolean-2) ' ' }
+                .print-site-enumerate-headings #bit_boolean h2 {  counter-reset: counter-bit_boolean-3 ;  counter-increment: counter-bit_boolean-2 }
+            
+                .print-site-enumerate-headings #bit_boolean h3:before { content: '6.' counter(counter-bit_boolean-2) '.' counter(counter-bit_boolean-3) ' ' }
+                .print-site-enumerate-headings #bit_boolean h3 {  counter-increment: counter-bit_boolean-3 }
+            
+.print-site-enumerate-headings #output > h1:before { content: '7 ' }
+
+                .print-site-enumerate-headings #output h2:before { content: '7.' counter(counter-output-2) ' ' }
+                .print-site-enumerate-headings #output h2 {  counter-reset: counter-output-3 ;  counter-increment: counter-output-2 }
+            
+                .print-site-enumerate-headings #output h3:before { content: '7.' counter(counter-output-2) '.' counter(counter-output-3) ' ' }
+                .print-site-enumerate-headings #output h3 {  counter-increment: counter-output-3 }
+            
+.print-site-enumerate-headings #input > h1:before { content: '8 ' }
+
+                .print-site-enumerate-headings #input h2:before { content: '8.' counter(counter-input-2) ' ' }
+                .print-site-enumerate-headings #input h2 {  counter-reset: counter-input-3 ;  counter-increment: counter-input-2 }
+            
+                .print-site-enumerate-headings #input h3:before { content: '8.' counter(counter-input-2) '.' counter(counter-input-3) ' ' }
+                .print-site-enumerate-headings #input h3 {  counter-increment: counter-input-3 }
+            
+.print-site-enumerate-headings #gpio > h1:before { content: '9 ' }
+
+                .print-site-enumerate-headings #gpio h2:before { content: '9.' counter(counter-gpio-2) ' ' }
+                .print-site-enumerate-headings #gpio h2 {  counter-reset: counter-gpio-3 ;  counter-increment: counter-gpio-2 }
+            
+                .print-site-enumerate-headings #gpio h3:before { content: '9.' counter(counter-gpio-2) '.' counter(counter-gpio-3) ' ' }
+                .print-site-enumerate-headings #gpio h3 {  counter-increment: counter-gpio-3 }
+            
+.print-site-enumerate-headings #datatypes > h1:before { content: '10 ' }
+
+                .print-site-enumerate-headings #datatypes h2:before { content: '10.' counter(counter-datatypes-2) ' ' }
+                .print-site-enumerate-headings #datatypes h2 {  counter-reset: counter-datatypes-3 ;  counter-increment: counter-datatypes-2 }
+            
+                .print-site-enumerate-headings #datatypes h3:before { content: '10.' counter(counter-datatypes-2) '.' counter(counter-datatypes-3) ' ' }
+                .print-site-enumerate-headings #datatypes h3 {  counter-increment: counter-datatypes-3 }
+            
+.print-site-enumerate-headings #eerste_programma > h1:before { content: '11 ' }
+
+                .print-site-enumerate-headings #eerste_programma h2:before { content: '11.' counter(counter-eerste_programma-2) ' ' }
+                .print-site-enumerate-headings #eerste_programma h2 {  counter-reset: counter-eerste_programma-3 ;  counter-increment: counter-eerste_programma-2 }
+            
+                .print-site-enumerate-headings #eerste_programma h3:before { content: '11.' counter(counter-eerste_programma-2) '.' counter(counter-eerste_programma-3) ' ' }
+                .print-site-enumerate-headings #eerste_programma h3 {  counter-increment: counter-eerste_programma-3 }
+            
+.print-site-enumerate-headings #analoog_pwm > h1:before { content: '12 ' }
+
+                .print-site-enumerate-headings #analoog_pwm h2:before { content: '12.' counter(counter-analoog_pwm-2) ' ' }
+                .print-site-enumerate-headings #analoog_pwm h2 {  counter-reset: counter-analoog_pwm-3 ;  counter-increment: counter-analoog_pwm-2 }
+            
+                .print-site-enumerate-headings #analoog_pwm h3:before { content: '12.' counter(counter-analoog_pwm-2) '.' counter(counter-analoog_pwm-3) ' ' }
+                .print-site-enumerate-headings #analoog_pwm h3 {  counter-increment: counter-analoog_pwm-3 }
+            
+.print-site-enumerate-headings #seriele_communicatie > h1:before { content: '13 ' }
+
+                .print-site-enumerate-headings #seriele_communicatie h2:before { content: '13.' counter(counter-seriele_communicatie-2) ' ' }
+                .print-site-enumerate-headings #seriele_communicatie h2 {  counter-reset: counter-seriele_communicatie-3 ;  counter-increment: counter-seriele_communicatie-2 }
+            
+                .print-site-enumerate-headings #seriele_communicatie h3:before { content: '13.' counter(counter-seriele_communicatie-2) '.' counter(counter-seriele_communicatie-3) ' ' }
+                .print-site-enumerate-headings #seriele_communicatie h3 {  counter-increment: counter-seriele_communicatie-3 }
+            
+.print-site-enumerate-headings #toepassingen > h1:before { content: '14 ' }
+
+                .print-site-enumerate-headings #toepassingen h2:before { content: '14.' counter(counter-toepassingen-2) ' ' }
+                .print-site-enumerate-headings #toepassingen h2 {  counter-reset: counter-toepassingen-3 ;  counter-increment: counter-toepassingen-2 }
+            
+                .print-site-enumerate-headings #toepassingen h3:before { content: '14.' counter(counter-toepassingen-2) '.' counter(counter-toepassingen-3) ' ' }
+                .print-site-enumerate-headings #toepassingen h3 {  counter-increment: counter-toepassingen-3 }
+            
+.print-site-enumerate-headings #vooruitblik > h1:before { content: '15 ' }
+
+                .print-site-enumerate-headings #vooruitblik h2:before { content: '15.' counter(counter-vooruitblik-2) ' ' }
+                .print-site-enumerate-headings #vooruitblik h2 {  counter-reset: counter-vooruitblik-3 ;  counter-increment: counter-vooruitblik-2 }
+            
+                .print-site-enumerate-headings #vooruitblik h3:before { content: '15.' counter(counter-vooruitblik-2) '.' counter(counter-vooruitblik-3) ' ' }
+                .print-site-enumerate-headings #vooruitblik h3 {  counter-increment: counter-vooruitblik-3 }
+            </style>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "/", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../js/print-site.js"></script>
+      
+    
+  </body>
+</html>

@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
@@ -52,6 +52,10 @@
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
+    
+      <link rel="stylesheet" href="../css/print-site.css">
+    
+      <link rel="stylesheet" href="../css/print-site-material.css">
     
       <link rel="stylesheet" href="../overrides.css">
     
@@ -238,6 +242,33 @@
     
   
     Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../print_page/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Afdrukken
   
 
     
@@ -609,6 +640,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#uart-signaal-en-baudrate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UART-signaal en baudrate
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#leerdoelen" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -807,6 +849,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#uart-signaal-en-baudrate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UART-signaal en baudrate
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#leerdoelen" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -934,6 +987,14 @@
 </ul>
 <p>In een <strong>ASCII‑tabel</strong> staat precies welk getal bij welk teken hoort. Zo kan een computer een letter sturen als een <strong>getal</strong>, en dat getal wordt door de ontvanger weer omgezet naar hetzelfde teken.</p>
 <p>Vanaf hier kijken we hoe microcontrollers die getallen echt verzenden, bit voor bit, via seriële communicatie.</p>
+<h2 id="uart-signaal-en-baudrate">UART-signaal en baudrate</h2>
+<p>Bij UART worden de bits achter elkaar verstuurd als <strong>spanningsniveaus in de tijd</strong>. Daarom is het belangrijk dat <strong>zender en ontvanger dezelfde snelheid</strong> gebruiken.</p>
+<ul>
+<li><strong>Baudrate</strong> = de snelheid van communiceren (bits per seconde)</li>
+<li>Beide apparaten <strong>moeten dezelfde baudrate</strong> ingesteld hebben</li>
+</ul>
+<p>Als de snelheden niet overeenkomen, wordt elke bit op het verkeerde moment gelezen. Dat is een <strong>veelvoorkomende reden</strong> waarom seriële communicatie niet werkt.</p>
+<p><img alt="Placeholder: UART timingdiagram" src="img/uart_timing_placeholder.png" /></p>
 <h2 id="leerdoelen">Leerdoelen</h2>
 <ul>
 <li>Begrijpen wat UART/serial is</li>
@@ -1041,6 +1102,8 @@
     
     
       <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../js/print-site.js"></script>
       
     
   </body>

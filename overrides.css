@@ -5,3 +5,54 @@
 .code-python pre {
   background: #f3e5f5 !important;
 }
+
+/* Print layout: remove navigation UI and optimize content flow for paper/PDF */
+@page {
+  size: A4;
+  margin: 14mm;
+}
+
+@media print {
+  .md-header,
+  .md-tabs,
+  .md-sidebar,
+  .md-footer,
+  .md-top,
+  .md-search,
+  .md-source,
+  .md-content__button {
+    display: none !important;
+  }
+
+  .md-main,
+  .md-main__inner,
+  .md-content,
+  .md-content__inner,
+  .md-grid {
+    margin: 0 !important;
+    max-width: none !important;
+    padding: 0 !important;
+  }
+
+  h1,
+  h2,
+  h3 {
+    break-after: avoid;
+  }
+
+  p,
+  ul,
+  ol,
+  table,
+  img,
+  pre,
+  blockquote {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.9em;
+  }
+}
